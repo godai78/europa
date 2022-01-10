@@ -14074,8 +14074,8 @@
                 0
             ],
             "id": "563bbdb6-8ca5-4f50-8809-60a701cc39b6",
-            "x": 1102,
-            "y": 782,
+            "x": 889,
+            "y": 701,
             "actors": [],
             "triggers": [],
             "script": [],
@@ -14093,8 +14093,8 @@
             "spritePaletteIds": [],
             "collisions": [],
             "id": "ec963f8e-4339-4e80-896e-9d6d94df7d8a",
-            "x": 1102,
-            "y": 132,
+            "x": 883,
+            "y": 57,
             "actors": [],
             "triggers": [],
             "script": [],
@@ -14904,6 +14904,26 @@
                         "actorId": "$self$"
                     },
                     "id": "2e9f1669-62e2-4782-aaa3-9cff44b3f85c"
+                },
+                {
+                    "command": "EVENT_AWAIT_INPUT",
+                    "args": {
+                        "input": [
+                            "start"
+                        ]
+                    },
+                    "id": "64284d0f-a7c8-4a1f-bd72-34b8d067c7ea"
+                },
+                {
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "be72c4bb-f520-43c8-918a-cae663c5b5d4",
+                        "x": 9,
+                        "y": 8,
+                        "direction": "up",
+                        "fadeSpeed": "2"
+                    },
+                    "id": "ff2714fe-2ead-4d50-abcf-597c63643936"
                 }
             ],
             "playerHit1Script": [],
@@ -15663,6 +15683,25 @@
             "id": "0da8378c-06b8-438c-9b7d-c03724d3d202",
             "x": 270,
             "y": 273,
+            "actors": [],
+            "triggers": [],
+            "script": [],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": []
+        },
+        {
+            "name": "sojuz",
+            "backgroundId": "e8809041-9c2e-46d5-9bcb-a77920c57101",
+            "width": 20,
+            "height": 18,
+            "type": "TOPDOWN",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "id": "be72c4bb-f520-43c8-918a-cae663c5b5d4",
+            "x": 512,
+            "y": 61,
             "actors": [],
             "triggers": [],
             "script": [],
