@@ -14893,11 +14893,19 @@
                 0
             ],
             "id": "334a7d99-79ba-45e0-99fc-475f97dd5c1d",
-            "x": 275,
+            "x": 276,
             "y": 60,
             "actors": [],
             "triggers": [],
             "script": [
+                {
+                    "command": "EVENT_MUSIC_PLAY",
+                    "args": {
+                        "musicId": "9c36cdc1-e8d0-48cb-b511-949805ab3184",
+                        "loop": true
+                    },
+                    "id": "f0f6c77b-f705-4193-9b9a-154333d3e5fb"
+                },
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
@@ -15728,7 +15736,8 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "logo.png"
+            "filename": "logo.png",
+            "tileColors": []
         },
         {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
@@ -15757,7 +15766,8 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "title.png"
+            "filename": "title.png",
+            "tileColors": []
         }
     ],
     "spriteSheets": [
@@ -16841,6 +16851,13 @@
     ],
     "customEvents": [],
     "music": [
+        {
+            "id": "9c36cdc1-e8d0-48cb-b511-949805ab3184",
+            "name": "goes ping",
+            "filename": "goes ping.uge",
+            "settings": {},
+            "type": "uge"
+        },
         {
             "id": "f50428ab-a084-4591-9bba-2ba10fe7b1c6",
             "name": "template",

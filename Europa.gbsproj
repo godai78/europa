@@ -14074,8 +14074,8 @@
                 0
             ],
             "id": "563bbdb6-8ca5-4f50-8809-60a701cc39b6",
-            "x": 889,
-            "y": 701,
+            "x": 357,
+            "y": 1170,
             "actors": [],
             "triggers": [],
             "script": [],
@@ -14093,8 +14093,8 @@
             "spritePaletteIds": [],
             "collisions": [],
             "id": "ec963f8e-4339-4e80-896e-9d6d94df7d8a",
-            "x": 883,
-            "y": 57,
+            "x": 356,
+            "y": 538,
             "actors": [],
             "triggers": [],
             "script": [],
@@ -15700,9 +15700,9 @@
         },
         {
             "name": "sojuz",
-            "backgroundId": "e8809041-9c2e-46d5-9bcb-a77920c57101",
-            "width": 20,
-            "height": 18,
+            "backgroundId": "b0593370-899c-4e6b-a526-6fbcdeebf114",
+            "width": 27,
+            "height": 40,
             "type": "TOPDOWN",
             "paletteIds": [],
             "spritePaletteIds": [],
@@ -15716,9 +15716,72 @@
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": []
+        },
+        {
+            "name": "Scene 8",
+            "backgroundId": "c878c66a-be4b-42c9-9020-32a4d0cd5d5e",
+            "width": 130,
+            "height": 18,
+            "type": "TOPDOWN",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "id": "7aa27ff8-a349-449a-8f65-897689cd8b61",
+            "x": 807,
+            "y": 62,
+            "actors": [],
+            "triggers": [],
+            "script": [
+                {
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    },
+                    "id": "d21d92f4-8442-414b-a8d4-3526694fdcdd"
+                },
+                {
+                    "command": "EVENT_ACTOR_MOVE_TO",
+                    "args": {
+                        "actorId": "$self$",
+                        "x": {
+                            "type": "number",
+                            "value": 119
+                        },
+                        "y": {
+                            "type": "number",
+                            "value": 4
+                        },
+                        "moveType": "horizontal",
+                        "useCollisions": false
+                    },
+                    "id": "0e9b56cb-08fe-4e52-88cc-73deed93eb45"
+                }
+            ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": [],
+            "parallax": [
+                {
+                    "height": 15,
+                    "speed": 128
+                },
+                {
+                    "height": 0,
+                    "speed": 0
+                }
+            ]
         }
     ],
     "backgrounds": [
+        {
+            "id": "7a52dd67-4de0-4561-8e96-a9e256d531f0",
+            "name": "download",
+            "width": 164,
+            "height": 20,
+            "imageWidth": 1312,
+            "imageHeight": 160,
+            "filename": "download.png"
+        },
         {
             "id": "699b6d0d-8e94-4146-ba74-8690f6d7c257",
             "name": "europa_full",
@@ -15740,6 +15803,15 @@
             "tileColors": []
         },
         {
+            "id": "c878c66a-be4b-42c9-9020-32a4d0cd5d5e",
+            "name": "news",
+            "width": 130,
+            "height": 18,
+            "imageWidth": 1040,
+            "imageHeight": 144,
+            "filename": "news.png"
+        },
+        {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
             "name": "placeholder",
             "width": 20,
@@ -15758,6 +15830,15 @@
             "imageHeight": 144,
             "filename": "soyuz.png",
             "tileColors": []
+        },
+        {
+            "id": "b0593370-899c-4e6b-a526-6fbcdeebf114",
+            "name": "spaceship",
+            "width": 27,
+            "height": 40,
+            "imageWidth": 216,
+            "imageHeight": 320,
+            "filename": "spaceship.png"
         },
         {
             "id": "62d32beb-c9be-44eb-91ff-a935e4a81e47",
@@ -16949,16 +17030,16 @@
         }
     ],
     "settings": {
-        "startSceneId": "1f10c435-64b1-4a4c-a5e5-19aa1d883949",
-        "startX": 0,
-        "startY": 1,
+        "startSceneId": "be72c4bb-f520-43c8-918a-cae663c5b5d4",
+        "startX": 15,
+        "startY": 18,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
-        "worldScrollY": 1,
+        "worldScrollX": 309,
+        "worldScrollY": 0,
         "zoom": 100,
         "customColorsEnabled": false,
         "sgbEnabled": false,
@@ -16987,9 +17068,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            669,
-            204,
-            204
+            401,
+            122,
+            122
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
