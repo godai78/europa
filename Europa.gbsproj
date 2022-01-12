@@ -823,7 +823,7 @@
                 {
                     "command": "EVENT_MUSIC_PLAY",
                     "args": {
-                        "musicId": "9c36cdc1-e8d0-48cb-b511-949805ab3184",
+                        "musicId": "9697db26-8078-457b-a0fe-0e93875efa9d",
                         "loop": true
                     },
                     "id": "f0f6c77b-f705-4193-9b9a-154333d3e5fb"
@@ -6862,7 +6862,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "f0125a88-f31c-4a72-97ee-507b73b6c88f",
-                    "x": 2,
+                    "x": 6,
                     "y": 16
                 },
                 {
@@ -6883,12 +6883,20 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "2eacaa79-40f5-476c-bbbf-c2ca342817c9",
-                    "x": 4,
+                    "x": 8,
                     "y": 16
                 }
             ],
             "triggers": [],
             "script": [
+                {
+                    "command": "EVENT_MUSIC_PLAY",
+                    "args": {
+                        "musicId": "9c36cdc1-e8d0-48cb-b511-949805ab3184",
+                        "loop": true
+                    },
+                    "id": "ab2d6706-6fcb-4c40-856a-3be8f5b2e6db"
+                },
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
@@ -6911,6 +6919,11 @@
                         "__collapse": false
                     },
                     "id": "d1fc7d02-8ced-4f5b-a7ca-bc66cbf52630"
+                },
+                {
+                    "command": "EVENT_MUSIC_STOP",
+                    "args": {},
+                    "id": "726409ce-3190-48e0-a7bf-5fc732c23fa5"
                 }
             ],
             "playerHit1Script": [],
@@ -7020,7 +7033,8 @@
             "height": 18,
             "imageWidth": 2040,
             "imageHeight": 144,
-            "filename": "ride.png"
+            "filename": "ride.png",
+            "tileColors": []
         },
         {
             "id": "e8809041-9c2e-46d5-9bcb-a77920c57101",
@@ -8680,7 +8694,7 @@
     "customEvents": [],
     "music": [
         {
-            "id": "9c36cdc1-e8d0-48cb-b511-949805ab3184",
+            "id": "9697db26-8078-457b-a0fe-0e93875efa9d",
             "name": "goes ping",
             "filename": "goes ping.uge",
             "settings": {},
@@ -8694,9 +8708,23 @@
             "type": "uge"
         },
         {
+            "id": "9c36cdc1-e8d0-48cb-b511-949805ab3184",
+            "name": "ride",
+            "filename": "ride.uge",
+            "settings": {},
+            "type": "uge"
+        },
+        {
             "id": "20c072d4-112b-4c8f-9d87-b810d2997d35",
             "name": "ring",
             "filename": "ring.uge",
+            "settings": {},
+            "type": "uge"
+        },
+        {
+            "id": "bab88daa-c91c-4656-aea3-bebfb45d02d4",
+            "name": "song_template 1",
+            "filename": "song_template 1.uge",
             "settings": {},
             "type": "uge"
         },
@@ -8806,9 +8834,9 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
-        "worldScrollY": 0,
-        "zoom": 50,
+        "worldScrollX": 790,
+        "worldScrollY": 400,
+        "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
