@@ -14040,28 +14040,7 @@
                     "name": "",
                     "frame": 0,
                     "animate": false,
-                    "spriteSheetId": "7146d0da-cad7-4606-a780-807c183a667a",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "6f9d577d-b18a-42db-9702-68c1bda78597",
-                    "x": 166,
-                    "y": 46
-                },
-                {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "8d7eb09c-b64d-4ed4-95ff-52032bbc04e1",
+                    "spriteSheetId": "0dcebd78-52a2-41d3-ae20-d0102dfac609",
                     "direction": "down",
                     "moveSpeed": 1,
                     "animSpeed": 15,
@@ -14073,42 +14052,53 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "RCS control panel."
+                                    "Electric link\ncontrol panel.",
+                                    "Cannot be used,\nstation inactive."
                                 ],
                                 "avatarId": ""
                             },
-                            "id": "dec774c0-4536-49a2-a704-714bf7ef8374"
-                        },
-                        {
-                            "command": "EVENT_CHOICE",
-                            "args": {
-                                "variable": "L0",
-                                "trueText": "Use RCS panel",
-                                "falseText": "Not now"
-                            },
-                            "id": "84a1c6a5-8ad1-43fd-a1fd-98984b43f5c1"
-                        },
+                            "id": "9f727703-dbc9-4228-a24d-eee8b7f9e030"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "6f9d577d-b18a-42db-9702-68c1bda78597",
+                    "x": 166,
+                    "y": 46
+                },
+                {
+                    "name": "RCS panel",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "8d7eb09c-b64d-4ed4-95ff-52032bbc04e1",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "1",
+                    "script": [
                         {
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "L0",
+                                "variable": "1",
                                 "__collapseElse": false,
                                 "__collapse": false
                             },
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_TEXT",
+                                        "command": "EVENT_CHOICE",
                                         "args": {
-                                            "text": [
-                                                "RCS is already off."
-                                            ],
-                                            "avatarId": ""
+                                            "variable": "L0",
+                                            "trueText": "Use RCS panel",
+                                            "falseText": "Not now"
                                         },
-                                        "id": "e655360f-6ceb-435f-be96-d2bacb3f13a4"
-                                    }
-                                ],
-                                "false": [
+                                        "id": "84a1c6a5-8ad1-43fd-a1fd-98984b43f5c1"
+                                    },
                                     {
                                         "command": "EVENT_IF_TRUE",
                                         "args": {
@@ -14133,6 +14123,18 @@
                                         },
                                         "id": "032db3fd-733a-4a4e-9e9f-1af3506650bb"
                                     }
+                                ],
+                                "false": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "RCS is already off."
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "e655360f-6ceb-435f-be96-d2bacb3f13a4"
+                                    }
                                 ]
                             },
                             "id": "72c5c6e0-cd16-4f23-a739-87d02c6cbbb7"
@@ -14146,14 +14148,75 @@
                     "id": "f858867c-def9-496c-b971-5b0d7e9766a9",
                     "x": 180,
                     "y": 42
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "113686bf-ff7d-4c8e-ba86-2f1bb847de3c",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "1",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Cannot pump fuel,\nstation inactive."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "cb54db79-dd59-4d14-bac1-3a670bd9ccd6"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "7085380c-82bb-442d-aea2-83f0e61081cf",
+                    "x": 180,
+                    "y": 47
+                },
+                {
+                    "name": "chair",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "7d76ba77-0b24-4c5a-9b23-82a780fa47ff",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [],
+                    "startScript": [
+                        {
+                            "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                            "args": {
+                                "actorId": "$self$"
+                            },
+                            "id": "2503d108-ecd7-4215-a04e-67adb369e188"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "c9510127-95db-410e-8550-ae6603b0a2d2",
+                    "x": 180,
+                    "y": 45
                 }
             ],
             "triggers": [
                 {
                     "name": "",
                     "id": "821077fc-fc63-4d72-b824-a52f65062f75",
-                    "x": 181,
-                    "y": 46,
+                    "x": 182,
+                    "y": 51,
                     "width": 1,
                     "height": 2,
                     "script": [
@@ -14173,8 +14236,8 @@
                 {
                     "name": "",
                     "id": "9d90f2af-a260-4023-8905-16c3cb916400",
-                    "x": 176,
-                    "y": 32,
+                    "x": 183,
+                    "y": 37,
                     "width": 1,
                     "height": 2,
                     "script": [
@@ -14392,8 +14455,8 @@
                 {
                     "name": "",
                     "id": "d0090e9c-6520-4d5a-bee3-6ce6e4239652",
-                    "x": 160,
-                    "y": 37,
+                    "x": 164,
+                    "y": 36,
                     "width": 2,
                     "height": 1,
                     "script": [
@@ -14541,7 +14604,7 @@
                 {
                     "name": "",
                     "id": "1fce1c0c-355b-4b56-a3a1-2ee41341b3e5",
-                    "x": 173,
+                    "x": 171,
                     "y": 36,
                     "width": 2,
                     "height": 1,
@@ -14560,7 +14623,16 @@
                     "leaveScript": []
                 }
             ],
-            "script": [],
+            "script": [
+                {
+                    "command": "EVENT_MUSIC_PLAY",
+                    "args": {
+                        "musicId": "59c808f6-b938-471c-828d-a254ed976494",
+                        "loop": true
+                    },
+                    "id": "e4fc149a-0078-44df-a33b-faa935152dd3"
+                }
+            ],
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": []
@@ -18472,6 +18544,14 @@
                 }
             ],
             "script": [
+                {
+                    "command": "EVENT_MUSIC_PLAY",
+                    "args": {
+                        "musicId": "59c808f6-b938-471c-828d-a254ed976494",
+                        "loop": true
+                    },
+                    "id": "0699679e-6a97-4172-9a8f-05fb81bf9d99"
+                },
                 {
                     "command": "EVENT_IF_TRUE",
                     "args": {
@@ -25895,6 +25975,14 @@
             ],
             "script": [
                 {
+                    "command": "EVENT_MUSIC_PLAY",
+                    "args": {
+                        "musicId": "4d944f98-aea7-4161-a7c3-59f243dab7a1",
+                        "loop": true
+                    },
+                    "id": "91aa0b75-ca97-473b-b17f-35068bbd8100"
+                },
+                {
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
@@ -29488,7 +29576,7 @@
                 {
                     "id": "b129a533-2564-49aa-9570-42423a33df5f",
                     "name": "",
-                    "animationType": "multi_movement",
+                    "animationType": "fixed",
                     "flipLeft": true,
                     "animations": [
                         {
@@ -29496,7 +29584,60 @@
                             "frames": [
                                 {
                                     "id": "60f23cb2-43f8-414a-9c0b-aba720abaf9b",
-                                    "tiles": []
+                                    "tiles": [
+                                        {
+                                            "id": "b3feb27e-f6ce-40a5-a36b-eb5f688ca441",
+                                            "x": 0,
+                                            "y": 16,
+                                            "sliceX": 0,
+                                            "sliceY": 0,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "f0ef5c23-a100-4249-b155-8597526ba93c",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 0,
+                                            "sliceY": 16,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "843d104b-208a-4c5b-acdf-74d088d710c3",
+                                            "x": 8,
+                                            "y": 16,
+                                            "sliceX": 8,
+                                            "sliceY": 0,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "b0506457-a1ca-4e1e-b582-8f4648b63c94",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 8,
+                                            "sliceY": 16,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -29566,13 +29707,13 @@
                     ]
                 }
             ],
-            "numTiles": 0,
-            "canvasWidth": 32,
+            "numTiles": 3,
+            "canvasWidth": 16,
             "canvasHeight": 32,
-            "boundsX": 0,
+            "boundsX": 15,
             "boundsY": 0,
-            "boundsWidth": 16,
-            "boundsHeight": 16,
+            "boundsWidth": 1,
+            "boundsHeight": 32,
             "animSpeed": 15
         },
         {
@@ -30765,7 +30906,7 @@
             "boundsX": 0,
             "boundsY": 0,
             "boundsWidth": 16,
-            "boundsHeight": 16,
+            "boundsHeight": 8,
             "animSpeed": 15
         },
         {
@@ -30892,7 +31033,7 @@
             "boundsX": 0,
             "boundsY": 0,
             "boundsWidth": 16,
-            "boundsHeight": 16,
+            "boundsHeight": 8,
             "animSpeed": 15
         },
         {
@@ -31019,7 +31160,7 @@
             "boundsX": 0,
             "boundsY": 0,
             "boundsWidth": 16,
-            "boundsHeight": 16,
+            "boundsHeight": 8,
             "animSpeed": 15
         },
         {
@@ -31146,7 +31287,7 @@
             "boundsX": 0,
             "boundsY": 0,
             "boundsWidth": 16,
-            "boundsHeight": 16,
+            "boundsHeight": 8,
             "animSpeed": 15
         },
         {
@@ -32561,10 +32702,10 @@
             "numTiles": 2,
             "canvasWidth": 16,
             "canvasHeight": 32,
-            "boundsX": 0,
+            "boundsX": 8,
             "boundsY": 0,
-            "boundsWidth": 16,
-            "boundsHeight": 16,
+            "boundsWidth": 8,
+            "boundsHeight": 24,
             "animSpeed": 15
         },
         {
@@ -32688,10 +32829,10 @@
             "numTiles": 2,
             "canvasWidth": 16,
             "canvasHeight": 32,
-            "boundsX": 0,
+            "boundsX": 8,
             "boundsY": 0,
-            "boundsWidth": 16,
-            "boundsHeight": 16,
+            "boundsWidth": 8,
+            "boundsHeight": 24,
             "animSpeed": 15
         }
     ],
@@ -33020,8 +33161,8 @@
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 3343,
-        "worldScrollY": 1723,
+        "worldScrollX": 0,
+        "worldScrollY": 1823,
         "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
