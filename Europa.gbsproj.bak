@@ -14214,105 +14214,6 @@
             "triggers": [
                 {
                     "name": "",
-                    "id": "821077fc-fc63-4d72-b824-a52f65062f75",
-                    "x": 182,
-                    "y": 51,
-                    "width": 1,
-                    "height": 2,
-                    "script": [
-                        {
-                            "command": "EVENT_TEXT",
-                            "args": {
-                                "text": [
-                                    "Cannot pump fuel,\nstation inactive."
-                                ],
-                                "avatarId": ""
-                            },
-                            "id": "cdfaa0b8-c256-437d-bb6d-8cb97508f429"
-                        }
-                    ],
-                    "leaveScript": []
-                },
-                {
-                    "name": "",
-                    "id": "9d90f2af-a260-4023-8905-16c3cb916400",
-                    "x": 183,
-                    "y": 37,
-                    "width": 1,
-                    "height": 2,
-                    "script": [
-                        {
-                            "command": "EVENT_TEXT",
-                            "args": {
-                                "text": [
-                                    "RCS control panel."
-                                ],
-                                "avatarId": ""
-                            },
-                            "id": "1ddde505-4c4f-4bbc-b165-175bfa30cfca"
-                        },
-                        {
-                            "command": "EVENT_IF_TRUE",
-                            "args": {
-                                "variable": "L0",
-                                "__collapseElse": false
-                            },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                "RCS is already on."
-                                            ],
-                                            "avatarId": ""
-                                        },
-                                        "id": "bb69d966-0341-4393-8f9f-f9e68a0c8850"
-                                    }
-                                ],
-                                "false": [
-                                    {
-                                        "command": "EVENT_CHOICE",
-                                        "args": {
-                                            "variable": "L0",
-                                            "trueText": "Use RCS panel",
-                                            "falseText": "Not now"
-                                        },
-                                        "id": "b2499fc9-ecc0-4bf7-9e1f-2741a7d54428"
-                                    },
-                                    {
-                                        "command": "EVENT_IF_TRUE",
-                                        "args": {
-                                            "variable": "L0",
-                                            "__collapseElse": true
-                                        },
-                                        "children": {
-                                            "true": [
-                                                {
-                                                    "command": "EVENT_SWITCH_SCENE",
-                                                    "args": {
-                                                        "sceneId": "fb109353-1ec5-49cf-a8a8-c2caee444fea",
-                                                        "x": 10,
-                                                        "y": 13,
-                                                        "direction": "",
-                                                        "fadeSpeed": "2"
-                                                    },
-                                                    "id": "061de3dd-cf82-4d1f-b5ca-12b22a330728"
-                                                }
-                                            ],
-                                            "false": []
-                                        },
-                                        "id": "66c7214b-56dc-4f38-a691-09b66841654f"
-                                    }
-                                ]
-                            },
-                            "id": "3549c579-64bd-4e14-b101-23b6eefb5bff"
-                        }
-                    ],
-                    "leaveScript": []
-                },
-                {
-                    "name": "",
                     "id": "fd33afba-3cc0-4bde-8b2a-23810f2e5036",
                     "x": 174,
                     "y": 40,
@@ -14454,99 +14355,6 @@
                 },
                 {
                     "name": "",
-                    "id": "d0090e9c-6520-4d5a-bee3-6ce6e4239652",
-                    "x": 164,
-                    "y": 36,
-                    "width": 2,
-                    "height": 1,
-                    "script": [
-                        {
-                            "command": "EVENT_IF_TRUE",
-                            "args": {
-                                "variable": "6",
-                                "__collapseElse": false
-                            },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                "Main airlock\nis open."
-                                            ],
-                                            "avatarId": ""
-                                        },
-                                        "id": "14aa53e3-3a84-45e6-9ce6-fa51747b5d86"
-                                    }
-                                ],
-                                "false": [
-                                    {
-                                        "command": "EVENT_IF_TRUE",
-                                        "args": {
-                                            "variable": "1",
-                                            "__collapseElse": false
-                                        },
-                                        "children": {
-                                            "true": [
-                                                {
-                                                    "command": "EVENT_TEXT",
-                                                    "args": {
-                                                        "text": [
-                                                            "You cannot open\nthe airlock while",
-                                                            "the RCS engines\nare still on."
-                                                        ],
-                                                        "avatarId": ""
-                                                    },
-                                                    "id": "0b4f4b64-bc63-4b9c-b5af-acd2783d1a32"
-                                                }
-                                            ],
-                                            "false": [
-                                                {
-                                                    "command": "EVENT_CHOICE",
-                                                    "args": {
-                                                        "variable": "L5",
-                                                        "trueText": "Open airlock",
-                                                        "falseText": "Not now"
-                                                    },
-                                                    "id": "d7c2e6d2-7632-46bd-8f8d-78d86bd3037d"
-                                                },
-                                                {
-                                                    "command": "EVENT_IF_TRUE",
-                                                    "args": {
-                                                        "variable": "L5",
-                                                        "__collapseElse": true
-                                                    },
-                                                    "children": {
-                                                        "true": [
-                                                            {
-                                                                "command": "EVENT_SWITCH_SCENE",
-                                                                "args": {
-                                                                    "sceneId": "61e0cea0-1e0a-4bcc-bd02-f7d67dc00039",
-                                                                    "x": 11,
-                                                                    "y": 12,
-                                                                    "direction": "",
-                                                                    "fadeSpeed": "2"
-                                                                },
-                                                                "id": "7772b5ee-a030-4de5-be0b-c2fe818b2d93"
-                                                            }
-                                                        ],
-                                                        "false": []
-                                                    },
-                                                    "id": "cc6812af-d1ed-4753-ab35-72d2422c52e8"
-                                                }
-                                            ]
-                                        },
-                                        "id": "63f023e5-64af-4c9c-aa19-56014023d095"
-                                    }
-                                ]
-                            },
-                            "id": "9248abb2-730c-4da3-929e-2843c45c0717"
-                        }
-                    ],
-                    "leaveScript": []
-                },
-                {
-                    "name": "",
                     "id": "c87c71f9-09c5-4d8b-ae78-00a4b4f3432d",
                     "x": 172,
                     "y": 42,
@@ -14597,27 +14405,6 @@
                                 "avatarId": ""
                             },
                             "id": "fc4d2cec-1410-47e3-baa7-16a6be9db3c1"
-                        }
-                    ],
-                    "leaveScript": []
-                },
-                {
-                    "name": "",
-                    "id": "1fce1c0c-355b-4b56-a3a1-2ee41341b3e5",
-                    "x": 171,
-                    "y": 36,
-                    "width": 2,
-                    "height": 1,
-                    "script": [
-                        {
-                            "command": "EVENT_TEXT",
-                            "args": {
-                                "text": [
-                                    "Docking antenna\nis deployed."
-                                ],
-                                "avatarId": ""
-                            },
-                            "id": "8cdc5058-dc53-4a2b-8f1b-86f680ee1bcd"
                         }
                     ],
                     "leaveScript": []
@@ -16229,8 +16016,8 @@
                 0
             ],
             "id": "0da8378c-06b8-438c-9b7d-c03724d3d202",
-            "x": 270,
-            "y": 273,
+            "x": 273,
+            "y": 267.5,
             "actors": [],
             "triggers": [],
             "script": [],
@@ -18383,8 +18170,8 @@
                                         "command": "EVENT_SWITCH_SCENE",
                                         "args": {
                                             "sceneId": "2a15e4ba-fb5c-418d-a4a4-cc50cf1a8e51",
-                                            "x": 34,
-                                            "y": 32,
+                                            "x": 5,
+                                            "y": 23,
                                             "direction": "up",
                                             "fadeSpeed": "2"
                                         },
@@ -25875,6 +25662,21 @@
                             "id": "2f45c2ce-3813-4755-b7ad-ee5292222b6c"
                         },
                         {
+                            "command": "EVENT_CAMERA_MOVE_TO",
+                            "args": {
+                                "x": {
+                                    "type": "number",
+                                    "value": 14
+                                },
+                                "y": {
+                                    "type": "number",
+                                    "value": 4
+                                },
+                                "speed": 0
+                            },
+                            "id": "0136506a-a03f-4b84-9499-001b8f9731f4"
+                        },
+                        {
                             "command": "EVENT_SWITCH_SCENE",
                             "args": {
                                 "sceneId": "ec963f8e-4339-4e80-896e-9d6d94df7d8a",
@@ -26371,8 +26173,8 @@
                 0
             ],
             "id": "1b33fb49-02b6-4750-aac4-9780eee47bb1",
-            "x": 60,
-            "y": 478,
+            "x": 72,
+            "y": 480.5,
             "actors": [],
             "triggers": [],
             "script": [
@@ -33134,16 +32936,16 @@
             "name": "Docking Ready"
         },
         {
-            "id": "0d82c1b2-0ecb-4f4f-b169-21019d7d4729__L0",
-            "name": "RCS systems"
-        },
-        {
             "id": "6",
             "name": "Main Airlock Open"
         },
         {
             "id": "7",
             "name": "Antenna Opened"
+        },
+        {
+            "id": "0d82c1b2-0ecb-4f4f-b169-21019d7d4729__L0",
+            "name": "RCS systems"
         }
     ],
     "engineFieldValues": [
@@ -33153,16 +32955,16 @@
         }
     ],
     "settings": {
-        "startSceneId": "be72c4bb-f520-43c8-918a-cae663c5b5d4",
-        "startX": 21,
-        "startY": 21,
+        "startSceneId": "1f10c435-64b1-4a4c-a5e5-19aa1d883949",
+        "startX": 0,
+        "startY": 2,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 0,
-        "worldScrollY": 1823,
+        "worldScrollY": 0,
         "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
