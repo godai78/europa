@@ -8435,7 +8435,7 @@
                 0,
                 0,
                 0,
-                0,
+                15,
                 0,
                 0,
                 0,
@@ -8633,7 +8633,7 @@
                 0,
                 0,
                 0,
-                0,
+                15,
                 0,
                 0,
                 0,
@@ -8831,7 +8831,7 @@
                 0,
                 0,
                 0,
-                0,
+                15,
                 0,
                 0,
                 0,
@@ -9029,7 +9029,7 @@
                 0,
                 0,
                 0,
-                0,
+                15,
                 0,
                 0,
                 0,
@@ -14356,6 +14356,28 @@
                                 "avatarId": ""
                             },
                             "id": "fc4d2cec-1410-47e3-baa7-16a6be9db3c1"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "bbc6782b-5cc0-4854-8555-4f8e2a6f5508",
+                    "x": 106,
+                    "y": 42,
+                    "width": 1,
+                    "height": 4,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Node airlock not\noperable while",
+                                    "main station\npower is down."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "10b266a3-dbc8-44c2-b175-d6fd94dffd7a"
                         }
                     ],
                     "leaveScript": []
@@ -29964,7 +29986,7 @@
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 714,
+        "worldScrollX": 1162,
         "worldScrollY": 540,
         "zoom": 100,
         "customColorsEnabled": false,
