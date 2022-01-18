@@ -41938,7 +41938,7 @@
                             "command": "EVENT_IF_TRUE",
                             "args": {
                                 "variable": "17",
-                                "__collapseElse": true
+                                "__collapseElse": false
                             },
                             "children": {
                                 "true": [
@@ -41976,9 +41976,46 @@
                                             "variable": "15"
                                         },
                                         "id": "4e39ddf9-0f83-472c-bb67-e40a1e9d0e8d"
+                                    },
+                                    {
+                                        "command": "EVENT_IF_VALUE",
+                                        "args": {
+                                            "variable": "15",
+                                            "operator": "==",
+                                            "comparator": 2,
+                                            "__collapseElse": true
+                                        },
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "Both solar panels\nare extended.",
+                                                            "Check the power\ncontrol panel."
+                                                        ],
+                                                        "avatarId": ""
+                                                    },
+                                                    "id": "12c9af58-83f4-4914-9493-8cee589e394d"
+                                                }
+                                            ],
+                                            "false": []
+                                        },
+                                        "id": "3c0c801c-22b0-4be4-9eb1-1932609b4018"
                                     }
                                 ],
-                                "false": []
+                                "false": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Unpowered panel\nlever  is locked"
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "fdbdc428-315f-48bc-9f7f-696db675416b"
+                                    }
+                                ]
                             },
                             "id": "79fec050-7fce-4e0b-a9c3-bae3fee57755"
                         }
@@ -42008,7 +42045,7 @@
                             "command": "EVENT_IF_TRUE",
                             "args": {
                                 "variable": "17",
-                                "__collapseElse": true
+                                "__collapseElse": false
                             },
                             "children": {
                                 "true": [
@@ -42046,9 +42083,46 @@
                                             "variable": "15"
                                         },
                                         "id": "6314e5a6-3c6e-4cc4-b50a-6ca74d1569bb"
+                                    },
+                                    {
+                                        "command": "EVENT_IF_VALUE",
+                                        "args": {
+                                            "variable": "15",
+                                            "operator": "==",
+                                            "comparator": 2,
+                                            "__collapseElse": true
+                                        },
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "Both solar panels\nare extended.",
+                                                            "Check the power\ncontrol panel."
+                                                        ],
+                                                        "avatarId": ""
+                                                    },
+                                                    "id": "61aa31bf-4caf-4b85-87f2-1ac69404b00e"
+                                                }
+                                            ],
+                                            "false": []
+                                        },
+                                        "id": "3c38eb95-ed83-4f41-b963-7b3084f7e1fa"
                                     }
                                 ],
-                                "false": []
+                                "false": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Unpowered panel\nlever  is locked"
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "969200cc-ac4b-46c6-b795-3cd3dbc9cefe"
+                                    }
+                                ]
                             },
                             "id": "b0ef233e-a67c-4b93-9428-814f725207c9"
                         }
@@ -42142,34 +42216,7 @@
                             "id": "7310cd00-f448-4a6c-a9cb-442b667d1a5c"
                         }
                     ],
-                    "updateScript": [
-                        {
-                            "command": "EVENT_IF_VALUE",
-                            "args": {
-                                "variable": "15",
-                                "operator": "==",
-                                "comparator": 2,
-                                "__collapseElse": true
-                            },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                "Both solar panels\nare extended.",
-                                                "Check the power\ncontrol panel."
-                                            ],
-                                            "avatarId": ""
-                                        },
-                                        "id": "c441247b-f00f-47c8-90d0-451a754a47af"
-                                    }
-                                ],
-                                "false": []
-                            },
-                            "id": "00d86690-63ab-44ea-b286-233723c1c5a6"
-                        }
-                    ],
+                    "updateScript": [],
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
@@ -51304,115 +51351,11 @@
                 0,
                 0,
                 0,
-                15,
-                0,
-                0,
-                0,
-                15,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0,
                 0,
                 0,
                 0,
                 15,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0,
                 0,
                 0,
@@ -51502,7 +51445,111 @@
                 0,
                 0,
                 0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 15,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 0,
                 0,
                 0,
@@ -65955,7 +66002,7 @@
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 1258,
-        "worldScrollY": 1207,
+        "worldScrollY": 1707,
         "zoom": 100,
         "customColorsEnabled": false,
         "sgbEnabled": false,
