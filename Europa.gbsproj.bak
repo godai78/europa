@@ -14171,14 +14171,16 @@
                     "animSpeed": 31,
                     "paletteId": "",
                     "isPinned": false,
-                    "collisionGroup": "1",
                     "script": [
                         {
-                            "command": "EVENT_ACTOR_PUSH",
+                            "command": "EVENT_TEXT",
                             "args": {
-                                "continue": true
+                                "text": [
+                                    "Cargo crate."
+                                ],
+                                "avatarId": ""
                             },
-                            "id": "3a042552-4eb2-4f4c-a452-f506823b125d"
+                            "id": "98e9d8cd-24d5-4193-a74c-6590c394a8f2"
                         }
                     ],
                     "startScript": [
@@ -14212,14 +14214,16 @@
                     "animSpeed": 31,
                     "paletteId": "",
                     "isPinned": false,
-                    "collisionGroup": "1",
                     "script": [
                         {
-                            "command": "EVENT_ACTOR_PUSH",
+                            "command": "EVENT_TEXT",
                             "args": {
-                                "continue": true
+                                "text": [
+                                    "Cargo crate."
+                                ],
+                                "avatarId": ""
                             },
-                            "id": "2bff6211-02ae-43c3-8653-1b66b28e5b13"
+                            "id": "8721f235-9c60-4e49-8b0a-6fd36febc6be"
                         }
                     ],
                     "startScript": [],
@@ -14412,10 +14416,10 @@
                 {
                     "name": "",
                     "id": "b08497f9-52ef-41c8-bb54-89d9b927ad54",
-                    "x": 135,
-                    "y": 37,
+                    "x": 151,
+                    "y": 38,
                     "width": 1,
-                    "height": 14,
+                    "height": 12,
                     "script": [
                         {
                             "command": "EVENT_TEXT",
@@ -14431,7 +14435,7 @@
                         {
                             "command": "EVENT_WAIT",
                             "args": {
-                                "time": 2
+                                "time": 0.5
                             },
                             "id": "726385ba-3e5e-4e63-ba06-98d24259fc0c"
                         },
@@ -14439,7 +14443,7 @@
                             "command": "EVENT_SWITCH_SCENE",
                             "args": {
                                 "sceneId": "ff18713c-902b-48fa-85f0-4371173cb0f5",
-                                "x": 157,
+                                "x": 180,
                                 "y": 44,
                                 "direction": "left",
                                 "fadeSpeed": "2"
@@ -17914,14 +17918,16 @@
                     "animSpeed": 255,
                     "paletteId": "",
                     "isPinned": false,
-                    "collisionGroup": "1",
                     "script": [
                         {
-                            "command": "EVENT_ACTOR_PUSH",
+                            "command": "EVENT_TEXT",
                             "args": {
-                                "continue": true
+                                "text": [
+                                    "Cargo crate."
+                                ],
+                                "avatarId": ""
                             },
-                            "id": "fb78937b-6d6b-47d8-b7fe-c31325c8f312"
+                            "id": "ad392385-257f-4b3e-a4dc-d68cc1f97582"
                         }
                     ],
                     "startScript": [],
@@ -17943,14 +17949,16 @@
                     "animSpeed": 31,
                     "paletteId": "",
                     "isPinned": false,
-                    "collisionGroup": "1",
                     "script": [
                         {
-                            "command": "EVENT_ACTOR_PUSH",
+                            "command": "EVENT_TEXT",
                             "args": {
-                                "continue": true
+                                "text": [
+                                    "Cargo crate."
+                                ],
+                                "avatarId": ""
                             },
-                            "id": "9a5a90ea-ea1b-40ea-95ed-16877d827c37"
+                            "id": "082b73ab-80d2-4503-8f06-85c74d342545"
                         }
                     ],
                     "startScript": [
@@ -18252,7 +18260,7 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Open the docking\nantenna before\ntrying to dock!"
+                                                "Extend the\ndocking antenna."
                                             ],
                                             "avatarId": ""
                                         },
@@ -18275,7 +18283,7 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Turn RCS on before\ntrying to dock!"
+                                                "Turn the RCS on."
                                             ],
                                             "avatarId": ""
                                         },
@@ -18298,7 +18306,7 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Deploy docking\ngear before trying\nto dock!"
+                                                "Deploy the\ndocking gear."
                                             ],
                                             "avatarId": ""
                                         },
@@ -23411,13 +23419,13 @@
                             "args": {
                                 "x": {
                                     "type": "number",
-                                    "value": 14
+                                    "value": 11
                                 },
                                 "y": {
                                     "type": "number",
                                     "value": 4
                                 },
-                                "speed": 0
+                                "speed": 2
                             },
                             "id": "0136506a-a03f-4b84-9499-001b8f9731f4"
                         },
@@ -35441,115 +35449,11 @@
                 0,
                 0,
                 0,
-                15,
-                0,
-                0,
-                0,
-                15,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0,
                 0,
                 0,
                 0,
                 15,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0,
                 0,
                 0,
@@ -35639,7 +35543,111 @@
                 0,
                 0,
                 0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 15,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 0,
                 0,
                 0,
@@ -40870,13 +40878,6 @@
                     "collisionGroup": "1",
                     "script": [
                         {
-                            "command": "EVENT_ACTOR_PUSH",
-                            "args": {
-                                "continue": false
-                            },
-                            "id": "ef0d2d67-a4c2-4e8d-aa76-a9ef6a80810a"
-                        },
-                        {
                             "command": "EVENT_IF_TRUE",
                             "args": {
                                 "variable": "13",
@@ -40891,7 +40892,37 @@
                                             "trueText": "Search cargo",
                                             "falseText": "Not now"
                                         },
-                                        "id": "3518187f-7ed8-4310-aa1a-b4fa068b903e"
+                                        "id": "30351b51-3919-4790-b8fa-194cc74207a3"
+                                    },
+                                    {
+                                        "command": "EVENT_SET_VALUE",
+                                        "args": {
+                                            "variable": "L3",
+                                            "value": {
+                                                "type": "number",
+                                                "value": 0
+                                            }
+                                        },
+                                        "id": "e2edd11a-2cf1-45ce-b050-e6955df7f4ce"
+                                    },
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Tools, spare parts\nand some electric ",
+                                                "components. Wait\na minute!",
+                                                "You found electric\nconnection cable!"
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "3b6ffa76-7cb4-4452-aeb3-cfd067aae544"
+                                    },
+                                    {
+                                        "command": "EVENT_SET_TRUE",
+                                        "args": {
+                                            "variable": "11"
+                                        },
+                                        "id": "5d538527-0095-4d76-b0c2-0281289bf6b0"
                                     }
                                 ],
                                 "false": [
@@ -40903,11 +40934,11 @@
                                             ],
                                             "avatarId": ""
                                         },
-                                        "id": "6e112853-a47d-47bd-ba8e-4d57cd35c670"
+                                        "id": "f115c2a6-ac51-432c-add6-fc5131377060"
                                     }
                                 ]
                             },
-                            "id": "1a09d9ac-1e25-4fa5-a40b-614a2c23800c"
+                            "id": "925749a4-579f-4986-aa4a-b95d6c7b1403"
                         }
                     ],
                     "startScript": [],
@@ -40932,11 +40963,61 @@
                     "collisionGroup": "1",
                     "script": [
                         {
-                            "command": "EVENT_ACTOR_PUSH",
+                            "command": "EVENT_IF_TRUE",
                             "args": {
-                                "continue": true
+                                "variable": "13",
+                                "__collapseElse": false
                             },
-                            "id": "42a0fdfd-464e-4378-af1a-a2cc75b47ebf"
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CHOICE",
+                                        "args": {
+                                            "variable": "L3",
+                                            "trueText": "Search cargo",
+                                            "falseText": "Not now"
+                                        },
+                                        "id": "ea7e4604-adc9-47b2-8b1d-d579e0a0b437"
+                                    },
+                                    {
+                                        "command": "EVENT_IF_TRUE",
+                                        "args": {
+                                            "variable": "L3",
+                                            "__collapseElse": true
+                                        },
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "Food, spare socks\nand trousers.",
+                                                            "Probably not here."
+                                                        ],
+                                                        "avatarId": ""
+                                                    },
+                                                    "id": "ce5c8f0b-3f29-4fe1-9220-325a7bc281ea"
+                                                }
+                                            ],
+                                            "false": []
+                                        },
+                                        "id": "92d33c58-c4ca-41df-839d-c5a0d4a2c92a"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Cargo crate"
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "45cbaf31-146a-41a5-9df0-76e6773580b3"
+                                    }
+                                ]
+                            },
+                            "id": "dfe71ec3-3742-4c3a-b708-8e28c3c276c0"
                         }
                     ],
                     "startScript": [
@@ -41063,41 +41144,16 @@
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_IF_TRUE",
+                                        "command": "EVENT_SWITCH_SCENE",
                                         "args": {
-                                            "variable": "12",
-                                            "__collapseElse": false
+                                            "sceneId": "89110d48-22e6-47fa-9384-db2675801d29",
+                                            "x": 9,
+                                            "y": 15,
+                                            "direction": "",
+                                            "fadeSpeed": "2",
+                                            "__collapse": false
                                         },
-                                        "children": {
-                                            "true": [
-                                                {
-                                                    "command": "EVENT_SWITCH_SCENE",
-                                                    "args": {
-                                                        "sceneId": "f9a1b3e8-89fd-40cf-8df8-62cc392577ba",
-                                                        "x": 9,
-                                                        "y": 15,
-                                                        "direction": "",
-                                                        "fadeSpeed": "2"
-                                                    },
-                                                    "id": "2801f9df-43a1-454a-b099-09ec988c4c33"
-                                                }
-                                            ],
-                                            "false": [
-                                                {
-                                                    "command": "EVENT_SWITCH_SCENE",
-                                                    "args": {
-                                                        "sceneId": "89110d48-22e6-47fa-9384-db2675801d29",
-                                                        "x": 9,
-                                                        "y": 15,
-                                                        "direction": "",
-                                                        "fadeSpeed": "2",
-                                                        "__collapse": false
-                                                    },
-                                                    "id": "295249ac-e616-42c8-96d7-e3e862c30371"
-                                                }
-                                            ]
-                                        },
-                                        "id": "3fc10b88-1686-48db-ad82-b705d70f1091"
+                                        "id": "295249ac-e616-42c8-96d7-e3e862c30371"
                                     }
                                 ],
                                 "false": []
@@ -41262,13 +41318,6 @@
             ],
             "script": [
                 {
-                    "command": "EVENT_SET_TRUE",
-                    "args": {
-                        "variable": "11"
-                    },
-                    "id": "c32dd02c-c4b3-4002-a6ec-d934852dff49"
-                },
-                {
                     "command": "EVENT_MUSIC_PLAY",
                     "args": {
                         "musicId": "59c808f6-b938-471c-828d-a254ed976494",
@@ -41291,8 +41340,7 @@
                                     "text": [
                                         "The station power\nseems to be gone.",
                                         "Try to deploy the\nsolar panels and",
-                                        "charge the bat-\nteries. Use your",
-                                        "ship to power it\nif necessary."
+                                        "charge the\nbatteries."
                                     ],
                                     "avatarId": ""
                                 },
@@ -41563,42 +41611,15 @@
                     "height": 1,
                     "script": [
                         {
-                            "command": "EVENT_IF_VALUE",
+                            "command": "EVENT_SWITCH_SCENE",
                             "args": {
-                                "variable": "15",
-                                "operator": "==",
-                                "comparator": 2,
-                                "__collapseElse": false
+                                "sceneId": "e5bf236a-ffe6-43d6-af00-2740c3ee3a75",
+                                "x": 143,
+                                "y": 41,
+                                "direction": "",
+                                "fadeSpeed": "2"
                             },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_SWITCH_SCENE",
-                                        "args": {
-                                            "sceneId": "e5bf236a-ffe6-43d6-af00-2740c3ee3a75",
-                                            "x": 143,
-                                            "y": 41,
-                                            "direction": "",
-                                            "fadeSpeed": "2"
-                                        },
-                                        "id": "e54e3050-fb93-46aa-b944-f58a0ad9ffc2"
-                                    }
-                                ],
-                                "false": [
-                                    {
-                                        "command": "EVENT_SWITCH_SCENE",
-                                        "args": {
-                                            "sceneId": "ff18713c-902b-48fa-85f0-4371173cb0f5",
-                                            "x": 143,
-                                            "y": 40,
-                                            "direction": "",
-                                            "fadeSpeed": "2"
-                                        },
-                                        "id": "b1430995-79de-4374-b1b5-eb5b5c4148a5"
-                                    }
-                                ]
-                            },
-                            "id": "a4815cf7-18c0-4e44-81ce-1b5714927a16"
+                            "id": "e54e3050-fb93-46aa-b944-f58a0ad9ffc2"
                         }
                     ],
                     "leaveScript": []
@@ -41916,7 +41937,7 @@
                         {
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "12",
+                                "variable": "17",
                                 "__collapseElse": true
                             },
                             "children": {
@@ -41924,13 +41945,20 @@
                                     {
                                         "command": "EVENT_ACTOR_SET_FRAME",
                                         "args": {
-                                            "actorId": "67da67f3-4088-4b28-9e77-19d0ffdca871",
+                                            "actorId": "$self$",
                                             "frame": {
                                                 "type": "number",
                                                 "value": 1
                                             }
                                         },
                                         "id": "bbd36138-36ae-4673-8afb-157f7061da83"
+                                    },
+                                    {
+                                        "command": "EVENT_WAIT",
+                                        "args": {
+                                            "time": 1
+                                        },
+                                        "id": "5dfa81cf-b8ed-4d22-a8ae-b5014fedcad6"
                                     },
                                     {
                                         "command": "EVENT_TEXT",
@@ -41979,7 +42007,7 @@
                         {
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "12",
+                                "variable": "17",
                                 "__collapseElse": true
                             },
                             "children": {
@@ -41994,6 +42022,13 @@
                                             }
                                         },
                                         "id": "eaadd5db-c0a6-4615-8136-8eb56b191d79"
+                                    },
+                                    {
+                                        "command": "EVENT_WAIT",
+                                        "args": {
+                                            "time": 1
+                                        },
+                                        "id": "d0edba28-9125-432b-a949-3b2df5e472e0"
                                     },
                                     {
                                         "command": "EVENT_TEXT",
@@ -42107,7 +42142,34 @@
                             "id": "7310cd00-f448-4a6c-a9cb-442b667d1a5c"
                         }
                     ],
-                    "updateScript": [],
+                    "updateScript": [
+                        {
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "15",
+                                "operator": "==",
+                                "comparator": 2,
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Both solar panels\nare extended.",
+                                                "Check the power\ncontrol panel."
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "c441247b-f00f-47c8-90d0-451a754a47af"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "00d86690-63ab-44ea-b286-233723c1c5a6"
+                        }
+                    ],
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
@@ -42194,7 +42256,7 @@
                                                 {
                                                     "command": "EVENT_SET_TRUE",
                                                     "args": {
-                                                        "variable": "12"
+                                                        "variable": "17"
                                                     },
                                                     "id": "7cc482d5-6ef8-4b1e-9ba5-8f0f453ff0a0"
                                                 }
@@ -56671,44 +56733,57 @@
                     "collisionGroup": "1",
                     "script": [
                         {
-                            "command": "EVENT_ACTOR_PUSH",
+                            "command": "EVENT_CHOICE",
                             "args": {
-                                "continue": false
+                                "variable": "L3",
+                                "trueText": "Search cargo",
+                                "falseText": "Not now"
                             },
-                            "id": "e3c3d6ae-292c-4b09-87ae-103268a8b6de"
+                            "id": "0d564d7c-022d-4600-935b-e161b5b1d8d6"
                         },
                         {
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "13",
-                                "__collapseElse": false
+                                "variable": "L3",
+                                "__collapseElse": true
                             },
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_CHOICE",
-                                        "args": {
-                                            "variable": "L3",
-                                            "trueText": "Search cargo",
-                                            "falseText": "Not now"
-                                        },
-                                        "id": "0d564d7c-022d-4600-935b-e161b5b1d8d6"
-                                    }
-                                ],
-                                "false": [
-                                    {
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Cargo crate"
+                                                "Where is the\nrectifier?",
+                                                "Come out, come out\nwherever you are!",
+                                                "Ah, here it is!\nGood.... Good..."
                                             ],
                                             "avatarId": ""
                                         },
-                                        "id": "de2a9cf5-8571-4399-a32c-20cbb9e1ae5a"
+                                        "id": "6155e165-87cc-4a9b-8585-a3e3854e47e8"
+                                    },
+                                    {
+                                        "command": "EVENT_SET_TRUE",
+                                        "args": {
+                                            "variable": "16"
+                                        },
+                                        "id": "0d2423f9-5209-48ed-ab7b-9541659bed6d"
+                                    },
+                                    {
+                                        "command": "EVENT_SWITCH_SCENE",
+                                        "args": {
+                                            "sceneId": "e5bf236a-ffe6-43d6-af00-2740c3ee3a75",
+                                            "x": 174,
+                                            "y": 44,
+                                            "direction": "",
+                                            "fadeSpeed": "2",
+                                            "__collapse": false
+                                        },
+                                        "id": "f6b2d295-46a8-473a-87fd-137dd79ecd7c"
                                     }
-                                ]
+                                ],
+                                "false": []
                             },
-                            "id": "6ba91591-950e-46fe-8a96-5253111be938"
+                            "id": "f130db8b-1dee-4b3c-a8e9-c341e1778cf3"
                         }
                     ],
                     "startScript": [],
@@ -56733,11 +56808,61 @@
                     "collisionGroup": "1",
                     "script": [
                         {
-                            "command": "EVENT_ACTOR_PUSH",
+                            "command": "EVENT_IF_TRUE",
                             "args": {
-                                "continue": true
+                                "variable": "13",
+                                "__collapseElse": false
                             },
-                            "id": "e84a3c66-4f75-4ad4-8ee3-7de757da32f0"
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CHOICE",
+                                        "args": {
+                                            "variable": "L3",
+                                            "trueText": "Search cargo",
+                                            "falseText": "Not now"
+                                        },
+                                        "id": "15487269-9721-4f18-8f92-bbb8639f96dd"
+                                    },
+                                    {
+                                        "command": "EVENT_IF_TRUE",
+                                        "args": {
+                                            "variable": "L3",
+                                            "__collapseElse": true
+                                        },
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "Food, spare socks\nand trousers.",
+                                                            "Probably not here."
+                                                        ],
+                                                        "avatarId": ""
+                                                    },
+                                                    "id": "a3e8a42d-658c-4290-9722-ed680726728a"
+                                                }
+                                            ],
+                                            "false": []
+                                        },
+                                        "id": "76b113c0-4808-41bd-b2ea-dfe379776e46"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Cargo crate"
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "d2265046-f056-47c1-8e6d-6f35efc0aa98"
+                                    }
+                                ]
+                            },
+                            "id": "2658d2fe-922e-4ee9-83e0-19270862167f"
                         }
                     ],
                     "startScript": [
@@ -56864,41 +56989,15 @@
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_IF_TRUE",
+                                        "command": "EVENT_SWITCH_SCENE",
                                         "args": {
-                                            "variable": "12",
-                                            "__collapseElse": false
+                                            "sceneId": "f9a1b3e8-89fd-40cf-8df8-62cc392577ba",
+                                            "x": 9,
+                                            "y": 15,
+                                            "direction": "",
+                                            "fadeSpeed": "2"
                                         },
-                                        "children": {
-                                            "true": [
-                                                {
-                                                    "command": "EVENT_SWITCH_SCENE",
-                                                    "args": {
-                                                        "sceneId": "f9a1b3e8-89fd-40cf-8df8-62cc392577ba",
-                                                        "x": 9,
-                                                        "y": 15,
-                                                        "direction": "",
-                                                        "fadeSpeed": "2"
-                                                    },
-                                                    "id": "49ae9be6-50c7-445f-b754-67685e72f837"
-                                                }
-                                            ],
-                                            "false": [
-                                                {
-                                                    "command": "EVENT_SWITCH_SCENE",
-                                                    "args": {
-                                                        "sceneId": "89110d48-22e6-47fa-9384-db2675801d29",
-                                                        "x": 9,
-                                                        "y": 15,
-                                                        "direction": "",
-                                                        "fadeSpeed": "2",
-                                                        "__collapse": false
-                                                    },
-                                                    "id": "1a0d8c73-ef4a-4bed-a381-9c43f4ea528c"
-                                                }
-                                            ]
-                                        },
-                                        "id": "8e3fe012-6170-45aa-9ccf-0995b1034132"
+                                        "id": "49ae9be6-50c7-445f-b754-67685e72f837"
                                     }
                                 ],
                                 "false": []
@@ -57000,6 +57099,40 @@
                                 "avatarId": ""
                             },
                             "id": "32dc55f1-9e95-4fdc-b57b-6d403d0d1ae0"
+                        },
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "16",
+                                "__collapseElse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Good. That's it\nfor now."
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "1e8408e2-cd29-4572-b3d0-3f17d14be75b"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Go get the\nrectifier."
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "1e04e09f-b888-4f02-b73f-02ce79d1e548"
+                                    }
+                                ]
+                            },
+                            "id": "9d56114a-45d3-4508-a1d8-516c94e5cc95"
                         }
                     ],
                     "leaveScript": []
@@ -57149,7 +57282,8 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "control_electric.png"
+            "filename": "control_electric.png",
+            "tileColors": []
         },
         {
             "id": "4fb61812-f8fb-4f12-9b98-8209195d4560",
@@ -57158,7 +57292,8 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "control_panels.png"
+            "filename": "control_panels.png",
+            "tileColors": []
         },
         {
             "id": "18271bd5-4a78-4f99-9304-1e089a78bd19",
@@ -57177,7 +57312,8 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "control_power_2.png"
+            "filename": "control_power_2.png",
+            "tileColors": []
         },
         {
             "id": "f18b24d1-7e6b-44cf-9a05-cea23bd7b067",
@@ -65771,10 +65907,6 @@
             "name": "Day 01 start"
         },
         {
-            "id": "0d82c1b2-0ecb-4f4f-b169-21019d7d4729__L0",
-            "name": "RCS systems"
-        },
-        {
             "id": "11",
             "name": "Have Cable"
         },
@@ -65793,6 +65925,18 @@
         {
             "id": "15",
             "name": "Panels Deployed"
+        },
+        {
+            "id": "0d82c1b2-0ecb-4f4f-b169-21019d7d4729__L0",
+            "name": "RCS systems"
+        },
+        {
+            "id": "16",
+            "name": "Have Rectifier"
+        },
+        {
+            "id": "17",
+            "name": "Panels Powered"
         }
     ],
     "engineFieldValues": [
@@ -65802,16 +65946,16 @@
         }
     ],
     "settings": {
-        "startSceneId": "ff18713c-902b-48fa-85f0-4371173cb0f5",
-        "startX": 142,
+        "startSceneId": "ec963f8e-4339-4e80-896e-9d6d94df7d8a",
+        "startX": 155,
         "startY": 44,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1252,
-        "worldScrollY": 1707,
+        "worldScrollX": 1258,
+        "worldScrollY": 1207,
         "zoom": 100,
         "customColorsEnabled": false,
         "sgbEnabled": false,
