@@ -14442,9 +14442,9 @@
                         {
                             "command": "EVENT_SWITCH_SCENE",
                             "args": {
-                                "sceneId": "ff18713c-902b-48fa-85f0-4371173cb0f5",
-                                "x": 180,
-                                "y": 44,
+                                "sceneId": "d91b09f0-a8db-4c88-a123-7446d0c71641",
+                                "x": 1,
+                                "y": 3,
                                 "direction": "left",
                                 "fadeSpeed": "2"
                             },
@@ -14867,11 +14867,6 @@
             "triggers": [],
             "script": [
                 {
-                    "command": "EVENT_RESET_VARIABLES",
-                    "args": {},
-                    "id": "2baa371f-cc61-40eb-8f8e-f02a1e6ac4a5"
-                },
-                {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
                         "actorId": "$self$"
@@ -15292,19 +15287,24 @@
             "triggers": [],
             "script": [
                 {
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    },
+                    "id": "2e9f1669-62e2-4782-aaa3-9cff44b3f85c"
+                },
+                {
+                    "command": "EVENT_RESET_VARIABLES",
+                    "args": {},
+                    "id": "d7975572-3afb-4bdb-b7c9-c837939a6439"
+                },
+                {
                     "command": "EVENT_MUSIC_PLAY",
                     "args": {
                         "musicId": "9697db26-8078-457b-a0fe-0e93875efa9d",
                         "loop": true
                     },
                     "id": "f0f6c77b-f705-4193-9b9a-154333d3e5fb"
-                },
-                {
-                    "command": "EVENT_ACTOR_HIDE",
-                    "args": {
-                        "actorId": "$self$"
-                    },
-                    "id": "2e9f1669-62e2-4782-aaa3-9cff44b3f85c"
                 },
                 {
                     "command": "EVENT_AWAIT_INPUT",
@@ -15318,9 +15318,9 @@
                 {
                     "command": "EVENT_SWITCH_SCENE",
                     "args": {
-                        "sceneId": "7aa27ff8-a349-449a-8f65-897689cd8b61",
-                        "x": 8,
-                        "y": 4,
+                        "sceneId": "5cba8fc6-c451-46c7-814a-1e8df0bac6c2",
+                        "x": 17,
+                        "y": 2,
                         "direction": "right",
                         "fadeSpeed": "2"
                     },
@@ -42652,7 +42652,7 @@
         },
         {
             "name": "Day 01 - Bohemia 02",
-            "backgroundId": "612931cb-1e46-4c62-9746-9ebd04fdbc09",
+            "backgroundId": "fef6b9e1-a9e3-4bc4-a382-7ce131ad89c0",
             "width": 198,
             "height": 70,
             "type": "TOPDOWN",
@@ -56814,18 +56814,6 @@
                                             "variable": "16"
                                         },
                                         "id": "0d2423f9-5209-48ed-ab7b-9541659bed6d"
-                                    },
-                                    {
-                                        "command": "EVENT_SWITCH_SCENE",
-                                        "args": {
-                                            "sceneId": "e5bf236a-ffe6-43d6-af00-2740c3ee3a75",
-                                            "x": 174,
-                                            "y": 44,
-                                            "direction": "",
-                                            "fadeSpeed": "2",
-                                            "__collapse": false
-                                        },
-                                        "id": "f6b2d295-46a8-473a-87fd-137dd79ecd7c"
                                     }
                                 ],
                                 "false": []
@@ -57164,6 +57152,17 @@
                                             "avatarId": ""
                                         },
                                         "id": "1e8408e2-cd29-4572-b3d0-3f17d14be75b"
+                                    },
+                                    {
+                                        "command": "EVENT_SWITCH_SCENE",
+                                        "args": {
+                                            "sceneId": "077a3efd-d0e5-429b-a94c-45edbe87a399",
+                                            "x": 0,
+                                            "y": 0,
+                                            "direction": "",
+                                            "fadeSpeed": "2"
+                                        },
+                                        "id": "70c38fdc-fb56-4e22-a51c-7b4413e0c54c"
                                     }
                                 ],
                                 "false": [
@@ -57269,6 +57268,194 @@
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": []
+        },
+        {
+            "name": "Day 00",
+            "backgroundId": "67a79f49-f3a9-41ee-aaad-51dfd8d64e0c",
+            "width": 20,
+            "height": 18,
+            "type": "TOPDOWN",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "id": "5cba8fc6-c451-46c7-814a-1e8df0bac6c2",
+            "x": 506,
+            "y": 54,
+            "actors": [],
+            "triggers": [],
+            "script": [
+                {
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    },
+                    "id": "1544b280-7e4b-429a-9cf3-71e6b2414cc2"
+                },
+                {
+                    "command": "EVENT_FADE_IN",
+                    "args": {
+                        "speed": "2"
+                    },
+                    "id": "7cf3605e-4830-4583-8d25-3a54f2f00796"
+                },
+                {
+                    "command": "EVENT_WAIT",
+                    "args": {
+                        "time": 3
+                    },
+                    "id": "b4b054ff-29d3-4936-b333-f14316e5947e"
+                },
+                {
+                    "command": "EVENT_FADE_OUT",
+                    "args": {
+                        "speed": "2"
+                    },
+                    "id": "f97846c3-d5c5-475e-99ea-62618383c8fa"
+                },
+                {
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "7aa27ff8-a349-449a-8f65-897689cd8b61",
+                        "x": 10,
+                        "y": 1,
+                        "direction": "",
+                        "fadeSpeed": "2"
+                    },
+                    "id": "207bbc95-5775-48e9-9b92-dc25b5002353"
+                }
+            ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": []
+        },
+        {
+            "name": "Day 01",
+            "backgroundId": "f741aff9-eb49-4c09-a56d-a980a98b0dff",
+            "width": 20,
+            "height": 18,
+            "type": "TOPDOWN",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "id": "d91b09f0-a8db-4c88-a123-7446d0c71641",
+            "x": 2410,
+            "y": 1113,
+            "actors": [],
+            "triggers": [],
+            "script": [
+                {
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    },
+                    "id": "6549b24d-b09b-45f4-b31d-9608808fc33c"
+                },
+                {
+                    "command": "EVENT_FADE_IN",
+                    "args": {
+                        "speed": "2"
+                    },
+                    "id": "fae2fc1d-99f6-408e-bfe5-0942b1499a24"
+                },
+                {
+                    "command": "EVENT_WAIT",
+                    "args": {
+                        "time": 3
+                    },
+                    "id": "4d4c566d-bc82-4550-866f-a58893e10d45"
+                },
+                {
+                    "command": "EVENT_FADE_OUT",
+                    "args": {
+                        "speed": "2"
+                    },
+                    "id": "a479194e-74e5-4df8-b774-b468bf330fa3"
+                },
+                {
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "ff18713c-902b-48fa-85f0-4371173cb0f5",
+                        "x": 180,
+                        "y": 44,
+                        "direction": "",
+                        "fadeSpeed": "2"
+                    },
+                    "id": "2361ebe5-8cee-4e2f-8061-bd149b87ea5c"
+                }
+            ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": []
+        },
+        {
+            "name": "Day 02",
+            "backgroundId": "c336c8cf-cb14-416e-94d9-9f4838f25630",
+            "width": 20,
+            "height": 18,
+            "type": "TOPDOWN",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "id": "077a3efd-d0e5-429b-a94c-45edbe87a399",
+            "x": 2289,
+            "y": 2391,
+            "actors": [],
+            "triggers": [],
+            "script": [
+                {
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    },
+                    "id": "ac3c8ad8-58cd-4cb0-819b-b19a461a2ac7"
+                },
+                {
+                    "command": "EVENT_FADE_IN",
+                    "args": {
+                        "speed": "2"
+                    },
+                    "id": "eddd7496-44e8-4eca-97b0-96d417740c8a"
+                },
+                {
+                    "command": "EVENT_WAIT",
+                    "args": {
+                        "time": 3
+                    },
+                    "id": "f625125c-d65e-4614-a063-675debb599ea"
+                },
+                {
+                    "command": "EVENT_FADE_OUT",
+                    "args": {
+                        "speed": "2"
+                    },
+                    "id": "2e6537aa-8753-409f-b5e0-6026ff702eaa"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Yeah, this is\nit for now."
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "bc3f9df0-9ff4-450a-a6e8-108829a2b9cb"
+                },
+                {
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "ff18713c-902b-48fa-85f0-4371173cb0f5",
+                        "x": 180,
+                        "y": 44,
+                        "direction": "",
+                        "fadeSpeed": "2",
+                        "__comment": true
+                    },
+                    "id": "41f09234-822e-4d3e-b7dd-5b95a1e64978"
+                }
+            ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": []
         }
     ],
     "backgrounds": [
@@ -57363,6 +57550,36 @@
             "tileColors": []
         },
         {
+            "id": "67a79f49-f3a9-41ee-aaad-51dfd8d64e0c",
+            "name": "day_00",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "day_00.png",
+            "tileColors": []
+        },
+        {
+            "id": "f741aff9-eb49-4c09-a56d-a980a98b0dff",
+            "name": "day_01",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "day_01.png",
+            "tileColors": []
+        },
+        {
+            "id": "c336c8cf-cb14-416e-94d9-9f4838f25630",
+            "name": "day_02",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "day_02.png",
+            "tileColors": []
+        },
+        {
             "id": "f18b24d1-7e6b-44cf-9a05-cea23bd7b067",
             "name": "docking",
             "width": 59,
@@ -57400,6 +57617,16 @@
             "imageWidth": 1584,
             "imageHeight": 560,
             "filename": "europa_day_01.png",
+            "tileColors": []
+        },
+        {
+            "id": "fef6b9e1-a9e3-4bc4-a382-7ce131ad89c0",
+            "name": "europa_day_01_extended",
+            "width": 198,
+            "height": 70,
+            "imageWidth": 1584,
+            "imageHeight": 560,
+            "filename": "europa_day_01_extended.png",
             "tileColors": []
         },
         {
@@ -65974,16 +66201,16 @@
             "name": "Panels Deployed"
         },
         {
-            "id": "0d82c1b2-0ecb-4f4f-b169-21019d7d4729__L0",
-            "name": "RCS systems"
-        },
-        {
             "id": "16",
             "name": "Have Rectifier"
         },
         {
             "id": "17",
             "name": "Panels Powered"
+        },
+        {
+            "id": "0d82c1b2-0ecb-4f4f-b169-21019d7d4729__L0",
+            "name": "RCS systems"
         }
     ],
     "engineFieldValues": [
@@ -65993,16 +66220,16 @@
         }
     ],
     "settings": {
-        "startSceneId": "ec963f8e-4339-4e80-896e-9d6d94df7d8a",
-        "startX": 155,
-        "startY": 44,
+        "startSceneId": "1f10c435-64b1-4a4c-a5e5-19aa1d883949",
+        "startX": 17,
+        "startY": 1,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 1258,
-        "worldScrollY": 1707,
+        "worldScrollY": 1700,
         "zoom": 100,
         "customColorsEnabled": false,
         "sgbEnabled": false,
