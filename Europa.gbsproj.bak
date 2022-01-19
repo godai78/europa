@@ -18886,7 +18886,7 @@
                     "hit3Script": [],
                     "id": "470a2e6d-f278-4ef4-a786-aa9bf71c8ba8",
                     "x": 5,
-                    "y": 16
+                    "y": 15
                 }
             ],
             "triggers": [],
@@ -102034,28 +102034,79 @@
                     "collisionGroup": "",
                     "script": [
                         {
-                            "command": "EVENT_TEXT",
+                            "command": "EVENT_IF_TRUE",
                             "args": {
-                                "text": [
-                                    "Power consumption\nis almost equal to",
-                                    "power supply from\nsolar panels."
-                                ],
-                                "avatarId": ""
+                                "variable": "23",
+                                "__collapseElse": false
                             },
-                            "id": "6d59d794-6135-4049-9b73-84a2a9ed7c83"
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Power level is\nenough to try to",
+                                                "dploy all solar\npanels onboard."
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "99284927-53c1-477a-bd57-d09ab7a3fe68"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Power consumption\nis almost equal to",
+                                                "power supply from\nsolar panels. More",
+                                                "time is needed to\ncharge enough."
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "6d59d794-6135-4049-9b73-84a2a9ed7c83"
+                                    }
+                                ]
+                            },
+                            "id": "d6bb748c-beed-48c7-b745-9b83d9fa7b6f"
                         }
                     ],
                     "startScript": [
                         {
-                            "command": "EVENT_ACTOR_SET_FRAME",
+                            "command": "EVENT_IF_TRUE",
                             "args": {
-                                "actorId": "$self$",
-                                "frame": {
-                                    "type": "number",
-                                    "value": 3
-                                }
+                                "variable": "23",
+                                "__collapseElse": false
                             },
-                            "id": "48215a3e-1bc4-46be-b9b6-71198ecea671"
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_SET_FRAME",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "frame": {
+                                                "type": "number",
+                                                "value": 5
+                                            }
+                                        },
+                                        "id": "9e2f6221-6cac-42f2-8789-575b4a09b640"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "command": "EVENT_ACTOR_SET_FRAME",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "frame": {
+                                                "type": "number",
+                                                "value": 3
+                                            }
+                                        },
+                                        "id": "48215a3e-1bc4-46be-b9b6-71198ecea671"
+                                    }
+                                ]
+                            },
+                            "id": "88295eb2-89e4-4151-b5bb-277bb07ccf94"
                         }
                     ],
                     "updateScript": [],
@@ -111311,6 +111362,10 @@
         {
             "id": "0d82c1b2-0ecb-4f4f-b169-21019d7d4729__L0",
             "name": "RCS systems"
+        },
+        {
+            "id": "23",
+            "name": "Generator Repaired"
         }
     ],
     "engineFieldValues": [
@@ -111328,8 +111383,8 @@
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1990,
-        "worldScrollY": 2416,
+        "worldScrollX": 629,
+        "worldScrollY": 116,
         "zoom": 100,
         "customColorsEnabled": false,
         "sgbEnabled": false,
