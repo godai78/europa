@@ -14286,7 +14286,28 @@
                             "id": "f2539a91-e7ba-4129-b5d3-12892ba4233d"
                         }
                     ],
-                    "startScript": [],
+                    "startScript": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "6",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_HIDE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "9a53baab-9903-49d1-8581-0d1bdb363482"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "929e3ce0-7160-47c7-9c39-9249c2a6c963"
+                        }
+                    ],
                     "updateScript": [],
                     "hit1Script": [],
                     "hit2Script": [],
@@ -14306,71 +14327,14 @@
                     "height": 2,
                     "script": [
                         {
-                            "command": "EVENT_IF_TRUE",
+                            "command": "EVENT_TEXT",
                             "args": {
-                                "variable": "0",
-                                "__collapseElse": false
-                            },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                "Orbital module\nlock is open."
-                                            ],
-                                            "avatarId": ""
-                                        },
-                                        "id": "88e7fbfa-872f-460f-8ac6-7522181897f6"
-                                    }
+                                "text": [
+                                    "Orbital module\nlock is open."
                                 ],
-                                "false": [
-                                    {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                "Orbital module\nairlock control."
-                                            ],
-                                            "avatarId": ""
-                                        },
-                                        "id": "2fbe9c6c-573d-4a46-87ba-5129f2778fa8"
-                                    },
-                                    {
-                                        "command": "EVENT_CHOICE",
-                                        "args": {
-                                            "variable": "L0",
-                                            "trueText": "Operate airlock",
-                                            "falseText": "Not now"
-                                        },
-                                        "id": "dd6a3bbf-1ea8-4b5e-9eb0-ea88ce58ac73"
-                                    },
-                                    {
-                                        "command": "EVENT_IF_TRUE",
-                                        "args": {
-                                            "variable": "L0",
-                                            "__collapseElse": true
-                                        },
-                                        "children": {
-                                            "true": [
-                                                {
-                                                    "command": "EVENT_SWITCH_SCENE",
-                                                    "args": {
-                                                        "sceneId": "5f419201-b500-426e-9861-b30d0d1a5315",
-                                                        "x": 9,
-                                                        "y": 13,
-                                                        "direction": "",
-                                                        "fadeSpeed": "2"
-                                                    },
-                                                    "id": "a59bc390-41ae-47b2-951a-42149f77150d"
-                                                }
-                                            ],
-                                            "false": []
-                                        },
-                                        "id": "044201f7-5d55-4c9a-9bb4-422e70bd0321"
-                                    }
-                                ]
+                                "avatarId": ""
                             },
-                            "id": "23ced0bf-902f-4ac6-93bc-5af140996bb9"
+                            "id": "88e7fbfa-872f-460f-8ac6-7522181897f6"
                         }
                     ],
                     "leaveScript": []
@@ -14392,41 +14356,6 @@
                                 "avatarId": ""
                             },
                             "id": "89ba592b-b3e3-4237-91e7-9a878a124cc8"
-                        }
-                    ],
-                    "leaveScript": []
-                },
-                {
-                    "name": "",
-                    "id": "c87c71f9-09c5-4d8b-ae78-00a4b4f3432d",
-                    "x": 172,
-                    "y": 42,
-                    "width": 1,
-                    "height": 4,
-                    "script": [
-                        {
-                            "command": "EVENT_IF_TRUE",
-                            "args": {
-                                "variable": "0",
-                                "__collapseElse": false
-                            },
-                            "children": {
-                                "true": [],
-                                "false": [
-                                    {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                "Orbital module not\naccessible now.",
-                                                "You must open\nOM lock first."
-                                            ],
-                                            "avatarId": ""
-                                        },
-                                        "id": "f62da58f-d4e6-4707-a54c-f4fcce8f7071"
-                                    }
-                                ]
-                            },
-                            "id": "81a6f510-49fa-4ca3-b98a-3684088e3065"
                         }
                     ],
                     "leaveScript": []
@@ -23284,11 +23213,11 @@
                                 "actorId": "$self$",
                                 "x": {
                                     "type": "number",
-                                    "value": 41
+                                    "value": 45
                                 },
                                 "y": {
                                     "type": "number",
-                                    "value": 16
+                                    "value": 22
                                 },
                                 "moveType": "horizontal",
                                 "useCollisions": false
@@ -23328,11 +23257,11 @@
                             "args": {
                                 "x": {
                                     "type": "number",
-                                    "value": 11
+                                    "value": 16
                                 },
                                 "y": {
                                     "type": "number",
-                                    "value": 4
+                                    "value": 9
                                 },
                                 "speed": 2
                             },
@@ -41283,7 +41212,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Battery bay 01.\nThe charger is",
+                                    "Battery Bank 01.\nThe charger is",
                                     "located here. The\nbatteries look",
                                     "like they are\nfully discharged."
                                 ],
@@ -41306,7 +41235,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Battery bay 02.\nThe batteries look",
+                                    "Battery Bank 02.\nThe batteries look",
                                     "like they are\nfully discharged."
                                 ],
                                 "avatarId": ""
@@ -41344,6 +41273,27 @@
                                 "avatarId": ""
                             },
                             "id": "e40fdb46-00f9-436b-a7ce-bb00de963281"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "c815c408-d5f6-4620-b516-c4f138d8d773",
+                    "x": 115,
+                    "y": 51,
+                    "width": 3,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "RCS fuel control.\nNo use of it now."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "64764157-f126-479b-ad52-7f5dcd1ee0bf"
                         }
                     ],
                     "leaveScript": []
@@ -57319,7 +57269,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Battery bay 01"
+                                    "Battery Bank 01"
                                 ],
                                 "avatarId": ""
                             },
@@ -57361,8 +57311,8 @@
                                             "text": [
                                                 "Looks like the\nbattery base is",
                                                 "not charging. The\nrectifier seems",
-                                                "to be dead. Maybe\nthere is a spare",
-                                                "one in the cargo\ncrates?"
+                                                "to be dead. Should\nthere not be one",
+                                                "spare in one of\nthe cargo crates?"
                                             ],
                                             "avatarId": ""
                                         },
@@ -57394,7 +57344,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Battery bay 02"
+                                    "Battery Bank 02"
                                 ],
                                 "avatarId": ""
                             },
@@ -57476,6 +57426,27 @@
                                 "avatarId": ""
                             },
                             "id": "1b54c982-f176-42d1-a996-ef026ddd5eea"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "1ef9f4b1-49cd-40e1-95b4-d48ce3a447fa",
+                    "x": 115,
+                    "y": 51,
+                    "width": 3,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "RCS fuel control.\nNo use of it now."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "03da1de9-ec99-4c64-a078-1c9f0cbdd037"
                         }
                     ],
                     "leaveScript": []
@@ -57677,7 +57648,7 @@
             "spritePaletteIds": [],
             "collisions": [],
             "id": "077a3efd-d0e5-429b-a94c-45edbe87a399",
-            "x": 2005,
+            "x": 2004,
             "y": 2770,
             "actors": [],
             "triggers": [],
@@ -57702,7 +57673,8 @@
                         "text": [
                             "This is it for\nthis release."
                         ],
-                        "avatarId": ""
+                        "avatarId": "",
+                        "__comment": true
                     },
                     "id": "5fd70e80-85ff-46a0-b34b-1d0760b2087e"
                 },
@@ -57712,10 +57684,10 @@
                         "text": [
                             "Ensure the Mazovia\noxygen generator",
                             "works properly,\nwhile batteries",
-                            "take time to\nfully charge."
+                            "take time to\nfully recharge."
                         ],
                         "avatarId": "",
-                        "__comment": true
+                        "__comment": false
                     },
                     "id": "6c733ea7-e790-4126-ad61-e27778d2aa42"
                 },
@@ -57731,9 +57703,22 @@
                     "args": {
                         "speed": "2",
                         "__collapse": false,
-                        "__comment": true
+                        "__comment": false
                     },
                     "id": "2e6537aa-8753-409f-b5e0-6026ff702eaa"
+                },
+                {
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "1f10c435-64b1-4a4c-a5e5-19aa1d883949",
+                        "x": 17,
+                        "y": 2,
+                        "direction": "",
+                        "fadeSpeed": "2",
+                        "__comment": true,
+                        "__collapse": false
+                    },
+                    "id": "b300dd44-aad0-464b-9acc-5fc7893accd5"
                 },
                 {
                     "command": "EVENT_SWITCH_SCENE",
@@ -72322,45 +72307,12 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Battery bay 01"
+                                    "Everything seems\nto be alright with",
+                                    "Battery Bank 01."
                                 ],
                                 "avatarId": ""
                             },
                             "id": "52875adf-abc1-4e4c-a047-fd9bcee09668"
-                        },
-                        {
-                            "command": "EVENT_IF_TRUE",
-                            "args": {
-                                "variable": "16",
-                                "__collapseElse": false
-                            },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                "Good. That's it\nfor now."
-                                            ],
-                                            "avatarId": ""
-                                        },
-                                        "id": "dca6bfca-099c-40b2-90f3-98118ff0f2d5"
-                                    }
-                                ],
-                                "false": [
-                                    {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                "Go get the\nrectifier."
-                                            ],
-                                            "avatarId": ""
-                                        },
-                                        "id": "6a2a0dfb-bb23-427e-9882-5eae36301ec2"
-                                    }
-                                ]
-                            },
-                            "id": "20522e29-0158-4c47-ad53-92f555f28a4e"
                         }
                     ],
                     "leaveScript": []
@@ -72377,7 +72329,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Battery bay 02"
+                                    "Battery Bank 02 is\ndead all the same."
                                 ],
                                 "avatarId": ""
                             },
@@ -72730,6 +72682,27 @@
                                 "avatarId": ""
                             },
                             "id": "640bb040-5a86-445a-bf3e-39352b36d530"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "5890f40f-a911-4828-938d-43f1ac1ef17a",
+                    "x": 115,
+                    "y": 51,
+                    "width": 3,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "RCS fuel control.\nNo use of it now."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "4f74946a-9749-4b20-a115-e9f254656bc0"
                         }
                     ],
                     "leaveScript": []
@@ -75073,193 +75046,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0,
                 0,
                 15,
@@ -75271,9 +75057,196 @@
                 0,
                 0,
                 0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 15,
                 0,
                 0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                15,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -86672,7 +86645,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Not enought power\nto open airlock."
+                                    "Not enough power\nto open airlock."
                                 ],
                                 "avatarId": ""
                             },
@@ -100736,7 +100709,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Not enought power\nto open airlock."
+                                    "Not enough power\nto open airlock."
                                 ],
                                 "avatarId": ""
                             },
@@ -100842,6 +100815,28 @@
                                 "avatarId": ""
                             },
                             "id": "54d0555e-796c-4217-8e6d-ec88f2aaa2d4"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "abd2f9c7-75d5-490f-8455-7ac92c8b60a9",
+                    "x": 67,
+                    "y": 36,
+                    "width": 4,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Wha-at? A triwing\nscredriver? What",
+                                    "is that, handheld\nNintendo or what?"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "b9ef7e48-e402-4656-916b-a3172d318116"
                         }
                     ],
                     "leaveScript": []
@@ -112142,10 +112137,6 @@
             "name": "Generator Repaired"
         },
         {
-            "id": "0d82c1b2-0ecb-4f4f-b169-21019d7d4729__L0",
-            "name": "RCS systems"
-        },
-        {
             "id": "24",
             "name": "Need Infill"
         },
@@ -112160,6 +112151,10 @@
         {
             "id": "27",
             "name": "Need Rectifier"
+        },
+        {
+            "id": "0d82c1b2-0ecb-4f4f-b169-21019d7d4729__L0",
+            "name": "RCS systems"
         }
     ],
     "engineFieldValues": [
@@ -112170,15 +112165,15 @@
     ],
     "settings": {
         "startSceneId": "1f10c435-64b1-4a4c-a5e5-19aa1d883949",
-        "startX": 17,
-        "startY": 2,
+        "startX": 0,
+        "startY": 1,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1504,
-        "worldScrollY": 2600,
+        "worldScrollX": 1919,
+        "worldScrollY": 2200,
         "zoom": 100,
         "customColorsEnabled": false,
         "sgbEnabled": false,
@@ -112207,9 +112202,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            403,
-            121,
-            121
+            673,
+            202,
+            202
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
