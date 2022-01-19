@@ -71577,19 +71577,45 @@
                                         "command": "EVENT_IF_TRUE",
                                         "args": {
                                             "variable": "L3",
-                                            "__collapseElse": true
+                                            "__collapseElse": false
                                         },
                                         "children": {
                                             "true": [
                                                 {
-                                                    "command": "EVENT_TEXT",
+                                                    "command": "EVENT_IF_TRUE",
                                                     "args": {
-                                                        "text": [
-                                                            "No tools of this\nkind here..."
-                                                        ],
-                                                        "avatarId": ""
+                                                        "variable": "24",
+                                                        "__collapseElse": false
                                                     },
-                                                    "id": "1c6f40e6-ecd1-49d2-adc0-e2888712f63f"
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "command": "EVENT_TEXT",
+                                                                "args": {
+                                                                    "text": [
+                                                                        "Some kind of soft\nfuzzy masterial...",
+                                                                        "Nope. Nothing that\ncould work to",
+                                                                        "replace the\nfilter..."
+                                                                    ],
+                                                                    "avatarId": ""
+                                                                },
+                                                                "id": "f05cf5ec-3f44-43f0-a500-df56f915aece"
+                                                            }
+                                                        ],
+                                                        "false": [
+                                                            {
+                                                                "command": "EVENT_TEXT",
+                                                                "args": {
+                                                                    "text": [
+                                                                        "No tools of this\nkind here..."
+                                                                    ],
+                                                                    "avatarId": ""
+                                                                },
+                                                                "id": "1c6f40e6-ecd1-49d2-adc0-e2888712f63f"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "id": "af7f72ba-0d94-49c4-a4a9-94e9874f6f6b"
                                                 }
                                             ],
                                             "false": []
@@ -71602,7 +71628,7 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Cargo crate"
+                                                "Cargo crate with\ntechnical supplies"
                                             ],
                                             "avatarId": ""
                                         },
@@ -71637,7 +71663,7 @@
                         {
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "22",
+                                "variable": "24",
                                 "__collapseElse": false
                             },
                             "children": {
@@ -71663,11 +71689,20 @@
                                                     "command": "EVENT_TEXT",
                                                     "args": {
                                                         "text": [
-                                                            "No tools of this\nkind here..."
+                                                            "Some kind of soft,\nfuzzy material...",
+                                                            "Maybe these towels\nwill do? Oh...",
+                                                            "That's much better\nfor the purpose!"
                                                         ],
                                                         "avatarId": ""
                                                     },
                                                     "id": "cd8ad1b7-2c65-42ea-83bd-abf669913824"
+                                                },
+                                                {
+                                                    "command": "EVENT_SET_TRUE",
+                                                    "args": {
+                                                        "variable": "25"
+                                                    },
+                                                    "id": "f6afa912-9596-4486-a0e3-a1a46db7f2c4"
                                                 }
                                             ],
                                             "false": []
@@ -71680,7 +71715,7 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Cargo crate"
+                                                "Cargo crate with\nlife supplies"
                                             ],
                                             "avatarId": ""
                                         },
@@ -102811,7 +102846,8 @@
             "height": 18,
             "imageWidth": 1616,
             "imageHeight": 144,
-            "filename": "unused\\ride-scroll.png"
+            "filename": "unused\\ride-scroll.png",
+            "tileColors": []
         },
         {
             "id": "b20edf99-23c3-44fd-8c4b-ec292bd89d0e",
@@ -111998,12 +112034,20 @@
             "name": "Need Tools"
         },
         {
+            "id": "23",
+            "name": "Generator Repaired"
+        },
+        {
             "id": "0d82c1b2-0ecb-4f4f-b169-21019d7d4729__L0",
             "name": "RCS systems"
         },
         {
-            "id": "23",
-            "name": "Generator Repaired"
+            "id": "24",
+            "name": "Need Infill"
+        },
+        {
+            "id": "25",
+            "name": "Have Infill"
         }
     ],
     "engineFieldValues": [
@@ -112021,8 +112065,8 @@
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1302,
-        "worldScrollY": 1400,
+        "worldScrollX": 2473,
+        "worldScrollY": 3700,
         "zoom": 100,
         "customColorsEnabled": false,
         "sgbEnabled": false,
