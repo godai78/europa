@@ -42175,8 +42175,8 @@
             "spritePaletteIds": [],
             "collisions": [],
             "id": "3b69c1b4-a4f8-430d-bedf-01ccee3a2800",
-            "x": 2257,
-            "y": 2066,
+            "x": 2285,
+            "y": 2022,
             "actors": [
                 {
                     "name": "Ext monitor",
@@ -71920,7 +71920,7 @@
             "playerHit3Script": []
         },
         {
-            "name": "Day 02 - Bohemia",
+            "name": "Day 02 - Panonia",
             "backgroundId": "3d89b709-3592-47d7-b029-1d4a99f04610",
             "width": 198,
             "height": 70,
@@ -85792,8 +85792,106 @@
             "id": "9509ee90-debe-4d27-9537-feffe4db0c3a",
             "x": 608,
             "y": 2752,
-            "actors": [],
-            "triggers": [],
+            "actors": [
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "23b75d3e-3982-4948-98bd-cffcd6b46e70",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "1",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Not enought power\nto open airlock."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "5b3d3345-127e-4883-ac3a-294cfeee461f"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "91b22d09-a564-4edd-a8cc-de7bc1e3ad51",
+                    "x": 103,
+                    "y": 11
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "23b75d3e-3982-4948-98bd-cffcd6b46e70",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "1",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "4d203df1-5899-42aa-a733-2dc32c4b636e",
+                    "x": 105,
+                    "y": 45
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "23b75d3e-3982-4948-98bd-cffcd6b46e70",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "1",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "f0739aa5-45cd-47bc-86d9-5be11efe0d5c",
+                    "x": 93,
+                    "y": 45
+                }
+            ],
+            "triggers": [
+                {
+                    "name": "",
+                    "id": "32032db0-1128-496f-9576-f60696b059c6",
+                    "x": 98,
+                    "y": 39,
+                    "width": 4,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "d25ba2e0-ec91-4b01-b14b-618a049240fb",
+                                "x": 100,
+                                "y": 44,
+                                "direction": "",
+                                "fadeSpeed": "2"
+                            },
+                            "id": "7420eb25-cc3c-46f3-afec-ac2a1fdec00f"
+                        }
+                    ],
+                    "leaveScript": []
+                }
+            ],
             "script": [
                 {
                     "command": "EVENT_SET_TRUE",
@@ -85849,7 +85947,7 @@
             "playerHit3Script": []
         },
         {
-            "name": "Day 02 - Bohemia",
+            "name": "Day 02 - Mazovia",
             "backgroundId": "7e07d0d8-9f98-4ed9-9107-74750cc3e2bc",
             "width": 198,
             "height": 70,
@@ -99720,9 +99818,65 @@
             ],
             "id": "ed4541d1-e371-43b8-84c9-f772fd37a09c",
             "x": 76,
-            "y": 3384,
-            "actors": [],
-            "triggers": [],
+            "y": 3382,
+            "actors": [
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "23b75d3e-3982-4948-98bd-cffcd6b46e70",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "1",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Not enought power\nto open airlock."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "24e6ec08-560d-4f93-b31b-38e612fc7d41"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "59e1ec1e-5726-49f9-9207-213847dd736a",
+                    "x": 37,
+                    "y": 45
+                }
+            ],
+            "triggers": [
+                {
+                    "name": "",
+                    "id": "acbdf807-eab3-4bd6-9ce7-ac9f8cead69e",
+                    "x": 95,
+                    "y": 42,
+                    "width": 1,
+                    "height": 4,
+                    "script": [
+                        {
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "d25ba2e0-ec91-4b01-b14b-618a049240fb",
+                                "x": 100,
+                                "y": 44,
+                                "direction": "",
+                                "fadeSpeed": "2"
+                            },
+                            "id": "1c0811dc-005e-4944-8aa1-d15f4a72e6aa"
+                        }
+                    ],
+                    "leaveScript": []
+                }
+            ],
             "script": [
                 {
                     "command": "EVENT_SET_TRUE",
@@ -99950,23 +100104,14 @@
             "tileColors": []
         },
         {
-            "id": "3e1ff57e-31af-47d7-82ef-713c017f708f",
-            "name": "europa_day_02",
-            "width": 198,
-            "height": 70,
-            "imageWidth": 1584,
-            "imageHeight": 560,
-            "filename": "europa_day_02.png",
-            "tileColors": []
-        },
-        {
             "id": "94aba8b7-3243-498d-bebd-17f8640c4713",
             "name": "europa_day_02_B",
             "width": 198,
             "height": 70,
             "imageWidth": 1584,
             "imageHeight": 560,
-            "filename": "europa_day_02_B.png"
+            "filename": "europa_day_02_B.png",
+            "tileColors": []
         },
         {
             "id": "7e07d0d8-9f98-4ed9-9107-74750cc3e2bc",
@@ -99975,7 +100120,8 @@
             "height": 70,
             "imageWidth": 1584,
             "imageHeight": 560,
-            "filename": "europa_day_02_M.png"
+            "filename": "europa_day_02_M.png",
+            "tileColors": []
         },
         {
             "id": "3d89b709-3592-47d7-b029-1d4a99f04610",
@@ -99984,7 +100130,8 @@
             "height": 70,
             "imageWidth": 1584,
             "imageHeight": 560,
-            "filename": "europa_day_02_P.png"
+            "filename": "europa_day_02_P.png",
+            "tileColors": []
         },
         {
             "id": "d7483b0b-7f79-4c8f-b578-f20407b5ba95",
@@ -100094,6 +100241,16 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "title.png",
+            "tileColors": []
+        },
+        {
+            "id": "fba6b992-ab02-4caa-a826-9471effb2348",
+            "name": "unused\\europa_day_02",
+            "width": 198,
+            "height": 70,
+            "imageWidth": 1584,
+            "imageHeight": 560,
+            "filename": "unused\\europa_day_02.png",
             "tileColors": []
         },
         {
@@ -108585,9 +108742,9 @@
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 790,
-        "worldScrollY": 873,
-        "zoom": 50,
+        "worldScrollX": 1203,
+        "worldScrollY": 2776,
+        "zoom": 100,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
