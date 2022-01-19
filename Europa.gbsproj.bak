@@ -13876,8 +13876,8 @@
                 0
             ],
             "id": "ec963f8e-4339-4e80-896e-9d6d94df7d8a",
-            "x": 603,
-            "y": 889,
+            "x": 611,
+            "y": 705,
             "actors": [
                 {
                     "name": "",
@@ -14921,8 +14921,8 @@
                 0
             ],
             "id": "1f10c435-64b1-4a4c-a5e5-19aa1d883949",
-            "x": 73,
-            "y": 62,
+            "x": 79,
+            "y": 60,
             "actors": [],
             "triggers": [],
             "script": [
@@ -17661,6 +17661,39 @@
                     "id": "c2be8398-0d52-4ad3-a265-d2589e447462",
                     "x": 18,
                     "y": 19
+                },
+                {
+                    "name": "Main Airlock door",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "dc8ecc61-4706-4d35-a286-8f696c04fd08",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 255,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "1",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Docking ring\nairlock.",
+                                    "You cannot open\nit in-flight."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "4f3bbc42-fa3a-47a1-9458-306bc6c237bf"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "7a2ebef6-34a0-4eac-9559-3a5198b1cac6",
+                    "x": 21,
+                    "y": 4
                 }
             ],
             "triggers": [
@@ -19295,8 +19328,8 @@
                 0
             ],
             "id": "964e1b57-148a-43ba-941c-f7e541371fc9",
-            "x": 690.5,
-            "y": 688,
+            "x": 2602.5,
+            "y": 494,
             "actors": [
                 {
                     "name": "",
@@ -24580,8 +24613,8 @@
                 0
             ],
             "id": "fb109353-1ec5-49cf-a8a8-c2caee444fea",
-            "x": 2215,
-            "y": 1104.5,
+            "x": 2229,
+            "y": 898.5,
             "actors": [
                 {
                     "name": "",
@@ -25681,8 +25714,8 @@
                 0
             ],
             "id": "5f419201-b500-426e-9861-b30d0d1a5315",
-            "x": 2219.5,
-            "y": 900.5,
+            "x": 2231.5,
+            "y": 710.5,
             "actors": [
                 {
                     "name": "",
@@ -26229,8 +26262,8 @@
                 0
             ],
             "id": "5e6db3f4-a307-40e2-b63d-b5c7ce609daa",
-            "x": 2218,
-            "y": 1299,
+            "x": 2226,
+            "y": 1095,
             "actors": [
                 {
                     "name": "",
@@ -40809,6 +40842,39 @@
                     "id": "d98a01c1-ebf7-4c5d-8bdd-fbcd7958fdd0",
                     "x": 99,
                     "y": 38
+                },
+                {
+                    "name": "Main Airlock door",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "dc8ecc61-4706-4d35-a286-8f696c04fd08",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 255,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "1",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Docking ring\nairlock.",
+                                    "You cannot open\nit in-flight."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "d2b59cea-17c9-45f4-87ed-ca7f5a06e3c8"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "6cda5f4a-01ae-40ca-bae5-9b05b8134806",
+                    "x": 99,
+                    "y": 50
                 }
             ],
             "triggers": [
@@ -56290,7 +56356,7 @@
             ],
             "id": "e5bf236a-ffe6-43d6-af00-2740c3ee3a75",
             "x": 627,
-            "y": 2150,
+            "y": 2148,
             "actors": [
                 {
                     "name": "",
@@ -56550,7 +56616,7 @@
                         {
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "22",
+                                "variable": "13",
                                 "__collapseElse": false
                             },
                             "children": {
@@ -56568,7 +56634,7 @@
                                         "command": "EVENT_IF_TRUE",
                                         "args": {
                                             "variable": "L3",
-                                            "__collapseElse": true
+                                            "__collapseElse": false
                                         },
                                         "children": {
                                             "true": [
@@ -56576,11 +56642,20 @@
                                                     "command": "EVENT_TEXT",
                                                     "args": {
                                                         "text": [
-                                                            "No tools of this\nkind here..."
+                                                            "Tools,spare parts\nand some electric",
+                                                            "components...\nWait a  minute!",
+                                                            "You found the\nlink cable!"
                                                         ],
                                                         "avatarId": ""
                                                     },
                                                     "id": "a5f94d82-adb1-4392-b0f7-23a59402f275"
+                                                },
+                                                {
+                                                    "command": "EVENT_SET_TRUE",
+                                                    "args": {
+                                                        "variable": "11"
+                                                    },
+                                                    "id": "2e4c653e-57e5-42ed-8541-ffd94a350c63"
                                                 }
                                             ],
                                             "false": []
@@ -56628,7 +56703,7 @@
                         {
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "22",
+                                "variable": "13",
                                 "__collapseElse": false
                             },
                             "children": {
@@ -56654,7 +56729,8 @@
                                                     "command": "EVENT_TEXT",
                                                     "args": {
                                                         "text": [
-                                                            "No tools of this\nkind here..."
+                                                            "Food, spare socks\nand trousers...",
+                                                            "Probably not here."
                                                         ],
                                                         "avatarId": ""
                                                     },
@@ -56791,6 +56867,39 @@
                     "id": "68d95a0b-d5cd-4d78-b98d-44ff05642cb4",
                     "x": 99,
                     "y": 38
+                },
+                {
+                    "name": "Main Airlock door",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "dc8ecc61-4706-4d35-a286-8f696c04fd08",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 255,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "1",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Docking ring\nairlock.",
+                                    "You cannot open\nit in-flight."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "d2e4b892-5da5-49c3-b16e-bdba30ac4f6c"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "337dce17-b7dd-4b51-84c1-3dccee3b2879",
+                    "x": 99,
+                    "y": 50
                 }
             ],
             "triggers": [
@@ -57130,7 +57239,8 @@
             ],
             "playerHit1Script": [],
             "playerHit2Script": [],
-            "playerHit3Script": []
+            "playerHit3Script": [],
+            "notes": ""
         },
         {
             "name": "Day 00",
@@ -57211,8 +57321,8 @@
             "spritePaletteIds": [],
             "collisions": [],
             "id": "d91b09f0-a8db-4c88-a123-7446d0c71641",
-            "x": 2410,
-            "y": 1113,
+            "x": 1734,
+            "y": 1303,
             "actors": [],
             "triggers": [],
             "script": [
@@ -57280,8 +57390,8 @@
             "spritePaletteIds": [],
             "collisions": [],
             "id": "077a3efd-d0e5-429b-a94c-45edbe87a399",
-            "x": 2305,
-            "y": 2855,
+            "x": 2005,
+            "y": 2770,
             "actors": [],
             "triggers": [],
             "script": [
@@ -57303,8 +57413,9 @@
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "Repair the Mazovia\noxygen generator",
-                            "while batteries\nfully charge."
+                            "Ensure the Mazovia\noxygen generator",
+                            "works properly,\nwhile batteries",
+                            "take time to\nfully charge."
                         ],
                         "avatarId": ""
                     },
@@ -71213,8 +71324,8 @@
                 0
             ],
             "id": "d25ba2e0-ec91-4b01-b14b-618a049240fb",
-            "x": 1690,
-            "y": 3387,
+            "x": 1726,
+            "y": 3583,
             "actors": [
                 {
                     "name": "",
@@ -71238,167 +71349,6 @@
                     "y": 38
                 },
                 {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "c2a86d28-8c13-4726-8171-2cb3caf878ae",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "1",
-                    "script": [
-                        {
-                            "command": "EVENT_TEXT",
-                            "args": {
-                                "text": [
-                                    "Main airlock\nis open."
-                                ],
-                                "avatarId": ""
-                            },
-                            "id": "b62b84d3-40e4-4454-a6be-9161cf12da45"
-                        }
-                    ],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "c6501e43-0c4b-4681-acb7-d0f9a4b857a9",
-                    "x": 166,
-                    "y": 41
-                },
-                {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "7146d0da-cad7-4606-a780-807c183a667a",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "1",
-                    "script": [
-                        {
-                            "command": "EVENT_TEXT",
-                            "args": {
-                                "text": [
-                                    "Docking antenna\nis deployed."
-                                ],
-                                "avatarId": ""
-                            },
-                            "id": "4c9ae0b1-b54f-4473-9d85-07cc74ddeb6f"
-                        }
-                    ],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "a8266fd2-b2e4-4512-b075-85a695593480",
-                    "x": 170,
-                    "y": 41
-                },
-                {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "0dcebd78-52a2-41d3-ae20-d0102dfac609",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "1",
-                    "script": [
-                        {
-                            "command": "EVENT_TEXT",
-                            "args": {
-                                "text": [
-                                    "Electric link\ncontrol panel."
-                                ],
-                                "avatarId": ""
-                            },
-                            "id": "acba5ed2-6aa4-427c-8f73-674d84fb836e"
-                        },
-                        {
-                            "command": "EVENT_CHOICE",
-                            "args": {
-                                "variable": "L3",
-                                "trueText": "Operate panel",
-                                "falseText": "Not now"
-                            },
-                            "id": "1ac7937e-1b42-4505-9bbe-fa8e1b9a11bd"
-                        },
-                        {
-                            "command": "EVENT_IF_TRUE",
-                            "args": {
-                                "variable": "L3",
-                                "__collapseElse": true
-                            },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_SWITCH_SCENE",
-                                        "args": {
-                                            "sceneId": "3b69c1b4-a4f8-430d-bedf-01ccee3a2800",
-                                            "x": 9,
-                                            "y": 12,
-                                            "direction": "",
-                                            "fadeSpeed": "2"
-                                        },
-                                        "id": "006733f5-baaf-4cca-8d36-8b408feec7eb"
-                                    }
-                                ],
-                                "false": []
-                            },
-                            "id": "17dbbbd6-bc83-464b-8d6d-26e03024cccf"
-                        }
-                    ],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "e97742ee-911c-480a-b0cd-b684afe42e41",
-                    "x": 166,
-                    "y": 46
-                },
-                {
-                    "name": "RCS panel",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "8d7eb09c-b64d-4ed4-95ff-52032bbc04e1",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "1",
-                    "script": [
-                        {
-                            "command": "EVENT_TEXT",
-                            "args": {
-                                "text": [
-                                    "You cannot use RCS\nwhile docked."
-                                ],
-                                "avatarId": ""
-                            },
-                            "id": "ac621687-85a4-47b9-a529-866eee3c02cc"
-                        }
-                    ],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "20e585e7-b148-426c-829f-28e7f67120d2",
-                    "x": 180,
-                    "y": 42
-                },
-                {
                     "name": "crate 1",
                     "frame": 0,
                     "animate": false,
@@ -71411,45 +71361,60 @@
                     "collisionGroup": "1",
                     "script": [
                         {
-                            "command": "EVENT_CHOICE",
-                            "args": {
-                                "variable": "L3",
-                                "trueText": "Search cargo",
-                                "falseText": "Not now"
-                            },
-                            "id": "eb76ab82-3992-4669-b5ff-5d8622804dc8"
-                        },
-                        {
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "L3",
-                                "__collapseElse": true
+                                "variable": "22",
+                                "__collapseElse": false
                             },
                             "children": {
                                 "true": [
                                     {
+                                        "command": "EVENT_CHOICE",
+                                        "args": {
+                                            "variable": "L3",
+                                            "trueText": "Search cargo",
+                                            "falseText": "Not now"
+                                        },
+                                        "id": "9b057b67-fc5c-482b-8ded-b86406dcbb5b"
+                                    },
+                                    {
+                                        "command": "EVENT_IF_TRUE",
+                                        "args": {
+                                            "variable": "L3",
+                                            "__collapseElse": true
+                                        },
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "No tools of this\nkind here..."
+                                                        ],
+                                                        "avatarId": ""
+                                                    },
+                                                    "id": "1c6f40e6-ecd1-49d2-adc0-e2888712f63f"
+                                                }
+                                            ],
+                                            "false": []
+                                        },
+                                        "id": "b15eae59-fac4-428f-abb4-9e3fcd2b7249"
+                                    }
+                                ],
+                                "false": [
+                                    {
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Where is the\nrectifier?",
-                                                "Come out, come out\nwherever you are!",
-                                                "Ah, here it is!\nGood.... Good..."
+                                                "Cargo crate"
                                             ],
                                             "avatarId": ""
                                         },
-                                        "id": "2c29a05f-0fbf-450b-b24d-5131ca745272"
-                                    },
-                                    {
-                                        "command": "EVENT_SET_TRUE",
-                                        "args": {
-                                            "variable": "16"
-                                        },
-                                        "id": "9aeec9d3-1e0a-4dcb-8f28-136b99096155"
+                                        "id": "81247507-a5c8-4f62-b31b-6558cb5c2690"
                                     }
-                                ],
-                                "false": []
+                                ]
                             },
-                            "id": "0589414d-28a2-49be-9653-7cbea86b2bee"
+                            "id": "aa5eb889-3648-43af-8b0f-85df5759fca1"
                         }
                     ],
                     "startScript": [],
@@ -71476,7 +71441,7 @@
                         {
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "13",
+                                "variable": "22",
                                 "__collapseElse": false
                             },
                             "children": {
@@ -71502,8 +71467,7 @@
                                                     "command": "EVENT_TEXT",
                                                     "args": {
                                                         "text": [
-                                                            "Food, spare socks\nand trousers.",
-                                                            "Probably not here."
+                                                            "No tools of this\nkind here..."
                                                         ],
                                                         "avatarId": ""
                                                     },
@@ -71731,6 +71695,67 @@
                     "id": "2d91998c-eb03-492c-9ac2-fddc9e710de9",
                     "x": 93,
                     "y": 45
+                },
+                {
+                    "name": "Airlock P",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "dc8ecc61-4706-4d35-a286-8f696c04fd08",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "1",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Dorcking ring\nairlock is locked.",
+                                    "Can only be used\nwhen craft docks."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "b5d5b9d7-a75a-4c0a-93bd-93add8b78f61"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "20",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_HIDE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "f760b242-fb54-4c24-823b-69d3a70a4d06"
+                                    },
+                                    {
+                                        "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "3cc362ba-53f8-4233-8a76-6c1d1d8b583f"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "b6e67b0e-6202-4664-b91f-0823df994659"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "93a6968e-92d6-4cef-821d-606eba1dc241",
+                    "x": 99,
+                    "y": 50
                 }
             ],
             "triggers": [
@@ -71892,7 +71917,7 @@
                                     {
                                         "command": "EVENT_SWITCH_SCENE",
                                         "args": {
-                                            "sceneId": "f9a1b3e8-89fd-40cf-8df8-62cc392577ba",
+                                            "sceneId": "89843e2b-5b5e-44a7-af6d-e15f4713c7de",
                                             "x": 9,
                                             "y": 15,
                                             "direction": "",
@@ -71920,44 +71945,11 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Solar panels\ncontrol panel"
+                                    "Both Bohemia solar\npanels are open."
                                 ],
                                 "avatarId": ""
                             },
-                            "id": "3d5c1866-d776-43b1-b318-843a29ec1a7d"
-                        },
-                        {
-                            "command": "EVENT_CHOICE",
-                            "args": {
-                                "variable": "L4",
-                                "trueText": "Operate panel",
-                                "falseText": "Not now"
-                            },
-                            "id": "db268479-408f-47bd-b6cb-340f89d31145"
-                        },
-                        {
-                            "command": "EVENT_IF_TRUE",
-                            "args": {
-                                "variable": "L4",
-                                "__collapseElse": false
-                            },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_SWITCH_SCENE",
-                                        "args": {
-                                            "sceneId": "8d72638c-8d39-4a2d-9649-3297b96282df",
-                                            "x": 9,
-                                            "y": 13,
-                                            "direction": "",
-                                            "fadeSpeed": "2"
-                                        },
-                                        "id": "4d10e883-ed37-414e-b46e-787ff578330f"
-                                    }
-                                ],
-                                "false": []
-                            },
-                            "id": "39efa220-6bfc-444d-ac37-43bdc39247e1"
+                            "id": "2b5adc1b-472f-448c-b5a7-543d7e72ae21"
                         }
                     ],
                     "leaveScript": []
@@ -72018,17 +72010,6 @@
                                             "avatarId": ""
                                         },
                                         "id": "dca6bfca-099c-40b2-90f3-98118ff0f2d5"
-                                    },
-                                    {
-                                        "command": "EVENT_SWITCH_SCENE",
-                                        "args": {
-                                            "sceneId": "077a3efd-d0e5-429b-a94c-45edbe87a399",
-                                            "x": 0,
-                                            "y": 0,
-                                            "direction": "",
-                                            "fadeSpeed": "2"
-                                        },
-                                        "id": "06251bad-94fd-4766-a05d-77b50ccf2bf3"
                                     }
                                 ],
                                 "false": [
@@ -72072,21 +72053,11 @@
                 },
                 {
                     "name": "",
-                    "id": "b2500628-b958-4b01-b3af-99c57c0eda86",
-                    "x": 167,
-                    "y": 46,
-                    "width": 1,
-                    "height": 1,
-                    "script": [],
-                    "leaveScript": []
-                },
-                {
-                    "name": "",
                     "id": "b22246e1-819e-41dc-961c-884ca2e33081",
                     "x": 96,
-                    "y": 40,
-                    "width": 2,
-                    "height": 2,
+                    "y": 41,
+                    "width": 1,
+                    "height": 1,
                     "script": [
                         {
                             "command": "EVENT_IF_TRUE",
@@ -72163,8 +72134,8 @@
                     "id": "d3b9da2b-dda6-4096-97c6-25a710899faf",
                     "x": 102,
                     "y": 40,
-                    "width": 2,
-                    "height": 2,
+                    "width": 1,
+                    "height": 1,
                     "script": [
                         {
                             "command": "EVENT_IF_TRUE",
@@ -72239,17 +72210,17 @@
                 {
                     "name": "",
                     "id": "b6cfc973-8ddb-4804-be26-551c50baa94f",
-                    "x": 96,
-                    "y": 46,
-                    "width": 2,
-                    "height": 2,
+                    "x": 97,
+                    "y": 47,
+                    "width": 1,
+                    "height": 1,
                     "script": [
                         {
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
                                     "Docking airlock\ncontrol panel.",
-                                    "Can only be opened\nwhen a ship docks."
+                                    "Cannoit be used\nat this time."
                                 ],
                                 "avatarId": ""
                             },
@@ -72261,10 +72232,10 @@
                 {
                     "name": "",
                     "id": "6725bd61-22d3-4f9c-9112-f6bf276f3de3",
-                    "x": 102,
+                    "x": 103,
                     "y": 46,
-                    "width": 2,
-                    "height": 2,
+                    "width": 1,
+                    "height": 1,
                     "script": [
                         {
                             "command": "EVENT_TEXT",
@@ -72343,16 +72314,93 @@
                         }
                     ],
                     "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "b0e48ce8-648e-4ffb-8240-ff1e21e434fe",
+                    "x": 181,
+                    "y": 40,
+                    "width": 1,
+                    "height": 2,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "You cannot use RCS\nwhile docked."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "e1b60b61-87c4-4439-9cef-445406e3adb5"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "ed70c30f-5c2e-4880-aa79-0a74e26a4899",
+                    "x": 170,
+                    "y": 41,
+                    "width": 2,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Docking antenna\nis deployed."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "0839baa9-3a15-427e-bea8-c512a5405c2f"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "99f101db-d291-43bc-916a-1976beeb14bc",
+                    "x": 166,
+                    "y": 41,
+                    "width": 2,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Main airlock\nis open."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "1d9a037c-3b45-4c27-b336-ee3ead30a019"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "0fc11fd2-5aa6-4b9a-a81e-400e17f40ebf",
+                    "x": 166,
+                    "y": 46,
+                    "width": 2,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Electric link of\nno use now."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "640bb040-5a86-445a-bf3e-39352b36d530"
+                        }
+                    ],
+                    "leaveScript": []
                 }
             ],
             "script": [
-                {
-                    "command": "EVENT_SET_TRUE",
-                    "args": {
-                        "variable": "11"
-                    },
-                    "id": "1ba84ebb-7fb5-439b-984b-190686060271"
-                },
                 {
                     "command": "EVENT_MUSIC_PLAY",
                     "args": {
@@ -86270,8 +86318,8 @@
                 0
             ],
             "id": "9509ee90-debe-4d27-9537-feffe4db0c3a",
-            "x": 608,
-            "y": 2752,
+            "x": 632,
+            "y": 2956,
             "actors": [
                 {
                     "name": "",
@@ -100334,8 +100382,8 @@
                 0
             ],
             "id": "ed4541d1-e371-43b8-84c9-f772fd37a09c",
-            "x": 76,
-            "y": 3382,
+            "x": 92,
+            "y": 3574,
             "actors": [
                 {
                     "name": "",
@@ -100849,8 +100897,8 @@
                 0
             ],
             "id": "d794dca6-a93b-4939-862f-6cf7cc8e5ca2",
-            "x": 1717,
-            "y": 4006,
+            "x": 1937,
+            "y": 4186,
             "actors": [
                 {
                     "name": "",
@@ -101343,8 +101391,8 @@
                 0
             ],
             "id": "8341f63d-f20f-45ca-bd49-865dcecf51b8",
-            "x": 1918,
-            "y": 4007,
+            "x": 2134,
+            "y": 4179,
             "actors": [
                 {
                     "name": "",
@@ -101837,8 +101885,8 @@
                 0
             ],
             "id": "b4873b0d-459b-4f81-bd36-0f21907593f0",
-            "x": 2106,
-            "y": 4004,
+            "x": 2326,
+            "y": 4176,
             "actors": [
                 {
                     "name": "",
@@ -101959,6 +102007,203 @@
             "playerHit2Script": [],
             "playerHit3Script": [],
             "playerSpriteSheetId": "dd3458a4-fc76-432e-b315-71d49a3ec513"
+        },
+        {
+            "name": "Panels power 02",
+            "backgroundId": "8a2d984a-733e-48a9-a234-db5acac817cd",
+            "width": 20,
+            "height": 18,
+            "type": "POINTNCLICK",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "id": "89843e2b-5b5e-44a7-af6d-e15f4713c7de",
+            "x": 2813,
+            "y": 3392,
+            "actors": [
+                {
+                    "name": "State",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "69dc2337-4908-48b0-880a-5ace681e2b7b",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 255,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Power consumption\nis almost equal to",
+                                    "power supply from\nsolar panels."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "6d59d794-6135-4049-9b73-84a2a9ed7c83"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "command": "EVENT_ACTOR_SET_FRAME",
+                            "args": {
+                                "actorId": "$self$",
+                                "frame": {
+                                    "type": "number",
+                                    "value": 3
+                                }
+                            },
+                            "id": "48215a3e-1bc4-46be-b9b6-71198ecea671"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "88403940-6079-47df-9cd3-24b23435bbbc",
+                    "x": 2,
+                    "y": 8
+                },
+                {
+                    "name": "Consum",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "69dc2337-4908-48b0-880a-5ace681e2b7b",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 255,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Power consumption\nnormal."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "48352c70-8c31-4a20-8459-a58e2e4b1709"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "command": "EVENT_ACTOR_SET_FRAME",
+                            "args": {
+                                "actorId": "$self$",
+                                "frame": {
+                                    "type": "number",
+                                    "value": 4
+                                }
+                            },
+                            "id": "198277f2-c9eb-48ef-aca4-17a2de4b1f29"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "02e1bf41-6380-40e8-8342-919ac7d875d3",
+                    "x": 2,
+                    "y": 6
+                },
+                {
+                    "name": "Charge",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "69dc2337-4908-48b0-880a-5ace681e2b7b",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 255,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "The battery base\nis charging."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "afe27c32-129e-4436-b5b6-adefb2831844"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "command": "EVENT_ACTOR_SET_FRAME",
+                            "args": {
+                                "actorId": "$self$",
+                                "frame": {
+                                    "type": "number",
+                                    "value": 5
+                                }
+                            },
+                            "id": "ddcbda55-441b-4df3-9c78-faa2b0b60174"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "2a9ae535-ce7c-4199-bf31-2f5be3c00254",
+                    "x": 2,
+                    "y": 10
+                }
+            ],
+            "triggers": [
+                {
+                    "name": "",
+                    "id": "be3f5956-74b7-4126-8bdc-c18e62e1eda1",
+                    "x": 1,
+                    "y": 16,
+                    "width": 1,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "d25ba2e0-ec91-4b01-b14b-618a049240fb",
+                                "x": 143,
+                                "y": 41,
+                                "direction": "down",
+                                "fadeSpeed": "2"
+                            },
+                            "id": "8cecf994-86a1-4fbb-bd0d-9740b54ec854"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "efcb53ff-41cc-470c-b641-ec24e3b53505",
+                    "x": 15,
+                    "y": 5,
+                    "width": 3,
+                    "height": 5,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Both Bohemia solar\npanels are open."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "7daccc16-262d-4a83-b3a1-1d7d60ccabc8"
+                        }
+                    ],
+                    "leaveScript": []
+                }
+            ],
+            "script": [],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": []
         }
     ],
     "backgrounds": [
@@ -101999,7 +102244,8 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "control_airlock_node.png"
+            "filename": "control_airlock_node.png",
+            "tileColors": []
         },
         {
             "id": "65777873-19cb-4a95-9383-bfbe8102570d",
@@ -110161,6 +110407,288 @@
             "animSpeed": 15
         },
         {
+            "id": "69dc2337-4908-48b0-880a-5ace681e2b7b",
+            "name": "stan_high",
+            "numFrames": 6,
+            "type": "actor_animated",
+            "filename": "stan_high.png",
+            "checksum": "e2ca4dc3a7ac00055caef007c91de4a3611ee4ea",
+            "width": 96,
+            "height": 8,
+            "states": [
+                {
+                    "id": "52aa8d7b-32e6-4b61-90a3-3d846042daa6",
+                    "name": "",
+                    "animationType": "fixed",
+                    "flipLeft": true,
+                    "animations": [
+                        {
+                            "id": "4703dbc4-8ae2-4274-8d9e-30587ffeae69",
+                            "frames": [
+                                {
+                                    "id": "06dea59d-b1e5-4660-8609-5fe1098a96d8",
+                                    "tiles": [
+                                        {
+                                            "id": "759f8160-4924-4725-9d4c-2cb1358ffe32",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 0,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "4e6e3ea0-f8bc-421f-a940-e6eb0c91cea1",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 8,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "8e59dd18-7bfa-475b-8f62-bac1a7d60bcb",
+                                    "tiles": [
+                                        {
+                                            "id": "e5deb9fa-699a-4894-8cae-376e91e7bae9",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 16,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "9b3854df-0897-493f-ab29-fd9e637baa20",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 24,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "a6457742-32d3-4655-b210-f77f17354406",
+                                    "tiles": [
+                                        {
+                                            "id": "e069cc75-c487-45cf-84a9-08a7bee8ed7a",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 32,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "125405b5-ab8b-495f-8689-858cc220228a",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 40,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "c279dcde-b524-495f-942e-45f337326b2a",
+                                    "tiles": [
+                                        {
+                                            "id": "3ad66b79-a163-4b07-878c-085a745d5ddc",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 48,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "5fcbf752-8b81-49c4-bdf9-3579c1815ee0",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 56,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "dd1a9321-d3d8-4dd4-8e7e-1efbde14f05a",
+                                    "tiles": [
+                                        {
+                                            "id": "d40b5f0b-ab83-45e2-95f9-2974a747d1ee",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 64,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "27aae6c2-1124-443d-9a92-46ec39a3aa8a",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 72,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "70a3d5ef-47db-4119-9190-ff393cc8aeba",
+                                    "tiles": [
+                                        {
+                                            "id": "2c7b7a04-dffb-4b4f-9616-77229e86e5c3",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 80,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "5c5a47d0-ba2d-4581-b067-f9fe4fccd998",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 88,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "b17bd18f-1e93-4c37-9ff4-6f29b127e6ef",
+                            "frames": [
+                                {
+                                    "id": "f885145c-c4e8-4109-9205-938d5b0ef3d2",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "5e89083c-28b4-47bf-b73c-63b3dff75899",
+                            "frames": [
+                                {
+                                    "id": "06720e6a-10e9-4274-85de-dba1daf17cab",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "e65ccef2-c285-47fd-b692-aca8a4ff6593",
+                            "frames": [
+                                {
+                                    "id": "c8cf1b64-b1fc-4637-b318-8f31762a576f",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "f34aeb1b-f0ad-4607-8d80-c8020199886b",
+                            "frames": [
+                                {
+                                    "id": "b1efb744-16c2-477e-b36d-e88a0d1908d2",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "31198918-d05e-4b11-b396-9cde8642d77f",
+                            "frames": [
+                                {
+                                    "id": "e458b978-0ab8-474f-93ed-bb912923a3f7",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "26d5ed46-b4eb-4d04-8471-994a0c3318f1",
+                            "frames": [
+                                {
+                                    "id": "e8a37b34-48fe-48f7-a754-0f72325ea351",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "e704c36a-6635-4f3b-b282-cd7dea81b9ab",
+                            "frames": [
+                                {
+                                    "id": "cdbdaf22-d36e-4f0b-bcc9-1baf5773485a",
+                                    "tiles": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "numTiles": 7,
+            "canvasWidth": 16,
+            "canvasHeight": 16,
+            "boundsX": 0,
+            "boundsY": 0,
+            "boundsWidth": 16,
+            "boundsHeight": 8,
+            "animSpeed": 15
+        },
+        {
             "id": "8d7eb09c-b64d-4ed4-95ff-52032bbc04e1",
             "name": "switch_bottom_right",
             "numFrames": 0.5,
@@ -110761,20 +111289,16 @@
             "name": "Panels Powered"
         },
         {
-            "id": "0d82c1b2-0ecb-4f4f-b169-21019d7d4729__L0",
-            "name": "RCS systems"
-        },
-        {
             "id": "18",
             "name": "Airlock B"
         },
         {
-            "id": "20",
-            "name": "Airlock P"
-        },
-        {
             "id": "19",
             "name": "Airlock M"
+        },
+        {
+            "id": "20",
+            "name": "Airlock P"
         },
         {
             "id": "21",
@@ -110783,6 +111307,10 @@
         {
             "id": "22",
             "name": "Need Tools"
+        },
+        {
+            "id": "0d82c1b2-0ecb-4f4f-b169-21019d7d4729__L0",
+            "name": "RCS systems"
         }
     ],
     "engineFieldValues": [
@@ -110792,16 +111320,16 @@
         }
     ],
     "settings": {
-        "startSceneId": "d25ba2e0-ec91-4b01-b14b-618a049240fb",
-        "startX": 118,
-        "startY": 41,
+        "startSceneId": "077a3efd-d0e5-429b-a94c-45edbe87a399",
+        "startX": 15,
+        "startY": 14,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 2643,
-        "worldScrollY": 3480,
+        "worldScrollX": 1990,
+        "worldScrollY": 2416,
         "zoom": 100,
         "customColorsEnabled": false,
         "sgbEnabled": false,
