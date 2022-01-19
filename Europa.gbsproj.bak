@@ -41283,11 +41283,13 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Battery bay 01"
+                                    "Battery bay 01.\nThe charger is",
+                                    "located here. The\nbatteries look",
+                                    "like they are\nfully discharged."
                                 ],
                                 "avatarId": ""
                             },
-                            "id": "d05a055a-cf14-450f-b34e-0ced1bb3f191"
+                            "id": "09f51192-767a-46da-967b-b5f7e7a6fae4"
                         }
                     ],
                     "leaveScript": []
@@ -41304,7 +41306,8 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Battery bay 02"
+                                    "Battery bay 02.\nThe batteries look",
+                                    "like they are\nfully discharged."
                                 ],
                                 "avatarId": ""
                             },
@@ -56835,23 +56838,57 @@
                                         "children": {
                                             "true": [
                                                 {
-                                                    "command": "EVENT_TEXT",
+                                                    "command": "EVENT_IF_TRUE",
                                                     "args": {
-                                                        "text": [
-                                                            "Tools,spare parts\nand some electric",
-                                                            "components...\nWait a  minute!",
-                                                            "You found the\nlink cable!"
+                                                        "variable": "27",
+                                                        "__collapseElse": false
+                                                    },
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "command": "EVENT_TEXT",
+                                                                "args": {
+                                                                    "text": [
+                                                                        "Oh, darn.  Where\ncan it be? Under",
+                                                                        "the toolbox?  Talk\nabout tetris, now.",
+                                                                        "Looks who's here!\nBingo on a rocket!"
+                                                                    ],
+                                                                    "avatarId": ""
+                                                                },
+                                                                "id": "250e6663-b9f4-40d4-989a-0e5e6173f4e7"
+                                                            },
+                                                            {
+                                                                "command": "EVENT_SET_TRUE",
+                                                                "args": {
+                                                                    "variable": "16"
+                                                                },
+                                                                "id": "7467f34d-242f-4de5-9c7a-f76c49233073"
+                                                            }
                                                         ],
-                                                        "avatarId": ""
+                                                        "false": [
+                                                            {
+                                                                "command": "EVENT_TEXT",
+                                                                "args": {
+                                                                    "text": [
+                                                                        "Tools,spare parts\nand some electric",
+                                                                        "components...\nWait a  minute!",
+                                                                        "You found the\nlink cable!"
+                                                                    ],
+                                                                    "avatarId": "",
+                                                                    "__collapse": true
+                                                                },
+                                                                "id": "a5f94d82-adb1-4392-b0f7-23a59402f275"
+                                                            },
+                                                            {
+                                                                "command": "EVENT_SET_TRUE",
+                                                                "args": {
+                                                                    "variable": "11"
+                                                                },
+                                                                "id": "2e4c653e-57e5-42ed-8541-ffd94a350c63"
+                                                            }
+                                                        ]
                                                     },
-                                                    "id": "a5f94d82-adb1-4392-b0f7-23a59402f275"
-                                                },
-                                                {
-                                                    "command": "EVENT_SET_TRUE",
-                                                    "args": {
-                                                        "variable": "11"
-                                                    },
-                                                    "id": "2e4c653e-57e5-42ed-8541-ffd94a350c63"
+                                                    "id": "7866c424-88bf-484d-bf3f-bc2f4661cb54"
                                                 }
                                             ],
                                             "false": []
@@ -57300,22 +57337,21 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Good. That's it\nfor now."
+                                                "The spare portable\nrectifier seems",
+                                                "to fit with the\nbattery sockets.",
+                                                "Good. Let it work\nwhile you check",
+                                                "the other battery\nbank, too."
                                             ],
                                             "avatarId": ""
                                         },
                                         "id": "1e8408e2-cd29-4572-b3d0-3f17d14be75b"
                                     },
                                     {
-                                        "command": "EVENT_SWITCH_SCENE",
+                                        "command": "EVENT_SET_TRUE",
                                         "args": {
-                                            "sceneId": "077a3efd-d0e5-429b-a94c-45edbe87a399",
-                                            "x": 0,
-                                            "y": 0,
-                                            "direction": "",
-                                            "fadeSpeed": "2"
+                                            "variable": "26"
                                         },
-                                        "id": "70c38fdc-fb56-4e22-a51c-7b4413e0c54c"
+                                        "id": "1beb13c5-4b64-4e09-9d08-ff70e0473786"
                                     }
                                 ],
                                 "false": [
@@ -57323,11 +57359,21 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Go get the\nrectifier."
+                                                "Looks like the\nbattery base is",
+                                                "not charging. The\nrectifier seems",
+                                                "to be dead. Maybe\nthere is a spare",
+                                                "one in the cargo\ncrates?"
                                             ],
                                             "avatarId": ""
                                         },
                                         "id": "1e04e09f-b888-4f02-b73f-02ce79d1e548"
+                                    },
+                                    {
+                                        "command": "EVENT_SET_TRUE",
+                                        "args": {
+                                            "variable": "27"
+                                        },
+                                        "id": "255492d4-9b1c-4de1-890a-5f0452a10238"
                                     }
                                 ]
                             },
@@ -57353,6 +57399,51 @@
                                 "avatarId": ""
                             },
                             "id": "c4740974-c7ae-4b63-a1f1-3b5fd0722cd2"
+                        },
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "26",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Looks like this\none is totally",
+                                                "dead. Too bad, as\nthis will take ",
+                                                "more time to power\nthe station. Well,",
+                                                "nothing to help.\nLet the batteries",
+                                                "in Bank 01 charge\nwhile you rest."
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "8a25efb7-a3cc-42ce-a23d-9fa3ca72a7d0"
+                                    },
+                                    {
+                                        "command": "EVENT_WAIT",
+                                        "args": {
+                                            "time": 0.5
+                                        },
+                                        "id": "196e269c-b4a5-44d0-bd04-b081713929dc"
+                                    },
+                                    {
+                                        "command": "EVENT_SWITCH_SCENE",
+                                        "args": {
+                                            "sceneId": "077a3efd-d0e5-429b-a94c-45edbe87a399",
+                                            "x": 0,
+                                            "y": 0,
+                                            "direction": "",
+                                            "fadeSpeed": "2"
+                                        },
+                                        "id": "aa3704ec-fed9-4f22-b571-7389abd03c04"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "13666ad6-38de-4b45-9c70-a7c84dc35c2b"
                         }
                     ],
                     "leaveScript": []
@@ -71577,19 +71668,45 @@
                                         "command": "EVENT_IF_TRUE",
                                         "args": {
                                             "variable": "L3",
-                                            "__collapseElse": true
+                                            "__collapseElse": false
                                         },
                                         "children": {
                                             "true": [
                                                 {
-                                                    "command": "EVENT_TEXT",
+                                                    "command": "EVENT_IF_TRUE",
                                                     "args": {
-                                                        "text": [
-                                                            "No tools of this\nkind here..."
-                                                        ],
-                                                        "avatarId": ""
+                                                        "variable": "24",
+                                                        "__collapseElse": false
                                                     },
-                                                    "id": "1c6f40e6-ecd1-49d2-adc0-e2888712f63f"
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "command": "EVENT_TEXT",
+                                                                "args": {
+                                                                    "text": [
+                                                                        "Some kind of soft\nfuzzy masterial...",
+                                                                        "Nope. Nothing that\ncould work to",
+                                                                        "replace the\nfilter..."
+                                                                    ],
+                                                                    "avatarId": ""
+                                                                },
+                                                                "id": "f05cf5ec-3f44-43f0-a500-df56f915aece"
+                                                            }
+                                                        ],
+                                                        "false": [
+                                                            {
+                                                                "command": "EVENT_TEXT",
+                                                                "args": {
+                                                                    "text": [
+                                                                        "No tools of this\nkind here..."
+                                                                    ],
+                                                                    "avatarId": ""
+                                                                },
+                                                                "id": "1c6f40e6-ecd1-49d2-adc0-e2888712f63f"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "id": "af7f72ba-0d94-49c4-a4a9-94e9874f6f6b"
                                                 }
                                             ],
                                             "false": []
@@ -71602,7 +71719,7 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Cargo crate"
+                                                "Cargo crate with\ntechnical supplies"
                                             ],
                                             "avatarId": ""
                                         },
@@ -71637,7 +71754,7 @@
                         {
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "22",
+                                "variable": "24",
                                 "__collapseElse": false
                             },
                             "children": {
@@ -71663,11 +71780,20 @@
                                                     "command": "EVENT_TEXT",
                                                     "args": {
                                                         "text": [
-                                                            "No tools of this\nkind here..."
+                                                            "Some kind of soft,\nfuzzy material...",
+                                                            "Maybe these towels\nwill do? Oh...",
+                                                            "That's much better\nfor the purpose!"
                                                         ],
                                                         "avatarId": ""
                                                     },
                                                     "id": "cd8ad1b7-2c65-42ea-83bd-abf669913824"
+                                                },
+                                                {
+                                                    "command": "EVENT_SET_TRUE",
+                                                    "args": {
+                                                        "variable": "25"
+                                                    },
+                                                    "id": "f6afa912-9596-4486-a0e3-a1a46db7f2c4"
                                                 }
                                             ],
                                             "false": []
@@ -71680,7 +71806,7 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Cargo crate"
+                                                "Cargo crate with\nlife supplies"
                                             ],
                                             "avatarId": ""
                                         },
@@ -102811,7 +102937,8 @@
             "height": 18,
             "imageWidth": 1616,
             "imageHeight": 144,
-            "filename": "unused\\ride-scroll.png"
+            "filename": "unused\\ride-scroll.png",
+            "tileColors": []
         },
         {
             "id": "b20edf99-23c3-44fd-8c4b-ec292bd89d0e",
@@ -111998,12 +112125,28 @@
             "name": "Need Tools"
         },
         {
+            "id": "23",
+            "name": "Generator Repaired"
+        },
+        {
             "id": "0d82c1b2-0ecb-4f4f-b169-21019d7d4729__L0",
             "name": "RCS systems"
         },
         {
-            "id": "23",
-            "name": "Generator Repaired"
+            "id": "24",
+            "name": "Need Infill"
+        },
+        {
+            "id": "25",
+            "name": "Have Infill"
+        },
+        {
+            "id": "26",
+            "name": "Rectifier Installed"
+        },
+        {
+            "id": "27",
+            "name": "Need Rectifier"
         }
     ],
     "engineFieldValues": [
@@ -112013,16 +112156,16 @@
         }
     ],
     "settings": {
-        "startSceneId": "ff18713c-902b-48fa-85f0-4371173cb0f5",
-        "startX": 127,
-        "startY": 44,
+        "startSceneId": "d91b09f0-a8db-4c88-a123-7446d0c71641",
+        "startX": 15,
+        "startY": 14,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1302,
-        "worldScrollY": 1400,
+        "worldScrollX": 1263,
+        "worldScrollY": 1300,
         "zoom": 100,
         "customColorsEnabled": false,
         "sgbEnabled": false,
