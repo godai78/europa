@@ -41060,6 +41060,28 @@
                     "height": 1,
                     "script": [],
                     "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "e382b844-d47b-4be8-8e3c-e7a8414a51dc",
+                    "x": 112,
+                    "y": 40,
+                    "width": 1,
+                    "height": 2,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Node airlock\ncontrol panel.",
+                                    "Inactive due to\nlack of power."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "e40fdb46-00f9-436b-a7ce-bb00de963281"
+                        }
+                    ],
+                    "leaveScript": []
                 }
             ],
             "script": [
@@ -56268,7 +56290,7 @@
             ],
             "id": "e5bf236a-ffe6-43d6-af00-2740c3ee3a75",
             "x": 627,
-            "y": 2150,
+            "y": 2148,
             "actors": [
                 {
                     "name": "",
@@ -56526,45 +56548,69 @@
                     "collisionGroup": "1",
                     "script": [
                         {
-                            "command": "EVENT_CHOICE",
-                            "args": {
-                                "variable": "L3",
-                                "trueText": "Search cargo",
-                                "falseText": "Not now"
-                            },
-                            "id": "0d564d7c-022d-4600-935b-e161b5b1d8d6"
-                        },
-                        {
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "L3",
-                                "__collapseElse": true
+                                "variable": "13",
+                                "__collapseElse": false
                             },
                             "children": {
                                 "true": [
                                     {
+                                        "command": "EVENT_CHOICE",
+                                        "args": {
+                                            "variable": "L3",
+                                            "trueText": "Search cargo",
+                                            "falseText": "Not now"
+                                        },
+                                        "id": "e76b7145-501d-4ab4-bbec-bc2bc84650d5"
+                                    },
+                                    {
+                                        "command": "EVENT_IF_TRUE",
+                                        "args": {
+                                            "variable": "L3",
+                                            "__collapseElse": false
+                                        },
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "Tools,spare parts\nand some electric",
+                                                            "components...\nWait a  minute!",
+                                                            "You found the\nlink cable!"
+                                                        ],
+                                                        "avatarId": ""
+                                                    },
+                                                    "id": "a5f94d82-adb1-4392-b0f7-23a59402f275"
+                                                },
+                                                {
+                                                    "command": "EVENT_SET_TRUE",
+                                                    "args": {
+                                                        "variable": "11"
+                                                    },
+                                                    "id": "2e4c653e-57e5-42ed-8541-ffd94a350c63"
+                                                }
+                                            ],
+                                            "false": []
+                                        },
+                                        "id": "f114f45c-7eff-4f2a-8b7d-2a8b2f889e5a"
+                                    }
+                                ],
+                                "false": [
+                                    {
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Where is the\nrectifier?",
-                                                "Come out, come out\nwherever you are!",
-                                                "Ah, here it is!\nGood.... Good..."
+                                                "Cargo crate"
                                             ],
                                             "avatarId": ""
                                         },
-                                        "id": "6155e165-87cc-4a9b-8585-a3e3854e47e8"
-                                    },
-                                    {
-                                        "command": "EVENT_SET_TRUE",
-                                        "args": {
-                                            "variable": "16"
-                                        },
-                                        "id": "0d2423f9-5209-48ed-ab7b-9541659bed6d"
+                                        "id": "a54ab523-706b-44d7-aa5f-88b87e5b550b"
                                     }
-                                ],
-                                "false": []
+                                ]
                             },
-                            "id": "f130db8b-1dee-4b3c-a8e9-c341e1778cf3"
+                            "id": "b68447c5-2c20-4860-aa77-5384d8023723"
                         }
                     ],
                     "startScript": [],
@@ -56617,7 +56663,7 @@
                                                     "command": "EVENT_TEXT",
                                                     "args": {
                                                         "text": [
-                                                            "Food, spare socks\nand trousers.",
+                                                            "Food, spare socks\nand trousers...",
                                                             "Probably not here."
                                                         ],
                                                         "avatarId": ""
@@ -57025,16 +57071,31 @@
                     "height": 1,
                     "script": [],
                     "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "a15da34e-e405-4188-9d17-43a04ff7a05e",
+                    "x": 112,
+                    "y": 40,
+                    "width": 1,
+                    "height": 2,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Node airlock\ncontrol panel.",
+                                    "Inactive due to\nlack of power."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "1b54c982-f176-42d1-a996-ef026ddd5eea"
+                        }
+                    ],
+                    "leaveScript": []
                 }
             ],
             "script": [
-                {
-                    "command": "EVENT_SET_TRUE",
-                    "args": {
-                        "variable": "11"
-                    },
-                    "id": "0986a038-da20-4a3e-b60d-9c97b060950e"
-                },
                 {
                     "command": "EVENT_MUSIC_PLAY",
                     "args": {
@@ -57079,7 +57140,8 @@
             ],
             "playerHit1Script": [],
             "playerHit2Script": [],
-            "playerHit3Script": []
+            "playerHit3Script": [],
+            "notes": ""
         },
         {
             "name": "Day 00",
@@ -57229,8 +57291,8 @@
             "spritePaletteIds": [],
             "collisions": [],
             "id": "077a3efd-d0e5-429b-a94c-45edbe87a399",
-            "x": 2305,
-            "y": 2855,
+            "x": 2005,
+            "y": 2771,
             "actors": [],
             "triggers": [],
             "script": [
@@ -57274,24 +57336,15 @@
                     "id": "2e6537aa-8753-409f-b5e0-6026ff702eaa"
                 },
                 {
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "Yeah, this is\nit for now."
-                        ],
-                        "avatarId": ""
-                    },
-                    "id": "bc3f9df0-9ff4-450a-a6e8-108829a2b9cb"
-                },
-                {
                     "command": "EVENT_SWITCH_SCENE",
                     "args": {
-                        "sceneId": "ff18713c-902b-48fa-85f0-4371173cb0f5",
+                        "sceneId": "d25ba2e0-ec91-4b01-b14b-618a049240fb",
                         "x": 180,
                         "y": 44,
                         "direction": "",
                         "fadeSpeed": "2",
-                        "__comment": true
+                        "__comment": false,
+                        "__collapse": false
                     },
                     "id": "41f09234-822e-4d3e-b7dd-5b95a1e64978"
                 }
@@ -65730,205 +65783,7 @@
                 0,
                 0,
                 0,
-                15,
                 0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                15,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                15,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                15,
                 0,
                 0,
                 0,
@@ -66126,127 +65981,6 @@
                 0,
                 0,
                 0,
-                15,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                15,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                15,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0,
                 0,
                 0,
@@ -66325,6 +66059,325 @@
                 0,
                 0,
                 15,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                15,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                15,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                15,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 0,
                 0,
                 0,
@@ -71171,8 +71224,8 @@
                 0
             ],
             "id": "d25ba2e0-ec91-4b01-b14b-618a049240fb",
-            "x": 1690,
-            "y": 3387,
+            "x": 1726,
+            "y": 3583,
             "actors": [
                 {
                     "name": "",
@@ -71196,228 +71249,6 @@
                     "y": 38
                 },
                 {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "c2a86d28-8c13-4726-8171-2cb3caf878ae",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "1",
-                    "script": [
-                        {
-                            "command": "EVENT_TEXT",
-                            "args": {
-                                "text": [
-                                    "Main airlock\nis open."
-                                ],
-                                "avatarId": ""
-                            },
-                            "id": "b62b84d3-40e4-4454-a6be-9161cf12da45"
-                        }
-                    ],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "c6501e43-0c4b-4681-acb7-d0f9a4b857a9",
-                    "x": 166,
-                    "y": 41
-                },
-                {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "7146d0da-cad7-4606-a780-807c183a667a",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "1",
-                    "script": [
-                        {
-                            "command": "EVENT_TEXT",
-                            "args": {
-                                "text": [
-                                    "Docking antenna\nis deployed."
-                                ],
-                                "avatarId": ""
-                            },
-                            "id": "4c9ae0b1-b54f-4473-9d85-07cc74ddeb6f"
-                        }
-                    ],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "a8266fd2-b2e4-4512-b075-85a695593480",
-                    "x": 170,
-                    "y": 41
-                },
-                {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "0dcebd78-52a2-41d3-ae20-d0102dfac609",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "1",
-                    "script": [
-                        {
-                            "command": "EVENT_TEXT",
-                            "args": {
-                                "text": [
-                                    "Electric link\ncontrol panel."
-                                ],
-                                "avatarId": ""
-                            },
-                            "id": "acba5ed2-6aa4-427c-8f73-674d84fb836e"
-                        },
-                        {
-                            "command": "EVENT_CHOICE",
-                            "args": {
-                                "variable": "L3",
-                                "trueText": "Operate panel",
-                                "falseText": "Not now"
-                            },
-                            "id": "1ac7937e-1b42-4505-9bbe-fa8e1b9a11bd"
-                        },
-                        {
-                            "command": "EVENT_IF_TRUE",
-                            "args": {
-                                "variable": "L3",
-                                "__collapseElse": true
-                            },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_SWITCH_SCENE",
-                                        "args": {
-                                            "sceneId": "3b69c1b4-a4f8-430d-bedf-01ccee3a2800",
-                                            "x": 9,
-                                            "y": 12,
-                                            "direction": "",
-                                            "fadeSpeed": "2"
-                                        },
-                                        "id": "006733f5-baaf-4cca-8d36-8b408feec7eb"
-                                    }
-                                ],
-                                "false": []
-                            },
-                            "id": "17dbbbd6-bc83-464b-8d6d-26e03024cccf"
-                        }
-                    ],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "e97742ee-911c-480a-b0cd-b684afe42e41",
-                    "x": 166,
-                    "y": 46
-                },
-                {
-                    "name": "RCS panel",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "8d7eb09c-b64d-4ed4-95ff-52032bbc04e1",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "1",
-                    "script": [
-                        {
-                            "command": "EVENT_TEXT",
-                            "args": {
-                                "text": [
-                                    "You cannot use RCS\nwhile docked."
-                                ],
-                                "avatarId": ""
-                            },
-                            "id": "ac621687-85a4-47b9-a529-866eee3c02cc"
-                        }
-                    ],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "20e585e7-b148-426c-829f-28e7f67120d2",
-                    "x": 180,
-                    "y": 42
-                },
-                {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "113686bf-ff7d-4c8e-ba86-2f1bb847de3c",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "1",
-                    "script": [
-                        {
-                            "command": "EVENT_TEXT",
-                            "args": {
-                                "text": [
-                                    "Cannot pump fuel,\nstation inactive."
-                                ],
-                                "avatarId": ""
-                            },
-                            "id": "e9757ac3-d637-4208-a586-6916f5ad6e4a"
-                        }
-                    ],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "b8492cbd-b9d9-4302-92d7-136b758b0a84",
-                    "x": 180,
-                    "y": 47
-                },
-                {
-                    "name": "chair",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "7d76ba77-0b24-4c5a-9b23-82a780fa47ff",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "",
-                    "script": [],
-                    "startScript": [
-                        {
-                            "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
-                            "args": {
-                                "actorId": "$self$"
-                            },
-                            "id": "118b2c42-bda4-4fe6-8116-f06c5cb4c1b3"
-                        }
-                    ],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "16ed7ad5-a6c3-4f4d-a0f4-bbe331287f2a",
-                    "x": 180,
-                    "y": 45
-                },
-                {
                     "name": "crate 1",
                     "frame": 0,
                     "animate": false,
@@ -71430,45 +71261,60 @@
                     "collisionGroup": "1",
                     "script": [
                         {
-                            "command": "EVENT_CHOICE",
-                            "args": {
-                                "variable": "L3",
-                                "trueText": "Search cargo",
-                                "falseText": "Not now"
-                            },
-                            "id": "eb76ab82-3992-4669-b5ff-5d8622804dc8"
-                        },
-                        {
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "L3",
-                                "__collapseElse": true
+                                "variable": "22",
+                                "__collapseElse": false
                             },
                             "children": {
                                 "true": [
                                     {
+                                        "command": "EVENT_CHOICE",
+                                        "args": {
+                                            "variable": "L3",
+                                            "trueText": "Search cargo",
+                                            "falseText": "Not now"
+                                        },
+                                        "id": "9b057b67-fc5c-482b-8ded-b86406dcbb5b"
+                                    },
+                                    {
+                                        "command": "EVENT_IF_TRUE",
+                                        "args": {
+                                            "variable": "L3",
+                                            "__collapseElse": true
+                                        },
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "No tools of this\nkind here..."
+                                                        ],
+                                                        "avatarId": ""
+                                                    },
+                                                    "id": "1c6f40e6-ecd1-49d2-adc0-e2888712f63f"
+                                                }
+                                            ],
+                                            "false": []
+                                        },
+                                        "id": "b15eae59-fac4-428f-abb4-9e3fcd2b7249"
+                                    }
+                                ],
+                                "false": [
+                                    {
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Where is the\nrectifier?",
-                                                "Come out, come out\nwherever you are!",
-                                                "Ah, here it is!\nGood.... Good..."
+                                                "Cargo crate"
                                             ],
                                             "avatarId": ""
                                         },
-                                        "id": "2c29a05f-0fbf-450b-b24d-5131ca745272"
-                                    },
-                                    {
-                                        "command": "EVENT_SET_TRUE",
-                                        "args": {
-                                            "variable": "16"
-                                        },
-                                        "id": "9aeec9d3-1e0a-4dcb-8f28-136b99096155"
+                                        "id": "81247507-a5c8-4f62-b31b-6558cb5c2690"
                                     }
-                                ],
-                                "false": []
+                                ]
                             },
-                            "id": "0589414d-28a2-49be-9653-7cbea86b2bee"
+                            "id": "aa5eb889-3648-43af-8b0f-85df5759fca1"
                         }
                     ],
                     "startScript": [],
@@ -71495,7 +71341,7 @@
                         {
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "13",
+                                "variable": "22",
                                 "__collapseElse": false
                             },
                             "children": {
@@ -71521,8 +71367,7 @@
                                                     "command": "EVENT_TEXT",
                                                     "args": {
                                                         "text": [
-                                                            "Food, spare socks\nand trousers.",
-                                                            "Probably not here."
+                                                            "No tools of this\nkind here..."
                                                         ],
                                                         "avatarId": ""
                                                     },
@@ -71570,6 +71415,186 @@
                     "id": "81ce1ba5-ec31-4957-b278-ba4610b82af3",
                     "x": 176,
                     "y": 48
+                },
+                {
+                    "name": "Airlock B",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "23b75d3e-3982-4948-98bd-cffcd6b46e70",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "1",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Node airlock\nis locked."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "5ae74104-20b3-403e-bea4-731f5d42ff12"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "18",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_HIDE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "cbac3065-c98b-452d-98f1-4e6a3875ac65"
+                                    },
+                                    {
+                                        "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "caa15119-037b-4458-bb73-b01c968eef59"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "7a270b17-2717-4282-9adc-ff12da3bdb75"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "37690755-2ae5-4c30-8379-9bd6204036b0",
+                    "x": 105,
+                    "y": 45
+                },
+                {
+                    "name": "Airlock P",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "dc8ecc61-4706-4d35-a286-8f696c04fd08",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "1",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Panonia airlock\nis locked."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "2b759f67-c5d3-4e46-9ade-ecf7c92697fb"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "20",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_HIDE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "201f0cc0-6ed5-47d0-b3e7-244b690deb36"
+                                    },
+                                    {
+                                        "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "de417a96-f072-46f7-ad80-4d42d5bdf55c"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "d158cda1-e7e2-4a2b-a1a5-06efbf3c0950"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "4622415d-4126-441a-a5ce-3991b2c92e18",
+                    "x": 99,
+                    "y": 38
+                },
+                {
+                    "name": "Airlock M",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "23b75d3e-3982-4948-98bd-cffcd6b46e70",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "1",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Mazovia airlock\nis locked."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "8da88d2c-72ea-4195-ae3a-a2da34527236"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "19",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_HIDE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "c0c56c88-a9b2-4e47-9785-5c3ed4d0feb1"
+                                    },
+                                    {
+                                        "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "3eb1d785-fab9-4f90-9d7a-3448e6158149"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "b677cf36-f969-4c5b-9588-33d837ea3507"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "2d91998c-eb03-492c-9ac2-fddc9e710de9",
+                    "x": 93,
+                    "y": 45
                 }
             ],
             "triggers": [
@@ -71618,22 +71643,77 @@
                 {
                     "name": "",
                     "id": "e540fef4-df0e-4183-8fb4-ac1ff4028974",
-                    "x": 106,
-                    "y": 42,
+                    "x": 112,
+                    "y": 40,
                     "width": 1,
-                    "height": 4,
+                    "height": 2,
                     "script": [
                         {
-                            "command": "EVENT_TEXT",
+                            "command": "EVENT_IF_TRUE",
                             "args": {
-                                "text": [
-                                    "The docking node\nairlock is locked",
-                                    "while the power\nis down. You need",
-                                    "to restore power\nto the module."
-                                ],
-                                "avatarId": ""
+                                "variable": "18",
+                                "__collapseElse": false
                             },
-                            "id": "1cfa4e43-f68c-4dc3-8fb4-acbd6c7c5983"
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Bohemia node\nairlock is open."
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "d1df6bdc-04be-43b9-926f-809ff7a60ceb"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Node airlock\ncontrol panel."
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "1cfa4e43-f68c-4dc3-8fb4-acbd6c7c5983"
+                                    },
+                                    {
+                                        "command": "EVENT_CHOICE",
+                                        "args": {
+                                            "variable": "L4",
+                                            "trueText": "Operate panel",
+                                            "falseText": "Not now"
+                                        },
+                                        "id": "b3a7caf0-0c66-4454-8506-85f99e218d78"
+                                    },
+                                    {
+                                        "command": "EVENT_IF_TRUE",
+                                        "args": {
+                                            "variable": "L4",
+                                            "__collapseElse": false
+                                        },
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "d794dca6-a93b-4939-862f-6cf7cc8e5ca2",
+                                                        "x": 9,
+                                                        "y": 14,
+                                                        "direction": "",
+                                                        "fadeSpeed": "2"
+                                                    },
+                                                    "id": "75129fbf-9b57-497b-9628-58acda158be5"
+                                                }
+                                            ],
+                                            "false": []
+                                        },
+                                        "id": "b2f2a5c7-0e97-4767-a9a6-6e5dcbedae26"
+                                    }
+                                ]
+                            },
+                            "id": "b3ea0bae-a4ef-4078-8873-b4efdb154e11"
                         }
                     ],
                     "leaveScript": []
@@ -71676,7 +71756,7 @@
                                     {
                                         "command": "EVENT_SWITCH_SCENE",
                                         "args": {
-                                            "sceneId": "f9a1b3e8-89fd-40cf-8df8-62cc392577ba",
+                                            "sceneId": "89843e2b-5b5e-44a7-af6d-e15f4713c7de",
                                             "x": 9,
                                             "y": 15,
                                             "direction": "",
@@ -71704,44 +71784,11 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Solar panels\ncontrol panel"
+                                    "Both Bohemia solar\npanels are open."
                                 ],
                                 "avatarId": ""
                             },
-                            "id": "3d5c1866-d776-43b1-b318-843a29ec1a7d"
-                        },
-                        {
-                            "command": "EVENT_CHOICE",
-                            "args": {
-                                "variable": "L4",
-                                "trueText": "Operate panel",
-                                "falseText": "Not now"
-                            },
-                            "id": "db268479-408f-47bd-b6cb-340f89d31145"
-                        },
-                        {
-                            "command": "EVENT_IF_TRUE",
-                            "args": {
-                                "variable": "L4",
-                                "__collapseElse": false
-                            },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_SWITCH_SCENE",
-                                        "args": {
-                                            "sceneId": "8d72638c-8d39-4a2d-9649-3297b96282df",
-                                            "x": 9,
-                                            "y": 13,
-                                            "direction": "",
-                                            "fadeSpeed": "2"
-                                        },
-                                        "id": "4d10e883-ed37-414e-b46e-787ff578330f"
-                                    }
-                                ],
-                                "false": []
-                            },
-                            "id": "39efa220-6bfc-444d-ac37-43bdc39247e1"
+                            "id": "2b5adc1b-472f-448c-b5a7-543d7e72ae21"
                         }
                     ],
                     "leaveScript": []
@@ -71802,17 +71849,6 @@
                                             "avatarId": ""
                                         },
                                         "id": "dca6bfca-099c-40b2-90f3-98118ff0f2d5"
-                                    },
-                                    {
-                                        "command": "EVENT_SWITCH_SCENE",
-                                        "args": {
-                                            "sceneId": "077a3efd-d0e5-429b-a94c-45edbe87a399",
-                                            "x": 0,
-                                            "y": 0,
-                                            "direction": "",
-                                            "fadeSpeed": "2"
-                                        },
-                                        "id": "06251bad-94fd-4766-a05d-77b50ccf2bf3"
                                     }
                                 ],
                                 "false": [
@@ -71856,23 +71892,354 @@
                 },
                 {
                     "name": "",
-                    "id": "b2500628-b958-4b01-b3af-99c57c0eda86",
-                    "x": 167,
+                    "id": "b22246e1-819e-41dc-961c-884ca2e33081",
+                    "x": 96,
+                    "y": 40,
+                    "width": 2,
+                    "height": 2,
+                    "script": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "19",
+                                "__collapseElse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Mazovia node\nairlock is open."
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "8966585d-16b8-404e-9eb6-e9573d2d462a"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Mazovia airlock\ncontrol panel."
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "77d7ec4a-78db-420c-9f22-8962a16cb442"
+                                    },
+                                    {
+                                        "command": "EVENT_CHOICE",
+                                        "args": {
+                                            "variable": "L4",
+                                            "trueText": "Operate panel",
+                                            "falseText": "Not now"
+                                        },
+                                        "id": "3d9f54fb-c2d2-4de5-9e92-588c175ec6d1"
+                                    },
+                                    {
+                                        "command": "EVENT_IF_TRUE",
+                                        "args": {
+                                            "variable": "L4",
+                                            "__collapseElse": false
+                                        },
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "8341f63d-f20f-45ca-bd49-865dcecf51b8",
+                                                        "x": 9,
+                                                        "y": 14,
+                                                        "direction": "",
+                                                        "fadeSpeed": "2"
+                                                    },
+                                                    "id": "d36e36dc-5773-48f6-bf44-d6a9071138c8"
+                                                }
+                                            ],
+                                            "false": []
+                                        },
+                                        "id": "8cb79402-a583-4fea-a2e6-b40a6a61d52d"
+                                    }
+                                ]
+                            },
+                            "id": "10201326-a64e-43dd-8e0f-a5ab56f4b417"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "d3b9da2b-dda6-4096-97c6-25a710899faf",
+                    "x": 102,
+                    "y": 40,
+                    "width": 2,
+                    "height": 2,
+                    "script": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "20",
+                                "__collapseElse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Panonia node\nairlock is open."
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "18c431d3-9dc5-4ac7-aa6e-046e145cba2c"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Panonia airlock\ncontrol panel."
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "9870e281-0e43-428a-9d9e-4393f954a1e5"
+                                    },
+                                    {
+                                        "command": "EVENT_CHOICE",
+                                        "args": {
+                                            "variable": "L4",
+                                            "trueText": "Operate panel",
+                                            "falseText": "Not now"
+                                        },
+                                        "id": "f1111049-5862-482c-af4d-455e037e643a"
+                                    },
+                                    {
+                                        "command": "EVENT_IF_TRUE",
+                                        "args": {
+                                            "variable": "L4",
+                                            "__collapseElse": false
+                                        },
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "b4873b0d-459b-4f81-bd36-0f21907593f0",
+                                                        "x": 8,
+                                                        "y": 14,
+                                                        "direction": "",
+                                                        "fadeSpeed": "2"
+                                                    },
+                                                    "id": "473fe5ab-4abb-4457-b49e-736e95f67eb8"
+                                                }
+                                            ],
+                                            "false": []
+                                        },
+                                        "id": "a808bffb-98e9-40f4-a0bf-9410779dc12d"
+                                    }
+                                ]
+                            },
+                            "id": "c3ef4c04-0274-4f6e-9e36-d01bb1a8df72"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "b6cfc973-8ddb-4804-be26-551c50baa94f",
+                    "x": 96,
+                    "y": 46,
+                    "width": 2,
+                    "height": 2,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Docking airlock\ncontrol panel.",
+                                    "Can only be opened\nwhen a ship docks."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "43868bc4-afb1-4764-9324-3132fd123281"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "6725bd61-22d3-4f9c-9112-f6bf276f3de3",
+                    "x": 102,
+                    "y": 46,
+                    "width": 2,
+                    "height": 2,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Bohemia node\nairlock is open."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "3e5a2a2f-c686-4cfa-99f1-a646184557e2"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "6ab208a8-8c3b-4c96-be07-a2d21b2e7a92",
+                    "x": 92,
+                    "y": 42,
+                    "width": 1,
+                    "height": 4,
+                    "script": [
+                        {
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "ed4541d1-e371-43b8-84c9-f772fd37a09c",
+                                "x": 90,
+                                "y": 44,
+                                "direction": "",
+                                "fadeSpeed": 1
+                            },
+                            "id": "05a3cb09-94df-477e-8d8b-707338c3cb54"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "88fda57a-46c5-4c2a-a83e-0ebf8ceb121e",
+                    "x": 98,
+                    "y": 36,
+                    "width": 4,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "9509ee90-debe-4d27-9537-feffe4db0c3a",
+                                "x": 99,
+                                "y": 35,
+                                "direction": "",
+                                "fadeSpeed": 1
+                            },
+                            "id": "8fe32de4-9b92-457d-aaa2-237df7041ea1"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "f703d744-e378-4f34-b2b6-8b9a516eb042",
+                    "x": 181,
                     "y": 46,
                     "width": 1,
+                    "height": 2,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Cannot pump fuel,\nstation inactive."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "23157c0e-a509-4149-84db-e2ad2765df0e"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "b0e48ce8-648e-4ffb-8240-ff1e21e434fe",
+                    "x": 181,
+                    "y": 40,
+                    "width": 1,
+                    "height": 2,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "You cannot use RCS\nwhile docked."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "e1b60b61-87c4-4439-9cef-445406e3adb5"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "ed70c30f-5c2e-4880-aa79-0a74e26a4899",
+                    "x": 170,
+                    "y": 41,
+                    "width": 2,
                     "height": 1,
-                    "script": [],
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Docking antenna\nis deployed."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "0839baa9-3a15-427e-bea8-c512a5405c2f"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "99f101db-d291-43bc-916a-1976beeb14bc",
+                    "x": 166,
+                    "y": 41,
+                    "width": 2,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Main airlock\nis open."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "1d9a037c-3b45-4c27-b336-ee3ead30a019"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "0fc11fd2-5aa6-4b9a-a81e-400e17f40ebf",
+                    "x": 166,
+                    "y": 46,
+                    "width": 2,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Electric link of\nno use now."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "640bb040-5a86-445a-bf3e-39352b36d530"
+                        }
+                    ],
                     "leaveScript": []
                 }
             ],
             "script": [
-                {
-                    "command": "EVENT_SET_TRUE",
-                    "args": {
-                        "variable": "11"
-                    },
-                    "id": "1ba84ebb-7fb5-439b-984b-190686060271"
-                },
                 {
                     "command": "EVENT_MUSIC_PLAY",
                     "args": {
@@ -71884,7 +72251,7 @@
                 {
                     "command": "EVENT_IF_TRUE",
                     "args": {
-                        "variable": "10",
+                        "variable": "21",
                         "__collapseElse": false
                     },
                     "children": {
@@ -71894,10 +72261,10 @@
                                 "command": "EVENT_TEXT",
                                 "args": {
                                     "text": [
-                                        "The station power\nseems to be gone.",
-                                        "Try to deploy the\nsolar panels and",
-                                        "charge the bat-\nteries. Use your",
-                                        "ship to power it\nif necessary."
+                                        "The station power\nis back enough to",
+                                        "operate some of\nthe equipment.",
+                                        "Check the Mazovia\nmodule oxygen",
+                                        "generator while\nbatteries charge."
                                     ],
                                     "avatarId": ""
                                 },
@@ -71906,7 +72273,7 @@
                             {
                                 "command": "EVENT_SET_TRUE",
                                 "args": {
-                                    "variable": "10"
+                                    "variable": "21"
                                 },
                                 "id": "9260b21e-bc6a-49e8-9900-5576e9a31de3"
                             }
@@ -85790,8 +86157,8 @@
                 0
             ],
             "id": "9509ee90-debe-4d27-9537-feffe4db0c3a",
-            "x": 608,
-            "y": 2752,
+            "x": 632,
+            "y": 2956,
             "actors": [
                 {
                     "name": "",
@@ -85826,7 +86193,7 @@
                     "y": 11
                 },
                 {
-                    "name": "",
+                    "name": "Airlock M",
                     "frame": 0,
                     "animate": false,
                     "spriteSheetId": "23b75d3e-3982-4948-98bd-cffcd6b46e70",
@@ -85837,28 +86204,35 @@
                     "isPinned": false,
                     "collisionGroup": "1",
                     "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "4d203df1-5899-42aa-a733-2dc32c4b636e",
-                    "x": 105,
-                    "y": 45
-                },
-                {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "23b75d3e-3982-4948-98bd-cffcd6b46e70",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "1",
-                    "script": [],
-                    "startScript": [],
+                    "startScript": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "19",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_HIDE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "35478f04-00cb-422f-92ae-97aafe9f8402"
+                                    },
+                                    {
+                                        "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "abb8dde0-dc63-4dab-acba-4e75eb2b15d6"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "ce27226f-1f38-49cd-a239-0e8694d4965a"
+                        }
+                    ],
                     "updateScript": [],
                     "hit1Script": [],
                     "hit2Script": [],
@@ -85866,6 +86240,55 @@
                     "id": "f0739aa5-45cd-47bc-86d9-5be11efe0d5c",
                     "x": 93,
                     "y": 45
+                },
+                {
+                    "name": "Airlock P",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "dc8ecc61-4706-4d35-a286-8f696c04fd08",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [],
+                    "startScript": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "20",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_HIDE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "15d46c2f-d4e2-4037-8bd7-8d79b0c464bd"
+                                    },
+                                    {
+                                        "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "cb57f29e-228a-43d8-93c8-c22d4c619ada"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "d07132dc-10dc-4896-8e8c-06dce114c136"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "2f1bc34e-6bb0-40e2-bce3-2e15500a3bf6",
+                    "x": 99,
+                    "y": 38
                 }
             ],
             "triggers": [
@@ -85884,9 +86307,30 @@
                                 "x": 100,
                                 "y": 44,
                                 "direction": "",
-                                "fadeSpeed": "2"
+                                "fadeSpeed": 1
                             },
                             "id": "7420eb25-cc3c-46f3-afec-ac2a1fdec00f"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "6ffecf20-b389-437d-96b6-bb81aaf1d43e",
+                    "x": 102,
+                    "y": 33,
+                    "width": 2,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Node airlock\nis open."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "cb19d23c-c822-4ecb-a0e6-8844cd4d9b18"
                         }
                     ],
                     "leaveScript": []
@@ -85894,52 +86338,12 @@
             ],
             "script": [
                 {
-                    "command": "EVENT_SET_TRUE",
-                    "args": {
-                        "variable": "11"
-                    },
-                    "id": "ed7c8ce9-4d0f-4ebc-b5cf-4a5ee976ffbe"
-                },
-                {
                     "command": "EVENT_MUSIC_PLAY",
                     "args": {
                         "musicId": "59c808f6-b938-471c-828d-a254ed976494",
                         "loop": true
                     },
                     "id": "e767d80d-b89b-4710-896e-eee7fa0da935"
-                },
-                {
-                    "command": "EVENT_IF_TRUE",
-                    "args": {
-                        "variable": "10",
-                        "__collapseElse": false
-                    },
-                    "children": {
-                        "true": [],
-                        "false": [
-                            {
-                                "command": "EVENT_TEXT",
-                                "args": {
-                                    "text": [
-                                        "The station power\nseems to be gone.",
-                                        "Try to deploy the\nsolar panels and",
-                                        "charge the bat-\nteries. Use your",
-                                        "ship to power it\nif necessary."
-                                    ],
-                                    "avatarId": ""
-                                },
-                                "id": "5ee6ac1c-d6f1-4d8d-b432-ec0c88f509e8"
-                            },
-                            {
-                                "command": "EVENT_SET_TRUE",
-                                "args": {
-                                    "variable": "10"
-                                },
-                                "id": "036b4edd-65ba-41ec-9157-18ca21e1eeb8"
-                            }
-                        ]
-                    },
-                    "id": "16f43761-cfa8-4a00-84f7-127aef3c184e"
                 }
             ],
             "playerHit1Script": [],
@@ -99817,8 +100221,8 @@
                 0
             ],
             "id": "ed4541d1-e371-43b8-84c9-f772fd37a09c",
-            "x": 76,
-            "y": 3382,
+            "x": 92,
+            "y": 3574,
             "actors": [
                 {
                     "name": "",
@@ -99851,6 +100255,55 @@
                     "id": "59e1ec1e-5726-49f9-9207-213847dd736a",
                     "x": 37,
                     "y": 45
+                },
+                {
+                    "name": "Airlock P",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "dc8ecc61-4706-4d35-a286-8f696c04fd08",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [],
+                    "startScript": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "20",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_HIDE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "b83b567b-9982-44f0-bcfc-7592a32dc142"
+                                    },
+                                    {
+                                        "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "699aa3f3-c5ba-4da9-909d-5fba73d5b94b"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "e73d64c4-a98a-46c3-b431-b1e8bea4950b"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "13829148-b565-4c94-8144-873939f7973a",
+                    "x": 99,
+                    "y": 38
                 }
             ],
             "triggers": [
@@ -99869,9 +100322,30 @@
                                 "x": 100,
                                 "y": 44,
                                 "direction": "",
-                                "fadeSpeed": "2"
+                                "fadeSpeed": 1
                             },
                             "id": "1c0811dc-005e-4944-8aa1-d15f4a72e6aa"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "88b5cbfc-b6ff-45b0-9b42-d719733cbca2",
+                    "x": 87,
+                    "y": 40,
+                    "width": 1,
+                    "height": 2,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Node airlock\nis open."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "54d0555e-796c-4217-8e6d-ec88f2aaa2d4"
                         }
                     ],
                     "leaveScript": []
@@ -99879,54 +100353,1695 @@
             ],
             "script": [
                 {
-                    "command": "EVENT_SET_TRUE",
-                    "args": {
-                        "variable": "11"
-                    },
-                    "id": "228ff671-0495-4028-b831-4167ad2aadef"
-                },
-                {
                     "command": "EVENT_MUSIC_PLAY",
                     "args": {
                         "musicId": "59c808f6-b938-471c-828d-a254ed976494",
                         "loop": true
                     },
                     "id": "2e237f61-29a2-40cb-897b-9d238feb3101"
-                },
-                {
-                    "command": "EVENT_IF_TRUE",
-                    "args": {
-                        "variable": "10",
-                        "__collapseElse": false
-                    },
-                    "children": {
-                        "true": [],
-                        "false": [
-                            {
-                                "command": "EVENT_TEXT",
-                                "args": {
-                                    "text": [
-                                        "The station power\nseems to be gone.",
-                                        "Try to deploy the\nsolar panels and",
-                                        "charge the bat-\nteries. Use your",
-                                        "ship to power it\nif necessary."
-                                    ],
-                                    "avatarId": ""
-                                },
-                                "id": "9686959d-38cf-4595-b555-e0b98fb257aa"
-                            },
-                            {
-                                "command": "EVENT_SET_TRUE",
-                                "args": {
-                                    "variable": "10"
-                                },
-                                "id": "abc3e0ef-09ec-433d-95fe-18103fd5b4dc"
-                            }
-                        ]
-                    },
-                    "id": "f63da118-98be-46ec-9811-37e8468799da"
                 }
             ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": []
+        },
+        {
+            "name": "Airlock B",
+            "backgroundId": "a3dea9c1-2152-48cc-8135-59d79b3fc57d",
+            "width": 20,
+            "height": 18,
+            "type": "POINTNCLICK",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "id": "d794dca6-a93b-4939-862f-6cf7cc8e5ca2",
+            "x": 1937,
+            "y": 4186,
+            "actors": [
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "c4ae02b8-7557-4bcd-8302-748be7368e29",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "6006dc10-da87-4d1a-a8d6-08080828522a",
+                    "x": 4,
+                    "y": 8
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "dbee7b02-b70d-4088-82b6-1aba32074fa3",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 255,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [
+                        {
+                            "command": "EVENT_ACTOR_SET_FRAME",
+                            "args": {
+                                "actorId": "4a34b983-650c-4d81-ad45-aa3c6c45f589",
+                                "frame": {
+                                    "type": "number",
+                                    "value": 1
+                                }
+                            },
+                            "id": "2e8e5d0a-1f1a-4afe-a4e9-c01e1a442731"
+                        },
+                        {
+                            "command": "EVENT_ACTOR_HIDE",
+                            "args": {
+                                "actorId": "6006dc10-da87-4d1a-a8d6-08080828522a"
+                            },
+                            "id": "a4a7f756-b6f4-4c39-9ef9-5990a87b4d40"
+                        },
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Node airlock\nis now open."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "393ddca1-6513-4e44-a9c7-4e1ae50e9536"
+                        },
+                        {
+                            "command": "EVENT_SET_TRUE",
+                            "args": {
+                                "variable": "18",
+                                "__collapse": false
+                            },
+                            "id": "a203278a-fac3-43f8-b0d9-5e2cee489c5b"
+                        },
+                        {
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "d25ba2e0-ec91-4b01-b14b-618a049240fb",
+                                "x": 114,
+                                "y": 42,
+                                "direction": "up",
+                                "fadeSpeed": "2"
+                            },
+                            "id": "87bece1a-5d2c-4c2e-b7a7-992ca85ba748"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "4a34b983-650c-4d81-ad45-aa3c6c45f589",
+                    "x": 14,
+                    "y": 9
+                }
+            ],
+            "triggers": [
+                {
+                    "name": "",
+                    "id": "da8ad802-9dce-40aa-8505-a707470a3932",
+                    "x": 5,
+                    "y": 8,
+                    "width": 1,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Airlock state\nindicator"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "cb3395f1-f919-4d0f-b4e6-dfd90a3906e9"
+                        }
+                    ],
+                    "leaveScript": []
+                }
+            ],
+            "script": [],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": [],
+            "playerSpriteSheetId": "dd3458a4-fc76-432e-b315-71d49a3ec513"
+        },
+        {
+            "name": "Airlock M",
+            "backgroundId": "a3dea9c1-2152-48cc-8135-59d79b3fc57d",
+            "width": 20,
+            "height": 18,
+            "type": "POINTNCLICK",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "id": "8341f63d-f20f-45ca-bd49-865dcecf51b8",
+            "x": 2134,
+            "y": 4179,
+            "actors": [
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "c4ae02b8-7557-4bcd-8302-748be7368e29",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "38ef828d-c9b6-4aa4-b595-5b2b9cb65812",
+                    "x": 4,
+                    "y": 8
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "dbee7b02-b70d-4088-82b6-1aba32074fa3",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 255,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [
+                        {
+                            "command": "EVENT_ACTOR_SET_FRAME",
+                            "args": {
+                                "actorId": "7c80984b-0a16-46f8-89a4-e21ee63d3c53",
+                                "frame": {
+                                    "type": "number",
+                                    "value": 1
+                                }
+                            },
+                            "id": "88c75ccc-16d7-427f-bd33-0f7b09512855"
+                        },
+                        {
+                            "command": "EVENT_ACTOR_HIDE",
+                            "args": {
+                                "actorId": "38ef828d-c9b6-4aa4-b595-5b2b9cb65812"
+                            },
+                            "id": "2ca29b35-1030-441a-826c-494a115e3059"
+                        },
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Node airlock\nis now open."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "c9f6af15-65d5-4697-9a28-eb337a69a4df"
+                        },
+                        {
+                            "command": "EVENT_SET_TRUE",
+                            "args": {
+                                "variable": "19",
+                                "__collapse": false
+                            },
+                            "id": "217f0512-04bc-4364-86ea-8217c3691893"
+                        },
+                        {
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "d25ba2e0-ec91-4b01-b14b-618a049240fb",
+                                "x": 98,
+                                "y": 43,
+                                "direction": "up",
+                                "fadeSpeed": "2"
+                            },
+                            "id": "68b802e8-adde-4d3b-bbff-a589372231bf"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "7c80984b-0a16-46f8-89a4-e21ee63d3c53",
+                    "x": 14,
+                    "y": 9
+                }
+            ],
+            "triggers": [
+                {
+                    "name": "",
+                    "id": "58464404-4738-4095-b110-db2aa8c1867b",
+                    "x": 5,
+                    "y": 8,
+                    "width": 1,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Airlock state\nindicator"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "66620891-644f-4896-bc55-ebd82fcb52cf"
+                        }
+                    ],
+                    "leaveScript": []
+                }
+            ],
+            "script": [],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": [],
+            "playerSpriteSheetId": "dd3458a4-fc76-432e-b315-71d49a3ec513"
+        },
+        {
+            "name": "Airlock P",
+            "backgroundId": "a3dea9c1-2152-48cc-8135-59d79b3fc57d",
+            "width": 20,
+            "height": 18,
+            "type": "POINTNCLICK",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "id": "b4873b0d-459b-4f81-bd36-0f21907593f0",
+            "x": 2326,
+            "y": 4176,
+            "actors": [
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "c4ae02b8-7557-4bcd-8302-748be7368e29",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "e8b9ce10-b924-48f4-ba50-3754cfc9fb93",
+                    "x": 4,
+                    "y": 8
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "dbee7b02-b70d-4088-82b6-1aba32074fa3",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 255,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [
+                        {
+                            "command": "EVENT_ACTOR_SET_FRAME",
+                            "args": {
+                                "actorId": "4bd28d62-59d4-40bf-98ee-143004e6bd3a",
+                                "frame": {
+                                    "type": "number",
+                                    "value": 1
+                                }
+                            },
+                            "id": "62107c74-eef3-4128-9fd6-a680f9aedfef"
+                        },
+                        {
+                            "command": "EVENT_ACTOR_HIDE",
+                            "args": {
+                                "actorId": "e8b9ce10-b924-48f4-ba50-3754cfc9fb93"
+                            },
+                            "id": "e75c92e7-f950-41f3-93e3-da2fc1fea24e"
+                        },
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Node airlock\nis now open."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "595127f7-5be8-4889-9514-a95bd8bd59af"
+                        },
+                        {
+                            "command": "EVENT_SET_TRUE",
+                            "args": {
+                                "variable": "20",
+                                "__collapse": false
+                            },
+                            "id": "841c71ef-09b3-4ed6-8e88-3110889dcf18"
+                        },
+                        {
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "d25ba2e0-ec91-4b01-b14b-618a049240fb",
+                                "x": 99,
+                                "y": 43,
+                                "direction": "up",
+                                "fadeSpeed": "2"
+                            },
+                            "id": "4e164d54-9031-4457-8da5-3294a7d732a9"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "4bd28d62-59d4-40bf-98ee-143004e6bd3a",
+                    "x": 14,
+                    "y": 9
+                }
+            ],
+            "triggers": [
+                {
+                    "name": "",
+                    "id": "05dc0f44-ec8d-41cf-99ae-604121b0cc5a",
+                    "x": 5,
+                    "y": 8,
+                    "width": 1,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Airlock state\nindicator"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "e9e35132-e6df-47ba-a4cd-fbff0a618bb0"
+                        }
+                    ],
+                    "leaveScript": []
+                }
+            ],
+            "script": [],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": [],
+            "playerSpriteSheetId": "dd3458a4-fc76-432e-b315-71d49a3ec513"
+        },
+        {
+            "name": "Panels power 02",
+            "backgroundId": "8a2d984a-733e-48a9-a234-db5acac817cd",
+            "width": 20,
+            "height": 18,
+            "type": "POINTNCLICK",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "id": "89843e2b-5b5e-44a7-af6d-e15f4713c7de",
+            "x": 2813,
+            "y": 3392,
+            "actors": [
+                {
+                    "name": "State",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "69dc2337-4908-48b0-880a-5ace681e2b7b",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 255,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Power consumption\nis larger than",
+                                    "power supply from\nsolar panels."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "6d59d794-6135-4049-9b73-84a2a9ed7c83"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "command": "EVENT_ACTOR_SET_FRAME",
+                            "args": {
+                                "actorId": "$self$",
+                                "frame": {
+                                    "type": "number",
+                                    "value": 3
+                                }
+                            },
+                            "id": "48215a3e-1bc4-46be-b9b6-71198ecea671"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "88403940-6079-47df-9cd3-24b23435bbbc",
+                    "x": 2,
+                    "y": 8
+                },
+                {
+                    "name": "Consum",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "69dc2337-4908-48b0-880a-5ace681e2b7b",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 255,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Power consumption\nnormal."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "48352c70-8c31-4a20-8459-a58e2e4b1709"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "command": "EVENT_ACTOR_SET_FRAME",
+                            "args": {
+                                "actorId": "$self$",
+                                "frame": {
+                                    "type": "number",
+                                    "value": 4
+                                }
+                            },
+                            "id": "198277f2-c9eb-48ef-aca4-17a2de4b1f29"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "02e1bf41-6380-40e8-8342-919ac7d875d3",
+                    "x": 2,
+                    "y": 6
+                },
+                {
+                    "name": "Charge",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "69dc2337-4908-48b0-880a-5ace681e2b7b",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 255,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "The battery base\nis not charging.",
+                                    "Check the battery\nchargers in the",
+                                    "module main hull."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "afe27c32-129e-4436-b5b6-adefb2831844"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "command": "EVENT_ACTOR_SET_FRAME",
+                            "args": {
+                                "actorId": "$self$",
+                                "frame": {
+                                    "type": "number",
+                                    "value": 5
+                                }
+                            },
+                            "id": "ddcbda55-441b-4df3-9c78-faa2b0b60174"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "2a9ae535-ce7c-4199-bf31-2f5be3c00254",
+                    "x": 2,
+                    "y": 10
+                }
+            ],
+            "triggers": [
+                {
+                    "name": "",
+                    "id": "be3f5956-74b7-4126-8bdc-c18e62e1eda1",
+                    "x": 1,
+                    "y": 16,
+                    "width": 1,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "d25ba2e0-ec91-4b01-b14b-618a049240fb",
+                                "x": 143,
+                                "y": 41,
+                                "direction": "down",
+                                "fadeSpeed": "2"
+                            },
+                            "id": "8cecf994-86a1-4fbb-bd0d-9740b54ec854"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "efcb53ff-41cc-470c-b641-ec24e3b53505",
+                    "x": 15,
+                    "y": 5,
+                    "width": 3,
+                    "height": 5,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Both Bohemia solar\npanels are open."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "7daccc16-262d-4a83-b3a1-1d7d60ccabc8"
+                        }
+                    ],
+                    "leaveScript": []
+                }
+            ],
+            "script": [],
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": []
@@ -99962,6 +102077,15 @@
             "imageHeight": 144,
             "filename": "control_airlock_main.png",
             "tileColors": []
+        },
+        {
+            "id": "a3dea9c1-2152-48cc-8135-59d79b3fc57d",
+            "name": "control_airlock_node",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "control_airlock_node.png"
         },
         {
             "id": "65777873-19cb-4a95-9383-bfbe8102570d",
@@ -108123,6 +110247,288 @@
             "animSpeed": 15
         },
         {
+            "id": "69dc2337-4908-48b0-880a-5ace681e2b7b",
+            "name": "stan_high",
+            "numFrames": 6,
+            "type": "actor_animated",
+            "filename": "stan_high.png",
+            "checksum": "e2ca4dc3a7ac00055caef007c91de4a3611ee4ea",
+            "width": 96,
+            "height": 8,
+            "states": [
+                {
+                    "id": "52aa8d7b-32e6-4b61-90a3-3d846042daa6",
+                    "name": "",
+                    "animationType": "fixed",
+                    "flipLeft": true,
+                    "animations": [
+                        {
+                            "id": "4703dbc4-8ae2-4274-8d9e-30587ffeae69",
+                            "frames": [
+                                {
+                                    "id": "06dea59d-b1e5-4660-8609-5fe1098a96d8",
+                                    "tiles": [
+                                        {
+                                            "id": "759f8160-4924-4725-9d4c-2cb1358ffe32",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 0,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "4e6e3ea0-f8bc-421f-a940-e6eb0c91cea1",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 8,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "8e59dd18-7bfa-475b-8f62-bac1a7d60bcb",
+                                    "tiles": [
+                                        {
+                                            "id": "e5deb9fa-699a-4894-8cae-376e91e7bae9",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 16,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "9b3854df-0897-493f-ab29-fd9e637baa20",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 24,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "a6457742-32d3-4655-b210-f77f17354406",
+                                    "tiles": [
+                                        {
+                                            "id": "e069cc75-c487-45cf-84a9-08a7bee8ed7a",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 32,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "125405b5-ab8b-495f-8689-858cc220228a",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 40,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "c279dcde-b524-495f-942e-45f337326b2a",
+                                    "tiles": [
+                                        {
+                                            "id": "3ad66b79-a163-4b07-878c-085a745d5ddc",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 48,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "5fcbf752-8b81-49c4-bdf9-3579c1815ee0",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 56,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "dd1a9321-d3d8-4dd4-8e7e-1efbde14f05a",
+                                    "tiles": [
+                                        {
+                                            "id": "d40b5f0b-ab83-45e2-95f9-2974a747d1ee",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 64,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "27aae6c2-1124-443d-9a92-46ec39a3aa8a",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 72,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "70a3d5ef-47db-4119-9190-ff393cc8aeba",
+                                    "tiles": [
+                                        {
+                                            "id": "2c7b7a04-dffb-4b4f-9616-77229e86e5c3",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 80,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "5c5a47d0-ba2d-4581-b067-f9fe4fccd998",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 88,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "b17bd18f-1e93-4c37-9ff4-6f29b127e6ef",
+                            "frames": [
+                                {
+                                    "id": "f885145c-c4e8-4109-9205-938d5b0ef3d2",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "5e89083c-28b4-47bf-b73c-63b3dff75899",
+                            "frames": [
+                                {
+                                    "id": "06720e6a-10e9-4274-85de-dba1daf17cab",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "e65ccef2-c285-47fd-b692-aca8a4ff6593",
+                            "frames": [
+                                {
+                                    "id": "c8cf1b64-b1fc-4637-b318-8f31762a576f",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "f34aeb1b-f0ad-4607-8d80-c8020199886b",
+                            "frames": [
+                                {
+                                    "id": "b1efb744-16c2-477e-b36d-e88a0d1908d2",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "31198918-d05e-4b11-b396-9cde8642d77f",
+                            "frames": [
+                                {
+                                    "id": "e458b978-0ab8-474f-93ed-bb912923a3f7",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "26d5ed46-b4eb-4d04-8471-994a0c3318f1",
+                            "frames": [
+                                {
+                                    "id": "e8a37b34-48fe-48f7-a754-0f72325ea351",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "e704c36a-6635-4f3b-b282-cd7dea81b9ab",
+                            "frames": [
+                                {
+                                    "id": "cdbdaf22-d36e-4f0b-bcc9-1baf5773485a",
+                                    "tiles": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "numTiles": 7,
+            "canvasWidth": 16,
+            "canvasHeight": 16,
+            "boundsX": 0,
+            "boundsY": 0,
+            "boundsWidth": 16,
+            "boundsHeight": 8,
+            "animSpeed": 15
+        },
+        {
             "id": "8d7eb09c-b64d-4ed4-95ff-52032bbc04e1",
             "name": "switch_bottom_right",
             "numFrames": 0.5,
@@ -108725,6 +111131,26 @@
         {
             "id": "0d82c1b2-0ecb-4f4f-b169-21019d7d4729__L0",
             "name": "RCS systems"
+        },
+        {
+            "id": "18",
+            "name": "Airlock B"
+        },
+        {
+            "id": "20",
+            "name": "Airlock P"
+        },
+        {
+            "id": "19",
+            "name": "Airlock M"
+        },
+        {
+            "id": "21",
+            "name": "Day 02 start"
+        },
+        {
+            "id": "22",
+            "name": "Need Tools"
         }
     ],
     "engineFieldValues": [
@@ -108734,17 +111160,17 @@
         }
     ],
     "settings": {
-        "startSceneId": "1f10c435-64b1-4a4c-a5e5-19aa1d883949",
-        "startX": 17,
-        "startY": 1,
+        "startSceneId": "d25ba2e0-ec91-4b01-b14b-618a049240fb",
+        "startX": 180,
+        "startY": 44,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1203,
-        "worldScrollY": 2776,
-        "zoom": 100,
+        "worldScrollX": 124,
+        "worldScrollY": 422,
+        "zoom": 25,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
