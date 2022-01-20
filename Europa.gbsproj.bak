@@ -40884,67 +40884,80 @@
                     "collisionGroup": "1",
                     "script": [
                         {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Cargo crate"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "f115c2a6-ac51-432c-add6-fc5131377060"
+                        },
+                        {
+                            "command": "EVENT_CHOICE",
+                            "args": {
+                                "variable": "L3",
+                                "trueText": "Search cargo",
+                                "falseText": "Not now"
+                            },
+                            "id": "30351b51-3919-4790-b8fa-194cc74207a3"
+                        },
+                        {
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "13",
+                                "variable": "L3",
                                 "__collapseElse": false
                             },
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_CHOICE",
+                                        "command": "EVENT_IF_TRUE",
                                         "args": {
-                                            "variable": "L3",
-                                            "trueText": "Search cargo",
-                                            "falseText": "Not now"
+                                            "variable": "13",
+                                            "__collapseElse": false
                                         },
-                                        "id": "30351b51-3919-4790-b8fa-194cc74207a3"
-                                    },
-                                    {
-                                        "command": "EVENT_SET_VALUE",
-                                        "args": {
-                                            "variable": "L3",
-                                            "value": {
-                                                "type": "number",
-                                                "value": 0
-                                            }
-                                        },
-                                        "id": "e2edd11a-2cf1-45ce-b050-e6955df7f4ce"
-                                    },
-                                    {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                "Tools, spare parts\nand some electric ",
-                                                "components. Wait\na minute!",
-                                                "You found electric\nconnection cable!"
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "Tools, spare parts\nand some electric ",
+                                                            "components. Wait\na minute!",
+                                                            "You found electric\nconnection cable!"
+                                                        ],
+                                                        "avatarId": ""
+                                                    },
+                                                    "id": "3b6ffa76-7cb4-4452-aeb3-cfd067aae544"
+                                                },
+                                                {
+                                                    "command": "EVENT_SET_TRUE",
+                                                    "args": {
+                                                        "variable": "11"
+                                                    },
+                                                    "id": "5d538527-0095-4d76-b0c2-0281289bf6b0"
+                                                }
                                             ],
-                                            "avatarId": ""
+                                            "false": [
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "This one holds\ntools, electric",
+                                                            "spare parts and \nother components."
+                                                        ],
+                                                        "avatarId": ""
+                                                    },
+                                                    "id": "b549b701-599a-4992-97cc-11133ca4d74f"
+                                                }
+                                            ]
                                         },
-                                        "id": "3b6ffa76-7cb4-4452-aeb3-cfd067aae544"
-                                    },
-                                    {
-                                        "command": "EVENT_SET_TRUE",
-                                        "args": {
-                                            "variable": "11"
-                                        },
-                                        "id": "5d538527-0095-4d76-b0c2-0281289bf6b0"
+                                        "id": "925749a4-579f-4986-aa4a-b95d6c7b1403"
                                     }
                                 ],
-                                "false": [
-                                    {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                "Cargo crate"
-                                            ],
-                                            "avatarId": ""
-                                        },
-                                        "id": "f115c2a6-ac51-432c-add6-fc5131377060"
-                                    }
-                                ]
+                                "false": []
                             },
-                            "id": "925749a4-579f-4986-aa4a-b95d6c7b1403"
+                            "id": "1546a347-c0c2-4df4-94c7-1e9532c76755"
                         }
                     ],
                     "startScript": [],
@@ -40969,27 +40982,37 @@
                     "collisionGroup": "1",
                     "script": [
                         {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Cargo crate"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "45cbaf31-146a-41a5-9df0-76e6773580b3"
+                        },
+                        {
+                            "command": "EVENT_CHOICE",
+                            "args": {
+                                "variable": "L2",
+                                "trueText": "Search cargo",
+                                "falseText": "Not now"
+                            },
+                            "id": "ea7e4604-adc9-47b2-8b1d-d579e0a0b437"
+                        },
+                        {
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "13",
+                                "variable": "L2",
                                 "__collapseElse": false
                             },
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_CHOICE",
-                                        "args": {
-                                            "variable": "L3",
-                                            "trueText": "Search cargo",
-                                            "falseText": "Not now"
-                                        },
-                                        "id": "ea7e4604-adc9-47b2-8b1d-d579e0a0b437"
-                                    },
-                                    {
                                         "command": "EVENT_IF_TRUE",
                                         "args": {
-                                            "variable": "L3",
-                                            "__collapseElse": true
+                                            "variable": "13",
+                                            "__collapseElse": false
                                         },
                                         "children": {
                                             "true": [
@@ -41005,25 +41028,25 @@
                                                     "id": "ce5c8f0b-3f29-4fe1-9220-325a7bc281ea"
                                                 }
                                             ],
-                                            "false": []
+                                            "false": [
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "Food, clothes,\nsanitary supplies."
+                                                        ],
+                                                        "avatarId": ""
+                                                    },
+                                                    "id": "89f71f28-3eb0-4e24-b6a0-a9684cdf4b7d"
+                                                }
+                                            ]
                                         },
-                                        "id": "92d33c58-c4ca-41df-839d-c5a0d4a2c92a"
+                                        "id": "dfe71ec3-3742-4c3a-b708-8e28c3c276c0"
                                     }
                                 ],
-                                "false": [
-                                    {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                "Cargo crate"
-                                            ],
-                                            "avatarId": ""
-                                        },
-                                        "id": "45cbaf31-146a-41a5-9df0-76e6773580b3"
-                                    }
-                                ]
+                                "false": []
                             },
-                            "id": "dfe71ec3-3742-4c3a-b708-8e28c3c276c0"
+                            "id": "92d33c58-c4ca-41df-839d-c5a0d4a2c92a"
                         }
                     ],
                     "startScript": [
@@ -41462,6 +41485,132 @@
                                 "avatarId": ""
                             },
                             "id": "64764157-f126-479b-ad52-7f5dcd1ee0bf"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "04e42532-da6c-4071-9fac-c70f08f9cd27",
+                    "x": 131,
+                    "y": 51,
+                    "width": 2,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Experiments bay.\nAll defunt while\nthere is no power."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "afe217bc-7f46-4d32-b3eb-8d9ee134c402"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "e277c6f0-39ae-41fc-a0bd-020562e2bf30",
+                    "x": 131,
+                    "y": 36,
+                    "width": 2,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Experiments bay.\nAll defunt while\nthere is no power."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "18306a1b-1082-4995-980c-bcc5bf829c6e"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "f7758adb-adc6-47e4-957a-eda92f630d94",
+                    "x": 136,
+                    "y": 38,
+                    "width": 6,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Experiments bay.\nAll defunt while\nthere is no power."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "a4e9db46-3de6-400c-8924-851d359b3336"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "66b94c4d-a74f-4d7b-89c3-aa281b879087",
+                    "x": 147,
+                    "y": 38,
+                    "width": 5,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Experiments bay.\nAll defunt while\nthere is no power."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "af351647-ba93-4821-9525-df5c71e8b46c"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "6216864f-547e-40de-a81a-9e44a0fdcdc8",
+                    "x": 115,
+                    "y": 36,
+                    "width": 10,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Cargo space"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "4989dea3-b022-4012-b275-804ff816c8f3"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "3bc96d0f-400a-4345-945c-9cf909539f7c",
+                    "x": 118,
+                    "y": 51,
+                    "width": 7,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Experiments bay.\nAll defunt while\nthere is no power."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "e0e5771b-ec84-4489-b8bf-dc5e4882147e"
                         }
                     ],
                     "leaveScript": []
@@ -56933,103 +57082,71 @@
                     "collisionGroup": "1",
                     "script": [
                         {
+                            "command": "EVENT_CHOICE",
+                            "args": {
+                                "variable": "L3",
+                                "trueText": "Search cargo",
+                                "falseText": "Not now"
+                            },
+                            "id": "e76b7145-501d-4ab4-bbec-bc2bc84650d5"
+                        },
+                        {
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "13",
+                                "variable": "L3",
                                 "__collapseElse": false
                             },
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_CHOICE",
-                                        "args": {
-                                            "variable": "L3",
-                                            "trueText": "Search cargo",
-                                            "falseText": "Not now"
-                                        },
-                                        "id": "e76b7145-501d-4ab4-bbec-bc2bc84650d5"
-                                    },
-                                    {
                                         "command": "EVENT_IF_TRUE",
                                         "args": {
-                                            "variable": "L3",
+                                            "variable": "27",
                                             "__collapseElse": false
                                         },
                                         "children": {
                                             "true": [
                                                 {
-                                                    "command": "EVENT_IF_TRUE",
+                                                    "command": "EVENT_TEXT",
                                                     "args": {
-                                                        "variable": "27",
-                                                        "__collapseElse": false
-                                                    },
-                                                    "children": {
-                                                        "true": [
-                                                            {
-                                                                "command": "EVENT_TEXT",
-                                                                "args": {
-                                                                    "text": [
-                                                                        "Oh, darn.  Where\ncan it be? Under",
-                                                                        "the toolbox?  Talk\nabout tetris, now.",
-                                                                        "Looks who's here!\nBingo on a rocket!"
-                                                                    ],
-                                                                    "avatarId": ""
-                                                                },
-                                                                "id": "250e6663-b9f4-40d4-989a-0e5e6173f4e7"
-                                                            },
-                                                            {
-                                                                "command": "EVENT_SET_TRUE",
-                                                                "args": {
-                                                                    "variable": "16"
-                                                                },
-                                                                "id": "7467f34d-242f-4de5-9c7a-f76c49233073"
-                                                            }
+                                                        "text": [
+                                                            "Oh, darn.  Where\ncan it be? Under",
+                                                            "the toolbox?  Talk\nabout tetris, now.",
+                                                            "Looks who's here!\nBingo on a rocket!"
                                                         ],
-                                                        "false": [
-                                                            {
-                                                                "command": "EVENT_TEXT",
-                                                                "args": {
-                                                                    "text": [
-                                                                        "Tools,spare parts\nand some electric",
-                                                                        "components...\nWait a  minute!",
-                                                                        "You found the\nlink cable!"
-                                                                    ],
-                                                                    "avatarId": "",
-                                                                    "__collapse": true
-                                                                },
-                                                                "id": "a5f94d82-adb1-4392-b0f7-23a59402f275"
-                                                            },
-                                                            {
-                                                                "command": "EVENT_SET_TRUE",
-                                                                "args": {
-                                                                    "variable": "11"
-                                                                },
-                                                                "id": "2e4c653e-57e5-42ed-8541-ffd94a350c63"
-                                                            }
-                                                        ]
+                                                        "avatarId": ""
                                                     },
-                                                    "id": "7866c424-88bf-484d-bf3f-bc2f4661cb54"
+                                                    "id": "250e6663-b9f4-40d4-989a-0e5e6173f4e7"
+                                                },
+                                                {
+                                                    "command": "EVENT_SET_TRUE",
+                                                    "args": {
+                                                        "variable": "16"
+                                                    },
+                                                    "id": "7467f34d-242f-4de5-9c7a-f76c49233073"
                                                 }
                                             ],
-                                            "false": []
+                                            "false": [
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "Tools, spare parts\nand some electric",
+                                                            "components. Oh, is\nthat a Gameboy?"
+                                                        ],
+                                                        "avatarId": "",
+                                                        "__collapse": false
+                                                    },
+                                                    "id": "a5f94d82-adb1-4392-b0f7-23a59402f275"
+                                                }
+                                            ]
                                         },
-                                        "id": "f114f45c-7eff-4f2a-8b7d-2a8b2f889e5a"
+                                        "id": "7866c424-88bf-484d-bf3f-bc2f4661cb54"
                                     }
                                 ],
-                                "false": [
-                                    {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                "Cargo crate"
-                                            ],
-                                            "avatarId": ""
-                                        },
-                                        "id": "a54ab523-706b-44d7-aa5f-88b87e5b550b"
-                                    }
-                                ]
+                                "false": []
                             },
-                            "id": "b68447c5-2c20-4860-aa77-5384d8023723"
+                            "id": "f114f45c-7eff-4f2a-8b7d-2a8b2f889e5a"
                         }
                     ],
                     "startScript": [],
@@ -57083,7 +57200,7 @@
                                                     "args": {
                                                         "text": [
                                                             "Food, spare socks\nand trousers...",
-                                                            "Probably not here."
+                                                            ""
                                                         ],
                                                         "avatarId": ""
                                                     },
@@ -57095,18 +57212,7 @@
                                         "id": "76b113c0-4808-41bd-b2ea-dfe379776e46"
                                     }
                                 ],
-                                "false": [
-                                    {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                "Cargo crate"
-                                            ],
-                                            "avatarId": ""
-                                        },
-                                        "id": "d2265046-f056-47c1-8e6d-6f35efc0aa98"
-                                    }
-                                ]
+                                "false": []
                             },
                             "id": "2658d2fe-922e-4ee9-83e0-19270862167f"
                         }
@@ -57620,6 +57726,132 @@
                         }
                     ],
                     "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "5454efac-7042-4069-969b-97f3a7f61948",
+                    "x": 118,
+                    "y": 51,
+                    "width": 7,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Experiments bay.\nAll defunct while\nthere is no power."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "8b241f10-efe3-416b-b024-2c02f948a6b8"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "1e891b1f-433f-4819-8919-5f102306fdd2",
+                    "x": 115,
+                    "y": 36,
+                    "width": 10,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Cargo space"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "33de8a8f-c026-4b5c-8622-1faedeeec871"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "6d74f02d-72bb-4301-a12b-05b4185dbd0c",
+                    "x": 131,
+                    "y": 36,
+                    "width": 2,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Experiments bay.\nAll defunct while\nthere is no power."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "94f96b47-d527-4e5f-8ba5-dff3cd0f5952"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "28ba3f87-c3fe-46cc-9af6-4482b97ec0c4",
+                    "x": 136,
+                    "y": 38,
+                    "width": 6,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Experiments bay.\nAll defunct while\nthere is no power."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "60080e7f-3bd2-4163-91fd-647e42f8c667"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "502a00ad-2aa7-44c3-8d92-4300a19568bf",
+                    "x": 147,
+                    "y": 38,
+                    "width": 5,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Experiments bay.\nAll defunct while\nthere is no power."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "305151c3-9f08-47ab-a5fe-46e4dca5763a"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "55106458-a4ca-488c-a701-f196a2567af6",
+                    "x": 131,
+                    "y": 51,
+                    "width": 2,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Experiments bay.\nAll defunct while\nthere is no power."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "aa60a96b-bb57-4c65-a315-114ec70f055c"
+                        }
+                    ],
+                    "leaveScript": []
                 }
             ],
             "script": [
@@ -57857,7 +58089,8 @@
                             "take time to\nfully recharge."
                         ],
                         "avatarId": "",
-                        "__comment": false
+                        "__comment": false,
+                        "__collapse": true
                     },
                     "id": "6c733ea7-e790-4126-ad61-e27778d2aa42"
                 },
@@ -72873,6 +73106,132 @@
                                 "avatarId": ""
                             },
                             "id": "4f74946a-9749-4b20-a115-e9f254656bc0"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "60cbf81a-308b-4147-a57f-b72d018468fe",
+                    "x": 115,
+                    "y": 36,
+                    "width": 10,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Cargo space"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "3a041229-56a0-4ffd-8c8e-6a8f1f0b5940"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "21691340-0a11-489f-bff2-b7ab63bda893",
+                    "x": 136,
+                    "y": 38,
+                    "width": 6,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Experiments bay.\nAll defunt while\nthere is no power."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "d06cc344-1591-42ff-8651-1d8f389b0beb"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "89408bde-0049-4b38-9a51-2a6d118cdfdd",
+                    "x": 147,
+                    "y": 38,
+                    "width": 5,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Experiments bay.\nAll defunct while\nthere is no power."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "b5065919-b12b-4c65-ba72-3b1eeca46d86"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "5ded93bc-69e9-4722-a055-dc3bb2998670",
+                    "x": 131,
+                    "y": 36,
+                    "width": 2,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Experiments bay.\nAll defunct while\nthere is no power."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "77fa7f89-08ca-49b5-b48e-10a25bf035b1"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "0af770b2-8539-465b-9344-f12aaf0e6ce8",
+                    "x": 131,
+                    "y": 51,
+                    "width": 2,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Experiments bay.\nAll defunct while\nthere is no power."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "b2be3cb4-5f3f-462f-be02-715592de59fc"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "02c0a96a-1bdb-4d9f-beb8-cf7670bbea7b",
+                    "x": 118,
+                    "y": 51,
+                    "width": 7,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Experiments bay.\nAll defunct while\nthere is no power."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "e4eeb6d1-68b1-4bd5-b15b-0938d3fd0ca3"
                         }
                     ],
                     "leaveScript": []
@@ -101001,12 +101360,44 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
+                                    "Oxygen generator\ncompartment."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "9e3a267c-5753-4397-b7a5-a76de6fddd3b"
+                        },
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
                                     "Wha-at? A triwing\nscredriver? What",
                                     "is that, handheld\nNintendo or what?"
                                 ],
                                 "avatarId": ""
                             },
                             "id": "b9ef7e48-e402-4656-916b-a3172d318116"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "22686e41-29c3-4d60-9cda-295b7b91e05a",
+                    "x": 82,
+                    "y": 51,
+                    "width": 4,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Robotic arm\ncontrol panel.",
+                                    "No use for it now."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "c592dfca-2964-4ca6-94aa-f08a4a5b88d6"
                         }
                     ],
                     "leaveScript": []
@@ -185637,17 +186028,17 @@
         }
     ],
     "settings": {
-        "startSceneId": "1f10c435-64b1-4a4c-a5e5-19aa1d883949",
-        "startX": 17,
-        "startY": 9,
+        "startSceneId": "ec963f8e-4339-4e80-896e-9d6d94df7d8a",
+        "startX": 157,
+        "startY": 43,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 446,
-        "worldScrollY": 0,
-        "zoom": 100,
+        "worldScrollX": 4079,
+        "worldScrollY": 3493,
+        "zoom": 200,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
@@ -185675,9 +186066,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            403,
-            121,
-            121
+            673,
+            202,
+            202
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
