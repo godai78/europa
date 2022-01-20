@@ -87379,21 +87379,55 @@
                     "height": 4,
                     "script": [
                         {
-                            "command": "EVENT_SET_TRUE",
+                            "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "30"
+                                "variable": "30",
+                                "__collapseElse": false
                             },
-                            "id": "ad67f1e3-c5b8-45f0-ade5-fd3a2be4dff5"
-                        },
-                        {
-                            "command": "EVENT_TEXT",
-                            "args": {
-                                "text": [
-                                    "Have Tools!"
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Oh, well. I sure\nam sorry there is",
+                                                "no Georgian cognac\nleft in the box..."
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "26c46a34-ad0f-4502-aea8-26df9b07beb9"
+                                    }
                                 ],
-                                "avatarId": ""
+                                "false": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "A tools locker.\nFinally! What do",
+                                                "we have here. An\naxe. Alrigt. Yes.",
+                                                "Uhm, and that is\na... \"bear gun\"?",
+                                                "Oh right, in case\nof landing in the",
+                                                "forest as an\nemergency. Sigh...",
+                                                "Where do they\nkeep those damn",
+                                                "tools! Wait, what\nis that thing?",
+                                                "A wooden box of\nGeorgian cognac?",
+                                                "Nope... This is\nsome makeshift ",
+                                                "toolbox! And here\nare the tools!"
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "c05fd2bd-7dc3-47c7-9072-c8a00f5ec7f6"
+                                    },
+                                    {
+                                        "command": "EVENT_SET_TRUE",
+                                        "args": {
+                                            "variable": "30"
+                                        },
+                                        "id": "ad67f1e3-c5b8-45f0-ade5-fd3a2be4dff5"
+                                    }
+                                ]
                             },
-                            "id": "c05fd2bd-7dc3-47c7-9072-c8a00f5ec7f6"
+                            "id": "a84017d9-6f70-433b-8013-fe2f38342c93"
                         }
                     ],
                     "leaveScript": []
@@ -87449,7 +87483,18 @@
                     "y": 23,
                     "width": 1,
                     "height": 11,
-                    "script": [],
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Cargo space"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "79543616-dcdf-4290-b547-6cbcd25ff7ef"
+                        }
+                    ],
                     "leaveScript": []
                 },
                 {
@@ -87464,11 +87509,11 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Experiments bay.\nAll defunct while\nthere is no power."
+                                    "Cargo space"
                                 ],
                                 "avatarId": ""
                             },
-                            "id": "41c332e9-70ba-4dc0-b2f0-efdf77f542a8"
+                            "id": "9123225b-848c-4b0e-8ad4-b0127c667b42"
                         }
                     ],
                     "leaveScript": []
@@ -87511,6 +87556,49 @@
                                 "avatarId": ""
                             },
                             "id": "d0d020b1-c472-4534-b94c-4d68d1ad7d5a"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "4b8fc810-6f3b-4c5a-91e2-546ce32244e4",
+                    "x": 103,
+                    "y": 6,
+                    "width": 1,
+                    "height": 2,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "The EVA hatch\ncontrol panel.",
+                                    "Not operable when\npower is down."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "5804dd31-2b03-46e5-b502-dd130717e12e"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "2fb2ad6b-ff0a-40c4-a7c4-2e227e770501",
+                    "x": 96,
+                    "y": 3,
+                    "width": 8,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Oooh, the EVA\nsuits. Noice!"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "9e334a0d-201e-4a92-b7ee-293052f7bac8"
                         }
                     ],
                     "leaveScript": []
@@ -101550,7 +101638,9 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Alright!"
+                                                "Alright!",
+                                                "You repaired the\noxygen genertor.",
+                                                "You may rest now."
                                             ],
                                             "avatarId": ""
                                         },
@@ -101562,6 +101652,17 @@
                                             "variable": "29"
                                         },
                                         "id": "0f8e9328-67b4-4f6b-a03b-3631581c316c"
+                                    },
+                                    {
+                                        "command": "EVENT_SWITCH_SCENE",
+                                        "args": {
+                                            "sceneId": "a89dd99d-c7d5-445c-b3e4-2578fdacaf04",
+                                            "x": 0,
+                                            "y": 0,
+                                            "direction": "",
+                                            "fadeSpeed": "2"
+                                        },
+                                        "id": "e07d92d0-f6a4-44cd-98d1-1d05174e8b02"
                                     }
                                 ],
                                 "false": [
@@ -101591,9 +101692,15 @@
                                                     "command": "EVENT_TEXT",
                                                     "args": {
                                                         "text": [
-                                                            "You need infill."
+                                                            "You managed to\nopen the cover.",
+                                                            "Looks like the\nfilters have all",
+                                                            "gone bad and the\ndevice stopped.",
+                                                            "THIS HERE WILL BE\nA SEPARATE SCENE.",
+                                                            "You need some kind\nof soft infill to",
+                                                            "replace the faulty\nfilter."
                                                         ],
-                                                        "avatarId": ""
+                                                        "avatarId": "",
+                                                        "__collapse": false
                                                     },
                                                     "id": "4b016095-9624-4f49-9cb6-a79086646edd"
                                                 }
@@ -101786,7 +101893,66 @@
                     "y": 38,
                     "width": 5,
                     "height": 1,
-                    "script": [],
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Cargo space."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "ea4cd0f3-ee5e-46f3-9c0d-9546f654b902"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "046bdb51-3172-43a1-9b50-7a19322082ea",
+                    "x": 48,
+                    "y": 38,
+                    "width": 5,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Experiments bay.\nAll defunct while\nthere is no power."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "35667cc2-1b73-4ddd-878e-7f591d1cc05e"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "222f0c8d-8ddb-4110-8766-ff13549da32b",
+                    "x": 75,
+                    "y": 51,
+                    "width": 7,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Experiments bay.\nAll defunct while",
+                                    "there is no power.\nBut... what is it?",
+                                    "Oh dear, is this?\nThis can't be!",
+                                    "It's a tiny white\nDjungarian hamster",
+                                    "and it must've\nhibernated while",
+                                    "power went down\nand it got cold.",
+                                    "But it's still\nalive! How nice!"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "dc6025f9-bca9-4ae0-aa21-9a99d22139c3"
+                        }
+                    ],
                     "leaveScript": []
                 }
             ],
@@ -103570,7 +103736,7 @@
                             "This is it for\nthis release."
                         ],
                         "avatarId": "",
-                        "__comment": true,
+                        "__comment": false,
                         "__collapse": true
                     },
                     "id": "122a5737-48c8-467d-88c4-8bc996b750c7"
@@ -103591,7 +103757,7 @@
                             "RCS engines on to\nset position."
                         ],
                         "avatarId": "",
-                        "__comment": false,
+                        "__comment": true,
                         "__collapse": false
                     },
                     "id": "f27313a4-ac8b-4f03-b090-04af84017a20"
@@ -103613,7 +103779,7 @@
                         "y": 2,
                         "direction": "",
                         "fadeSpeed": "2",
-                        "__comment": true,
+                        "__comment": false,
                         "__collapse": false
                     },
                     "id": "065729dd-2e5d-4c85-b2cd-22d4f1e5e54d"
@@ -103626,7 +103792,7 @@
                         "y": 44,
                         "direction": "",
                         "fadeSpeed": "2",
-                        "__comment": false,
+                        "__comment": true,
                         "__collapse": false
                     },
                     "id": "af1e11d4-395a-4673-af2d-04cfccee2441"
@@ -177624,7 +177790,368 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "title.png",
-            "tileColors": []
+            "tileColors": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
         },
         {
             "id": "fba6b992-ab02-4caa-a826-9471effb2348",
@@ -187982,16 +188509,16 @@
         }
     ],
     "settings": {
-        "startSceneId": "077a3efd-d0e5-429b-a94c-45edbe87a399",
-        "startX": 12,
-        "startY": 15,
+        "startSceneId": "1f10c435-64b1-4a4c-a5e5-19aa1d883949",
+        "startX": 18,
+        "startY": 9,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "up",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 2388,
-        "worldScrollY": 5901,
+        "worldScrollX": 2209,
+        "worldScrollY": 5700,
         "zoom": 200,
         "customColorsEnabled": true,
         "sgbEnabled": false,
