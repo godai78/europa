@@ -11,15 +11,15 @@
 # alpha Day 02 (unreleased)
 
 * Game levels
-	* Triplet  level: Bohemia, Mazovia, Panonia + spaceship
+	* Triplet  level: Bohemia, Mazovia, Panonia + spaceship, oxygen generator
 * Game tasks
 	* Entering all modules
 	* Fetching tools & materials
-	* Repairing oxigen generator
+	* Repairing oxygen generator
 * Changes and fixes
 	* Cargo crates now searchable even if not as tasks
 	* Filling in all empty lockers onboards
-	* Differentiating between locker types
+	* Graphically differentiating between locker types (thank Korzen!)
 	* Minor graphic changes to backgrouds
 	
 # alpha Day 01 (2022-01-19)
