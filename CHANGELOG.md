@@ -2,6 +2,8 @@
 
 # alphs Day 03 (unreleased)
 
+* Game levels
+	* Europa rotation animation
 * Game tasks
 	* Deploy all panels
 	* Manage the station RCS
@@ -16,8 +18,9 @@
 	* Repairing oxigen generator
 * Changes and fixes
 	* Cargo crates now searchable even if not as tasks
-	* Minor graphic changes to backgrouds
 	* Filling in all empty lockers onboards
+	* Differentiating between locker types
+	* Minor graphic changes to backgrouds
 	
 # alpha Day 01 (2022-01-19)
 
