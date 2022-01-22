@@ -1,14 +1,26 @@
 # Europa rescue! CHANGELOG
 
+# alphs Day 03 (unreleased)
+
+* Game levels
+	* Europa rotation animation
+* Game tasks
+	* Deploy all panels
+	* Manage the station RCS
+
 # alpha Day 02 (unreleased)
 
 * Game levels
-	* Triplet  level: Bohemia, Mazovia, Panonia + spaceship
+	* Triplet  level: Bohemia, Mazovia, Panonia + spaceship, oxygen generator
 * Game tasks
 	* Entering all modules
-	* Fetching tools
-	* Repairing oxigen generator
-	* Deploying all panels
+	* Fetching tools & materials
+	* Repairing oxygen generator
+* Changes and fixes
+	* Cargo crates now searchable even if not as tasks
+	* Filling in all empty lockers onboards
+	* Graphically differentiating between locker types (thank Korzen!)
+	* Minor graphic changes to backgrouds
 	
 # alpha Day 01 (2022-01-19)
 
