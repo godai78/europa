@@ -8,7 +8,7 @@
 	* Deploy all panels
 	* Manage the station RCS
 
-# alpha Day 02 (unreleased)
+# alpha Day 02 (022-01-22)
 
 * Game levels
 	* Triplet  level: Bohemia, Mazovia, Panonia + spaceship, oxygen generator
