@@ -1,14 +1,24 @@
 # Europa rescue! CHANGELOG
 
-# alphs Day 03 (unreleased)
+# alpha Day 05 (unreleased)
 
 * Game levels
 	* Europa rotation animation
+	* EVA in space
 * Game tasks
 	* Deploy all panels
 	* Manage the station RCS
+	* Check radio control panel
+	* Check outside antenna
+	* Retrieve and exchange actuator
+	* Establish commlink with Gołdap
+* Changes and fixes
+	* Some rescripts
+	* Return arrow in certain control backgrounds
+	* Rotated station interior
+	* Renamed Day 0 to Day 1 and so on
 
-# alpha Day 02 (unreleased)
+# alpha Day 02 (022-01-22)
 
 * Game levels
 	* Triplet  level: Bohemia, Mazovia, Panonia + spaceship, oxygen generator
