@@ -1,6 +1,8 @@
 # Europa rescue! CHANGELOG
 
-# alpha Day 05 (unreleased)
+# alpha Day 06 (unreleased)
+
+# alpha Day 05 (2022-01-26)
 
 * Game levels
 	* Europa rotation animation
@@ -13,6 +15,7 @@
 	* Retrieve and exchange actuator
 	* Establish commlink with Gołdap
 * Changes and fixes
+	* Autosave system and new game/continue start option
 	* Some rescripts
 	* Return arrow in certain control backgrounds
 	* Rotated station interior
