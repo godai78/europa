@@ -1,6 +1,18 @@
 # Europa rescue! CHANGELOG
 
-# alpha Day 06 (unreleased)
+# alpha Day 06 (2022-01-29)
+* Game levels
+	* Reverter space station rotation
+	* Labirinth bonus level (from https://github.com/godai78/labirinth)
+	* Fail level
+* Game tasks
+	* Feeding the hamster (with failsafe if the player never met hamster)
+	* Turning on the radio beacon
+	* Activating the RCS
+* Changes and fixes
+	* Additional chance to find the Game Boy
+	* Dialog in experiments bay once power is back
+	* Bonus level scripting
 
 # alpha Day 05 (2022-01-26)
 
@@ -21,7 +33,7 @@
 	* Rotated station interior
 	* Renamed Day 0 to Day 1 and so on
 
-# alpha Day 02 (022-01-22)
+# alpha Day 03 (022-01-22)
 
 * Game levels
 	* Triplet  level: Bohemia, Mazovia, Panonia + spaceship, oxygen generator
@@ -35,7 +47,7 @@
 	* Graphically differentiating between locker types (thank Korzen!)
 	* Minor graphic changes to backgrouds
 	
-# alpha Day 01 (2022-01-19)
+# alpha Day 02 (2022-01-19)
 
 * Game levels
 	* Spaceship
