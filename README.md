@@ -1,5 +1,9 @@
+![](https://user-images.githubusercontent.com/68123541/151654436-cd6b87bd-7ba9-4b1f-9caf-aa118b018fd3.png)
+
 # Europa rescue!
 
-_Europa rescue!_ is a Game Boy game based on a short novel by Bartek Biedrzycki, titled "Half the Sky", published 2020 in the "The Cold Starlight" collection of stories. It tells the history of Gloria Dobrowolska, the first Polish female cosmonaut, and colonel Liu Yuxi, a Chinese taikonaut, struggling to repair a defunct space station Europa. The story was based on the events of the rescue mission on Salyut 7 in the '80s.
+International Satellite Base „Europa” stopped responding and went dark. The general calls you personally and wants you on a rescue mission on the dead space station. Now you have to restore the power, repair defunct devices, and do other maintenance tasks to make “Europa” this extra shiny star on the European sky again. And be sure there are surprises hidden in cargo crates and experiments bay, high, high in Earth’s low orbit. 
 
-This game is in the early stages of development and as such may malfunction more than the Europa station herself.
+Feel the thrill of space adventure in this space station simulator with point-and-click elements from the science-fiction writer, Bartek Biedrzycki, loosely based on the novel “Half the Sky” and the real-life events on the Soviet space station Salyut 7.  
+
+This game is in the later stages of development and as such may still malfunction.
