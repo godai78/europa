@@ -1,6 +1,31 @@
 # Europa rescue! CHANGELOG
 
-# alpha Day 06 (unreleased)
+# beta RC (2022-02-03)
+* Game levels
+	* Hamster sleeping / eating
+	* TV anchor replaced
+	* General replaced
+	* Updated UI elements
+	* Minor recoloring
+* Changes and fixes (thanks to https://itch.io/profile/baron-elmwich)
+	* Docking preparation bugfix
+	* RCS task bugfix
+	* Day 06 Panonia leave error bugifx
+	* Background imagery optimization
+
+# alpha Day 06 (2022-01-29)
+* Game levels
+	* Reverter space station rotation
+	* Labirinth bonus level (from https://github.com/godai78/labirinth)
+	* Fail level
+* Game tasks
+	* Feeding the hamster (with failsafe if the player never met hamster)
+	* Turning on the radio beacon
+	* Activating the RCS
+* Changes and fixes
+	* Additional chance to find the Game Boy
+	* Dialog in experiments bay once power is back
+	* Bonus level scripting
 
 # alpha Day 05 (2022-01-26)
 
@@ -21,7 +46,7 @@
 	* Rotated station interior
 	* Renamed Day 0 to Day 1 and so on
 
-# alpha Day 02 (022-01-22)
+# alpha Day 03 (022-01-22)
 
 * Game levels
 	* Triplet  level: Bohemia, Mazovia, Panonia + spaceship, oxygen generator
@@ -32,10 +57,10 @@
 * Changes and fixes
 	* Cargo crates now searchable even if not as tasks
 	* Filling in all empty lockers onboards
-	* Graphically differentiating between locker types (thank Korzen!)
+	* Graphically differentiating between locker types (thanks Korzen!)
 	* Minor graphic changes to backgrouds
 	
-# alpha Day 01 (2022-01-19)
+# alpha Day 02 (2022-01-19)
 
 * Game levels
 	* Spaceship
