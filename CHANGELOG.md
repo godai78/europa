@@ -1,5 +1,17 @@
 # Europa rescue! CHANGELOG
 
+# beta RC (2022-02-03)
+* Game levels
+	* Hamster sleeping / eating
+	* TV anchor replaced
+	* General replaced
+	* Updated UI elements
+	* Minor recoloring
+* Changes and fixes (thanks to https://itch.io/profile/baron-elmwich)
+	* Docking preparation bugfix
+	* RCS task bugfix
+	* Day 06 Panonia leave error bugifx
+
 # alpha Day 06 (2022-01-29)
 * Game levels
 	* Reverter space station rotation
@@ -44,7 +56,7 @@
 * Changes and fixes
 	* Cargo crates now searchable even if not as tasks
 	* Filling in all empty lockers onboards
-	* Graphically differentiating between locker types (thank Korzen!)
+	* Graphically differentiating between locker types (thanks Korzen!)
 	* Minor graphic changes to backgrouds
 	
 # alpha Day 02 (2022-01-19)
