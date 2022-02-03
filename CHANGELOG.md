@@ -11,6 +11,7 @@
 	* Docking preparation bugfix
 	* RCS task bugfix
 	* Day 06 Panonia leave error bugifx
+	* Background imagery optimization
 
 # alpha Day 06 (2022-01-29)
 * Game levels
