@@ -1,5 +1,12 @@
 # Europa rescue! CHANGELOG
 
+# v1.1 (unreleased)
+* Changes and fixes
+	* New background music by Seb Johannson
+
+# v1.0 (2022-02-08)
+* official release
+
 # beta RC (2022-02-03)
 * Game levels
 	* Hamster sleeping / eating
