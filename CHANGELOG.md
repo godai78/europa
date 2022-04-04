@@ -1,13 +1,17 @@
 # Europa rescue! CHANGELOG
 
 # v1.1 (unreleased)
+
 * Changes and fixes
 	* New background music by Seb Johannson
+	* General calling background parallax fix
 
 # v1.0 (2022-02-08)
+
 * official release
 
 # beta RC (2022-02-03)
+
 * Game levels
 	* Hamster sleeping / eating
 	* TV anchor replaced
@@ -21,6 +25,7 @@
 	* Background imagery optimization
 
 # alpha Day 06 (2022-01-29)
+
 * Game levels
 	* Reverter space station rotation
 	* Labirinth bonus level (from https://github.com/godai78/labirinth)
